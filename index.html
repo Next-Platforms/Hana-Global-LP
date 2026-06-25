@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hana Global</title>
+
+  <!-- Adobe Typekit Script (Kozuka Gothic Pr6N) -->
+  <script>
+    (function (d) {
+      var config = {
+        kitId: 'lsu1ewf',
+        scriptTimeout: 3000,
+        async: true
+      },
+        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS (Local Font Faces and Font Helper Classes) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-white text-[#1A1A1A] font-noto-sans-r min-h-screen">
+
+  <!-- Header Section -->
+  <header
+    class="w-full h-[129px] bg-white border-b-[1px] border-[#e2b774] px-[40px] max-[750px]:px-[20px] relative z-50">
+    <div class="max-w-[1920px] mx-auto h-full flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="#" class="flex h-[104.1372px]">
+        <img src="./images/home-page/01-header-footer/logo.png" alt="Hana Global Support"
+          class="w-full h-auto object-contain">
+      </a>
+
+      <!-- Navigation & Call To Action (Desktop) -->
+      <div class="flex items-center space-x-10 h-full">
+        <!-- Navigation Links -->
+        <nav class="hidden min-[1150px]:flex items-center space-x-8 h-full">
+          <a href="#strengths"
+            class="font-noto-sans-r text-[18px] leading-[63px] tracking-[0.18px] text-[#1A1A1A] hover:text-[#990033] transition-colors">独自の強み・教育体制</a>
+          <a href="#talent"
+            class="font-noto-sans-r text-[18px] leading-[63px] tracking-[0.18px] text-[#1A1A1A] hover:text-[#990033] transition-colors">紹介可能な人材・職種</a>
+          <a href="#flow"
+            class="font-noto-sans-r text-[18px] leading-[63px] tracking-[0.18px] text-[#1A1A1A] hover:text-[#990033] transition-colors">ご紹介の流れ・費用</a>
+          <a href="#system"
+            class="font-noto-sans-r text-[18px] leading-[63px] tracking-[0.18px] text-[#1A1A1A] hover:text-[#990033] transition-colors">運営体制・会社概要</a>
+        </nav>
+
+        <!-- Right Side Button -->
+        <a href="#contact" class="hidden min-[750px]:flex flex-col items-center justify-center bg-[#990033] hover:bg-[#80002a] transition-colors rounded-full w-[384px] h-[96px] shrink-0 self-center">
+          <!-- Top Text / Badge (bg: #f9f2f2, color: #990033, 15px) -->
+          <div class="bg-[#f9f2f2] w-[304px] py-[3px] text-center font-noto-sans-b text-[15px] font-bold text-[#990033] tracking-[0.05em] rounded-sm leading-none">
+            24時間365日受付中／全国対応
+          </div>
+          <!-- Bottom Text / Call to Action (color: #FFFFFF, 22px) -->
+          <div class="flex items-center justify-center space-x-2.5 mt-2 font-noto-sans-b text-[22px] font-bold text-white leading-none">
+            <img src="./images/home-page/01-header-footer/mail-icon.svg" alt="" class="w-[22px] h-[16px] object-contain">
+            <span>お問い合わせはこちら</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Hamburger Menu Icon (Mobile: width < 750px) -->
+      <button id="mobile-menu-btn"
+        class="min-[750px]:hidden flex flex-col items-center justify-center w-[48.1px] h-[44.559px] focus:outline-none">
+        <img src="./images/home-page/01-header-footer/hamburger-icon.svg" alt="MENU"
+          class="w-full h-full object-contain">
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Menu (Hidden by default, slides out from right) -->
+    <div id="mobile-menu"
+      class="fixed inset-y-0 right-0 w-[300px] bg-white shadow-2xl z-40 transform translate-x-full transition-transform duration-300 ease-in-out min-[750px]:hidden flex flex-col pt-[129px] border-l border-gray-100">
+      <nav class="flex flex-col p-6 space-y-4">
+        <a href="#strengths"
+          class="font-noto-sans-m text-[18px] text-[#1A1A1A] py-3 border-b border-gray-100 hover:text-[#990033] transition-colors">独自の強み・教育体制</a>
+        <a href="#talent"
+          class="font-noto-sans-m text-[18px] text-[#1A1A1A] py-3 border-b border-gray-100 hover:text-[#990033] transition-colors">紹介可能な人材・職種</a>
+        <a href="#flow"
+          class="font-noto-sans-m text-[18px] text-[#1A1A1A] py-3 border-b border-gray-100 hover:text-[#990033] transition-colors">ご紹介の流れ・費用</a>
+        <a href="#system"
+          class="font-noto-sans-m text-[18px] text-[#1A1A1A] py-3 border-b border-gray-100 hover:text-[#990033] transition-colors">運営体制・会社概要</a>
+
+        <!-- Contact CTA Button inside Drawer -->
+        <a href="#contact" class="flex flex-col items-center justify-center bg-[#990033] rounded-full py-3.5 px-4 mt-6 w-full shrink-0">
+          <!-- Top Text / Badge (bg: #f9f2f2, color: #990033, 13px) -->
+          <div class="bg-[#f9f2f2] w-full max-w-[220px] py-[3px] text-center font-noto-sans-b text-[13px] font-bold text-[#990033] tracking-[0.05em] rounded-sm leading-none">
+            24時間365日受付中／全国対応
+          </div>
+          <!-- Bottom Text / Call to Action (color: #FFFFFF, 18px) -->
+          <div class="flex items-center justify-center space-x-2 mt-2 font-noto-sans-b text-[18px] font-bold text-white leading-none">
+            <img src="./images/home-page/01-header-footer/mail-icon.svg" alt="" class="w-[18px] h-[13px] object-contain">
+            <span>お問い合わせはこちら</span>
+          </div>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Rest of the landing page content can go here -->
+
+  <script src="main.js"></script>
+</body>
+
+</html>

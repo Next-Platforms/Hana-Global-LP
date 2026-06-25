@@ -1,0 +1,22 @@
+<svg viewBox="0 0 48.1 44.559" xmlns="http://www.w3.org/2000/svg" data-name="Layer 2" id="Layer_2" style="max-height: 500px" width="48.1" height="44.559">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Inter-Regular, Inter;
+        font-size: 16px;
+        font-variation-settings: 'opsz' 14, 'wght' 400;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #903;
+      }
+    </style>
+  </defs>
+  <g id="header">
+    <g>
+      <text transform="translate(.07 44.36)" class="cls-1"><tspan y="0" x="0">MENU</tspan></text>
+      <rect height="3" width="48" class="cls-2"/>
+      <rect height="3" width="48" y="15" class="cls-2"/>
+    </g>
+  </g>
+</svg>

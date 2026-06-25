@@ -1,0 +1,26 @@
+# System Files
+.DS_Store
+Thumbs.db
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Dependencies (if added later)
+node_modules/
+jspm_packages/
+.pnpm-store/
+
+# Builds / Output
+dist/
+build/
+out/
+
+# Gemini IDE directory
+.gemini/
+.agents/
