@@ -1,111 +1,874 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hana Global</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hana Global</title>
+    <!-- Adobe Typekit Script (Kozuka Gothic Pr6N) -->
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "lsu1ewf",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
 
-  <!-- Adobe Typekit Script (Kozuka Gothic Pr6N) -->
-  <script>
-    (function (d) {
-      var config = {
-        kitId: 'lsu1ewf',
-        scriptTimeout: 3000,
-        async: true
-      },
-        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
-    })(document);
-  </script>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            xs: "375px",
+            sm: "480px",
+            sm2: "600px",
+            md: "750px",
+            md2: "900px",
+            lg: "1024px",
+            xl: "1280px",
+            "2xl": "1440px",
+            "3xl": "1920px",
+            "hb-max": { max: "1860px" },
+            "hb-max2": { max: "1650px" },
+            "hb-max3": { max: "1450px" },
+            "hb-max4": { max: "1350px" },
+            "hb-min": "1351px",
+            "hb-mid": { min: "1351px", max: "1650px" },
+            "about-stack": { max: "1100px" },
+            "about-row": "1101px",
+            "about-sm": { min: "480px", max: "1100px" },
+            "about-sm2": { min: "600px", max: "1100px" },
+            "about-md": { min: "750px", max: "1100px" },
+            "about-md2": { min: "900px", max: "1100px" },
+            "about-b-stack": { max: "1000px" },
+            "about-b-h2": { min: "500px", max: "749px" },
+            "about-b-h3": { min: "750px", max: "1000px" },
+            "about-b-row": "1001px",
+          },
+        },
+      };
+    </script>
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS (fonts only) -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-  <!-- Custom CSS (Local Font Faces and Font Helper Classes) -->
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body class="bg-white text-[#1A1A1A] font-noto-sans-r min-h-screen">
-
-  <!-- Header Section -->
-  <header
-    class="w-full h-[129px] bg-white border-b-[1px] border-[#e2b774] px-[40px] max-[750px]:px-[20px] relative z-50">
-    <div class="max-w-[1920px] mx-auto h-full flex items-center justify-between">
-
-      <!-- Logo -->
-      <a href="#" class="flex h-[104.1372px]">
-        <img src="./images/home-page/01-header-footer/logo.png" alt="Hana Global Support"
-          class="w-full h-auto object-contain">
-      </a>
-
-      <!-- Navigation & Call To Action (Desktop) -->
-      <div class="flex items-center space-x-10 h-full">
-        <!-- Navigation Links -->
-        <nav class="hidden min-[1150px]:flex items-center space-x-8 h-full">
-          <a href="#strengths"
-            class="font-noto-sans-r text-[18px] leading-[63px] tracking-[0.18px] text-[#1A1A1A] hover:text-[#990033] transition-colors">独自の強み・教育体制</a>
-          <a href="#talent"
-            class="font-noto-sans-r text-[18px] leading-[63px] tracking-[0.18px] text-[#1A1A1A] hover:text-[#990033] transition-colors">紹介可能な人材・職種</a>
-          <a href="#flow"
-            class="font-noto-sans-r text-[18px] leading-[63px] tracking-[0.18px] text-[#1A1A1A] hover:text-[#990033] transition-colors">ご紹介の流れ・費用</a>
-          <a href="#system"
-            class="font-noto-sans-r text-[18px] leading-[63px] tracking-[0.18px] text-[#1A1A1A] hover:text-[#990033] transition-colors">運営体制・会社概要</a>
-        </nav>
-
-        <!-- Right Side Button -->
-        <a href="#contact" class="hidden min-[750px]:flex flex-col items-center justify-center bg-[#990033] hover:bg-[#80002a] transition-colors rounded-full w-[384px] h-[96px] shrink-0 self-center">
-          <!-- Top Text / Badge (bg: #f9f2f2, color: #990033, 15px) -->
-          <div class="bg-[#f9f2f2] w-[304px] py-[3px] text-center font-noto-sans-b text-[15px] font-bold text-[#990033] tracking-[0.05em] rounded-sm leading-none">
-            24時間365日受付中／全国対応
-          </div>
-          <!-- Bottom Text / Call to Action (color: #FFFFFF, 22px) -->
-          <div class="flex items-center justify-center space-x-2.5 mt-2 font-noto-sans-b text-[22px] font-bold text-white leading-none">
-            <img src="./images/home-page/01-header-footer/mail-icon.svg" alt="" class="w-[22px] h-[16px] object-contain">
-            <span>お問い合わせはこちら</span>
-          </div>
+  <body class="bg-white text-[#1A1A1A] font-noto-sans-r min-h-screen">
+    <!-- Header Section -->
+    <!--
+      Heights by breakpoint:
+        base–sm2 : 96–112px  — logo scales down, hamburger
+        md–md2   : 120–125px  — hamburger
+        lg+      : 129px      — desktop spec
+      Desktop CTA + nav links: lg (1024px)+
+      Hamburger + drawer CTA: below lg
+    -->
+    <header
+      class="w-full bg-white border-b-2 border-[#e2b774] relative z-50 h-[96px] px-[10px] xs:h-[100px] sm:h-[106px] sm:px-6 sm2:h-[112px] sm2:px-8 md:h-[120px] md:px-10 md2:h-[125px] lg:h-[129px] lg:px-12 xl:px-14 2xl:px-16"
+    >
+      <div
+        class="w-full max-w-[1920px] mx-auto h-full flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <a
+          href="#"
+          class="flex shrink-0 h-[68px] xs:h-[74px] sm:h-[82px] sm2:h-[88px] md:h-[94px] md2:h-[98px] lg:h-[104.1372px]"
+        >
+          <img
+            src="./images/home-page/01-header-footer/logo.png"
+            alt="Hana Global Edutech"
+            class="h-full w-auto object-contain"
+          />
         </a>
+
+        <!-- Right side: nav + CTA + hamburger -->
+        <div
+          class="flex items-center shrink-0 gap-3 sm:gap-4 md2:gap-5 xl:gap-6 2xl:gap-10"
+        >
+          <nav
+            class="hidden lg:flex items-center h-full gap-2 xl:gap-3 2xl:gap-8 font-noto-sans-r"
+          >
+            <a
+              href="#"
+              class="text-[#1A1A1A] whitespace-nowrap hover:opacity-60 transition-opacity text-[13px] leading-[48px] tracking-[0.13px] xl:text-[14px] xl:leading-[54px] xl:tracking-[0.14px] 2xl:text-[18px] 2xl:leading-[63px] 2xl:tracking-[0.18px]"
+              >独自の強み・教育体制</a
+            >
+            <a
+              href="#"
+              class="text-[#1A1A1A] whitespace-nowrap hover:opacity-60 transition-opacity text-[13px] leading-[48px] tracking-[0.13px] xl:text-[14px] xl:leading-[54px] xl:tracking-[0.14px] 2xl:text-[18px] 2xl:leading-[63px] 2xl:tracking-[0.18px]"
+              >紹介可能な人材・職種</a
+            >
+            <a
+              href="#"
+              class="text-[#1A1A1A] whitespace-nowrap hover:opacity-60 transition-opacity text-[13px] leading-[48px] tracking-[0.13px] xl:text-[14px] xl:leading-[54px] xl:tracking-[0.14px] 2xl:text-[18px] 2xl:leading-[63px] 2xl:tracking-[0.18px]"
+              >ご紹介の流れ・費用</a
+            >
+            <a
+              href="#"
+              class="text-[#1A1A1A] whitespace-nowrap hover:opacity-60 transition-opacity text-[13px] leading-[48px] tracking-[0.13px] xl:text-[14px] xl:leading-[54px] xl:tracking-[0.14px] 2xl:text-[18px] 2xl:leading-[63px] 2xl:tracking-[0.18px]"
+              >運営体制・会社概要</a
+            >
+          </nav>
+
+          <a
+            href="#contact"
+            class="hidden lg:flex flex-col items-center justify-center self-center rounded-full bg-[#990033] hover:opacity-60 transition-opacity w-[210px] h-[54px] lg:w-[250px] lg:h-[64px] xl:w-[280px] xl:h-[72px] 2xl:w-[313px] 2xl:h-[80px]"
+          >
+            <div
+              class="bg-[#f9f2f2] text-center font-noto-sans-b text-[#990033] tracking-[0.05em] rounded-sm leading-none py-[2px] px-[4px] text-[9px] lg:py-[3px] lg:px-[5px] lg:text-[11px] xl:text-[13px] 2xl:text-[15px]"
+            >
+              24時間365日受付中／全国対応
+            </div>
+            <div
+              class="flex items-center justify-center text-white leading-none font-noto-sans-b gap-1.5 mt-0.5 text-[13px] lg:gap-2 lg:mt-1 lg:text-[15px] xl:text-[18px] 2xl:text-[22px]"
+            >
+              <img
+                src="./images/home-page/01-header-footer/mail-icon.svg"
+                alt=""
+                class="object-contain w-[15px] h-[11px] lg:w-[17px] lg:h-[12px] xl:w-[19px] xl:h-[14px] 2xl:w-[22px] 2xl:h-4"
+              />
+              <span>お問い合わせはこちら</span>
+            </div>
+          </a>
+
+          <!-- Hamburger (below lg / 1024px — when nav links are hidden) -->
+          <button
+            id="mobile-menu-btn"
+            type="button"
+            class="flex lg:hidden items-center justify-center focus:outline-none w-10 h-10 xs:w-11 xs:h-11 sm:w-12 sm:h-12"
+            aria-label="メニューを開く"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <img
+              src="./images/home-page/01-header-footer/hamburger-icon.svg"
+              alt="MENU"
+              class="w-full h-full object-contain"
+            />
+          </button>
+        </div>
       </div>
 
-      <!-- Hamburger Menu Icon (Mobile: width < 750px) -->
-      <button id="mobile-menu-btn"
-        class="min-[750px]:hidden flex flex-col items-center justify-center w-[48.1px] h-[44.559px] focus:outline-none">
-        <img src="./images/home-page/01-header-footer/hamburger-icon.svg" alt="MENU"
-          class="w-full h-full object-contain">
-      </button>
-    </div>
+      <!-- Mobile Drawer Backdrop -->
+      <div
+        id="mobile-menu-backdrop"
+        class="fixed inset-0 bg-black/50 z-[55] opacity-0 invisible transition-all duration-300 lg:hidden"
+        aria-hidden="true"
+      ></div>
 
-    <!-- Mobile Drawer Menu (Hidden by default, slides out from right) -->
-    <div id="mobile-menu"
-      class="fixed inset-y-0 right-0 w-[300px] bg-white shadow-2xl z-40 transform translate-x-full transition-transform duration-300 ease-in-out min-[750px]:hidden flex flex-col pt-[129px] border-l border-gray-100">
-      <nav class="flex flex-col p-6 space-y-4">
-        <a href="#strengths"
-          class="font-noto-sans-m text-[18px] text-[#1A1A1A] py-3 border-b border-gray-100 hover:text-[#990033] transition-colors">独自の強み・教育体制</a>
-        <a href="#talent"
-          class="font-noto-sans-m text-[18px] text-[#1A1A1A] py-3 border-b border-gray-100 hover:text-[#990033] transition-colors">紹介可能な人材・職種</a>
-        <a href="#flow"
-          class="font-noto-sans-m text-[18px] text-[#1A1A1A] py-3 border-b border-gray-100 hover:text-[#990033] transition-colors">ご紹介の流れ・費用</a>
-        <a href="#system"
-          class="font-noto-sans-m text-[18px] text-[#1A1A1A] py-3 border-b border-gray-100 hover:text-[#990033] transition-colors">運営体制・会社概要</a>
+      <!-- Mobile Drawer Menu -->
+      <div
+        id="mobile-menu"
+        class="fixed inset-0 w-full h-full bg-white z-[60] translate-x-full transition-transform duration-300 ease-in-out flex flex-col overflow-y-auto lg:hidden"
+        aria-hidden="true"
+      >
+        <div
+          class="flex items-center justify-end border-b-2 border-[#e2b774] shrink-0 h-[96px] px-[10px] xs:h-[100px] sm:h-[106px] sm:px-6 sm2:h-[112px] sm2:px-8 md:h-[120px] md:px-10 md2:h-[125px] md2:px-10 lg:h-[129px] lg:px-12"
+        >
+          <button
+            id="mobile-menu-close"
+            type="button"
+            class="flex items-center justify-center hover:opacity-60 transition-opacity focus:outline-none w-10 h-10 xs:w-11 xs:h-11 sm:w-12 sm:h-12"
+            aria-label="メニューを閉じる"
+          >
+            <img
+              src="./images/home-page/01-header-footer/close-icon.svg"
+              alt=""
+              class="w-full h-full object-contain"
+            />
+          </button>
+        </div>
 
-        <!-- Contact CTA Button inside Drawer -->
-        <a href="#contact" class="flex flex-col items-center justify-center bg-[#990033] rounded-full py-3.5 px-4 mt-6 w-full shrink-0">
-          <!-- Top Text / Badge (bg: #f9f2f2, color: #990033, 13px) -->
-          <div class="bg-[#f9f2f2] w-full max-w-[220px] py-[3px] text-center font-noto-sans-b text-[13px] font-bold text-[#990033] tracking-[0.05em] rounded-sm leading-none">
-            24時間365日受付中／全国対応
-          </div>
-          <!-- Bottom Text / Call to Action (color: #FFFFFF, 18px) -->
-          <div class="flex items-center justify-center space-x-2 mt-2 font-noto-sans-b text-[18px] font-bold text-white leading-none">
-            <img src="./images/home-page/01-header-footer/mail-icon.svg" alt="" class="w-[18px] h-[13px] object-contain">
-            <span>お問い合わせはこちら</span>
-          </div>
+        <nav class="flex flex-col px-[10px] sm:px-6 sm2:px-8 md:px-10">
+          <a
+            href="#"
+            class="font-noto-sans-r text-[#1A1A1A] border-b border-gray-100 hover:opacity-60 transition-opacity text-[15px] leading-[48px] tracking-[0.15px] xs:text-[16px] xs:leading-[52px] xs:tracking-[0.16px] sm:text-[17px] sm:leading-[56px] sm:tracking-[0.17px] sm2:text-[18px] sm2:leading-[60px] sm2:tracking-[0.18px] md:text-[18px] md:leading-[63px] md:tracking-[0.18px]"
+            >独自の強み・教育体制</a
+          >
+          <a
+            href="#"
+            class="font-noto-sans-r text-[#1A1A1A] border-b border-gray-100 hover:opacity-60 transition-opacity text-[15px] leading-[48px] tracking-[0.15px] xs:text-[16px] xs:leading-[52px] xs:tracking-[0.16px] sm:text-[17px] sm:leading-[56px] sm:tracking-[0.17px] sm2:text-[18px] sm2:leading-[60px] sm2:tracking-[0.18px] md:text-[18px] md:leading-[63px] md:tracking-[0.18px]"
+            >紹介可能な人材・職種</a
+          >
+          <a
+            href="#"
+            class="font-noto-sans-r text-[#1A1A1A] border-b border-gray-100 hover:opacity-60 transition-opacity text-[15px] leading-[48px] tracking-[0.15px] xs:text-[16px] xs:leading-[52px] xs:tracking-[0.16px] sm:text-[17px] sm:leading-[56px] sm:tracking-[0.17px] sm2:text-[18px] sm2:leading-[60px] sm2:tracking-[0.18px] md:text-[18px] md:leading-[63px] md:tracking-[0.18px]"
+            >ご紹介の流れ・費用</a
+          >
+          <a
+            href="#"
+            class="font-noto-sans-r text-[#1A1A1A] border-b border-gray-100 hover:opacity-60 transition-opacity text-[15px] leading-[48px] tracking-[0.15px] xs:text-[16px] xs:leading-[52px] xs:tracking-[0.16px] sm:text-[17px] sm:leading-[56px] sm:tracking-[0.17px] sm2:text-[18px] sm2:leading-[60px] sm2:tracking-[0.18px] md:text-[18px] md:leading-[63px] md:tracking-[0.18px]"
+            >運営体制・会社概要</a
+          >
+        </nav>
+
+        <a
+          href="#contact"
+          class="flex items-center justify-center shrink-0 rounded-full bg-[#990033] hover:opacity-60 transition-opacity mx-auto gap-1.5 w-[260px] max-w-[calc(100%-32px)] h-[64px] mt-5 mb-6 xs:gap-2 xs:w-[280px] xs:max-w-[calc(100%-40px)] xs:h-[68px] xs:mt-6 sm:w-[300px] sm:h-[72px] sm2:w-[313px] sm2:h-[76px] md:h-[80px] md:mb-8"
+        >
+          <img
+            src="./images/home-page/01-header-footer/mail-icon.svg"
+            alt=""
+            class="object-contain shrink-0 w-[16px] h-[12px] xs:w-[18px] xs:h-[13px] sm:w-5 sm:h-[15px]"
+          />
+          <span
+            class="font-noto-sans-b text-white text-[18px] leading-none xs:text-[19px] sm:text-[20px] sm2:text-[21px] md:text-[22px]"
+            >お問い合わせはこちら</span
+          >
         </a>
-      </nav>
-    </div>
-  </header>
+      </div>
+    </header>
 
-  <!-- Rest of the landing page content can go here -->
+    <!-- Hero Section -->
+    <!--
+      Heights by breakpoint:
+        0–479px   (base) : 750px  — mobile bg, content top
+        480–599px (sm)   : 800px  — mobile bg
+        600–749px (sm2)  : 860px  — mobile bg
+        750–899px (md)   : 1000px — mobile bg (matches image native height)
+        900–1023px(md2)  : 1000px — mobile bg
+        1024px+   (lg)   : 705px  — desktop bg, content centered
+    -->
+    <section
+      class="relative w-full max-w-[1920px] mx-auto overflow-hidden h-[750px] sm:h-[800px] sm2:h-[860px] md:h-[1000px] md2:h-[1000px] lg:h-[705px] 2xl:h-[705px]"
+    >
+      <!-- Background mobile (< lg) -->
+      <img
+        src="./images/home-page/02-hero/hero-bg-mobile.png"
+        alt=""
+        aria-hidden="true"
+        class="lg:hidden absolute inset-0 w-full h-full object-cover object-bottom"
+      />
 
-  <script src="main.js"></script>
-</body>
+      <!-- Background desktop (lg+) -->
+      <img
+        src="./images/home-page/02-hero/hero-bg-pc.png"
+        alt="Hero Background"
+        class="hidden lg:block absolute inset-0 w-full h-full object-cover"
+      />
 
+      <!-- Content -->
+      <div
+        class="relative h-full flex flex-col justify-start pt-[24px] px-[10px] xs:pt-[28px] sm:pt-[32px] sm:px-6 sm2:pt-[36px] sm2:px-8 md:pt-[48px] md:px-10 md2:pt-[56px] md2:px-12 lg:justify-center lg:pt-0 lg:pl-[120px] lg:pr-0 xl:pl-[160px]"
+      >
+        <!-- Headline -->
+        <h1>
+          <!-- Line 1: 即戦力インド人材を、 -->
+          <span
+            class="block font-mb101-b italic text-[#820032] text-[27px] leading-[1.3] tracking-[-0.54px] xs:text-[30px] xs:tracking-[-0.6px] sm:text-[35px] sm:tracking-[-0.7px] sm2:text-[40px] sm2:tracking-[-0.8px] md:text-[45px] md:leading-[90px] md:tracking-[-0.9px] md:relative md:top-[-9.66px] md2:text-[45px] md2:leading-[90px] md2:tracking-[-0.9px] md2:relative md2:top-[-9.66px] lg:static lg:top-auto lg:text-[45px] lg:leading-[90px] lg:tracking-[-0.9px] xl:text-[57px] xl:leading-[84px] xl:tracking-[11px] 2xl:text-[57px] 2xl:leading-[84px] 2xl:tracking-[11px]"
+          >
+            即戦力インド人材を、
+          </span>
+          <!-- Line 2: 貴社の成長エンジンに -->
+          <span
+            class="block font-mb101-b italic text-[#820032] text-[32px] leading-[1.25] tracking-[0.64px] xs:text-[36px] xs:tracking-[0.72px] sm:text-[42px] sm:tracking-[0.84px] sm2:text-[48px] sm2:tracking-[0.96px] md:text-[54px] md:leading-[90px] md:tracking-[1.08px] md2:text-[54px] md2:leading-[90px] md2:tracking-[1.08px] lg:text-[54px] lg:leading-[90px] lg:tracking-[1.08px] xl:text-[68px] xl:leading-[90px] xl:tracking-[1.36px] 2xl:text-[68px] 2xl:leading-[90px] 2xl:tracking-[1.36px]"
+          >
+            貴社の成長エンジンに
+          </span>
+        </h1>
+
+        <!-- Body copy -->
+        <p
+          class="font-kozuka-r text-[#1A1A1A] mt-[10px] text-[13px] leading-[21px] tracking-[0.13px] xs:mt-[12px] xs:text-[14px] xs:leading-[22px] xs:tracking-[0.14px] sm:mt-[14px] sm:text-[16px] sm:leading-[25px] sm:tracking-[0.16px] sm2:mt-[16px] sm2:text-[18px] sm2:leading-[28px] sm2:tracking-[0.18px] md:mt-[20px] md:text-[22px] md:leading-[33.11px] md:tracking-[0.22px] md2:mt-[22px] md2:text-[22px] md2:leading-[33.11px] md2:tracking-[0.22px] lg:mt-[18px] lg:text-[22px] lg:leading-[33.11px] lg:tracking-[0.22px] xl:text-[24px] xl:leading-[38px] xl:tracking-[0.24px] 2xl:text-[24px] 2xl:leading-[38px] 2xl:tracking-[0.24px]"
+        >
+          日本の職場文化を完璧に叩き込まれ、<br />
+          <span
+            class="font-noto-sans-b bg-[#ffe05f] [-webkit-box-decoration-break:clone] [box-decoration-break:clone] px-[6px] mr-[6px] text-[13px] leading-[21px] tracking-[0.13px] xs:text-[14px] xs:leading-[22px] xs:tracking-[0.14px] sm:text-[16px] sm:leading-[25px] sm:tracking-[0.16px] sm2:text-[18px] sm2:leading-[28px] sm2:tracking-[0.18px] md:text-[22px] md:leading-[33.11px] md:tracking-[0.22px] md2:text-[22px] md2:leading-[33.11px] md2:tracking-[0.22px] lg:text-[22px] lg:leading-[33.11px] lg:tracking-[0.22px] xl:text-[24px] xl:leading-[38px] xl:tracking-[0.24px] 2xl:text-[24px] 2xl:leading-[38px] 2xl:tracking-[0.24px]"
+            >入国初日から現場の即戦力となる「選び抜かれたエリート人材<span
+              class="tracking-[-0.45em]"
+              >」</span
+            ></span
+          >が、<br />
+          貴社の深刻な人手不足を解決し、爆発的な成長エンジンに変わります 。
+        </p>
+
+        <!-- Circles infographic -->
+        <img
+          src="./images/home-page/02-hero/circles.svg"
+          alt=""
+          aria-hidden="true"
+          class="h-auto mt-[14px] w-full xs:mt-[16px] sm:mt-[18px] sm2:mt-[20px] md:mt-[24px] md:w-[580px] md2:mt-[26px] md2:w-[620px] lg:mt-[20px] lg:w-[580px] xl:mt-[28px] xl:w-[634.9497px] 2xl:mt-[28px] 2xl:w-[686.45px]"
+        />
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- Hero B — hb-max4 ≤1350: flex-col + mobile photos. Row above 1350       -->
+    <!-- ================================================================ -->
+    <section
+      class="relative w-full max-w-[1920px] mx-auto overflow-hidden flex hb-max4:flex-col hb-min:grid hb-min:grid-cols-[55%_45%] h-[240px] hb-max:h-[210px] hb-max2:h-[180px] hb-max4:h-auto bg-[#f2f2f2]"
+    >
+      <!-- Text content -->
+      <div
+        class="flex flex-col justify-center z-[2] w-full hb-min:min-w-0 px-[10px] py-5 sm:px-6 sm2:px-8 md:px-10 md2:px-12 lg:px-[120px] xl:px-[160px] hb-min:py-0 hb-min:pl-[160px] hb-mid:pl-[120px] hb-min:pr-0"
+      >
+        <!-- Pain-point tags -->
+        <div
+          class="flex items-center gap-[5px] mb-[10px] hb-mid:gap-[4px] hb-mid:mb-[8px] hb-max4:flex-wrap"
+        >
+          <span
+            class="inline-flex items-center gap-[5px] bg-[#636f93] rounded-[3px] px-[6px] py-[4px] xs:gap-[5px] xs:px-[7px] sm:gap-[6px] sm:px-[8px] sm:py-[5px] sm2:py-[5px] md:py-[5px] lg:py-[6px] min-[1351px]:gap-[6px] min-[1351px]:px-[8px] min-[1351px]:py-[6px] hb-mid:gap-[4px] hb-mid:px-[5px] hb-mid:py-[4px] min-[1351px]:max-[1450px]:px-[5px] min-[1351px]:max-[1450px]:py-[3px]"
+          >
+            <img
+              src="./images/home-page/02-hero/rope-icon.svg"
+              alt=""
+              aria-hidden="true"
+              class="shrink-0 w-[14px] h-[15px] object-contain xs:w-[15px] xs:h-[16px] sm:w-[16px] sm:h-[17px] sm2:w-[17px] sm2:h-[18px] md:w-[18px] md:h-[19px] lg:w-[19px] lg:h-[20px] xl:w-[20px] xl:h-[21px] min-[1351px]:w-[21.541px] min-[1351px]:h-[22px] min-[1651px]:max-[1860px]:w-[18px] min-[1651px]:max-[1860px]:h-[19px] hb-mid:w-[13px] hb-mid:h-[14px] min-[1351px]:max-[1450px]:w-[12px] min-[1351px]:max-[1450px]:h-[13px]"
+            />
+            <span
+              class="font-ryumin-h text-white leading-none text-[12px] xs:text-[13px] sm:text-[14px] sm2:text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px] min-[1351px]:text-[26px] min-[1651px]:max-[1860px]:text-[22px] hb-mid:text-[15px] min-[1351px]:max-[1450px]:text-[13px]"
+              >言葉が通じない…</span
+            >
+          </span>
+          <span
+            class="inline-flex items-center gap-[5px] bg-[#636f93] rounded-[3px] px-[6px] py-[4px] xs:gap-[5px] xs:px-[7px] sm:gap-[6px] sm:px-[8px] sm:py-[5px] sm2:py-[5px] md:py-[5px] lg:py-[6px] min-[1351px]:gap-[6px] min-[1351px]:px-[8px] min-[1351px]:py-[6px] hb-mid:gap-[4px] hb-mid:px-[5px] hb-mid:py-[4px] min-[1351px]:max-[1450px]:px-[5px] min-[1351px]:max-[1450px]:py-[3px]"
+          >
+            <img
+              src="./images/home-page/02-hero/rope-icon.svg"
+              alt=""
+              aria-hidden="true"
+              class="shrink-0 w-[14px] h-[15px] object-contain xs:w-[15px] xs:h-[16px] sm:w-[16px] sm:h-[17px] sm2:w-[17px] sm2:h-[18px] md:w-[18px] md:h-[19px] lg:w-[19px] lg:h-[20px] xl:w-[20px] xl:h-[21px] min-[1351px]:w-[21.541px] min-[1351px]:h-[22px] min-[1651px]:max-[1860px]:w-[18px] min-[1651px]:max-[1860px]:h-[19px] hb-mid:w-[13px] hb-mid:h-[14px] min-[1351px]:max-[1450px]:w-[12px] min-[1351px]:max-[1450px]:h-[13px]"
+            />
+            <span
+              class="font-ryumin-h text-white leading-none text-[12px] xs:text-[13px] sm:text-[14px] sm2:text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px] min-[1351px]:text-[26px] min-[1651px]:max-[1860px]:text-[22px] hb-mid:text-[15px] min-[1351px]:max-[1450px]:text-[13px]"
+              >すぐ辞める…</span
+            >
+          </span>
+          <span
+            class="inline-flex items-center gap-[5px] bg-[#636f93] rounded-[3px] px-[6px] py-[4px] xs:gap-[5px] xs:px-[7px] sm:gap-[6px] sm:px-[8px] sm:py-[5px] sm2:py-[5px] md:py-[5px] lg:py-[6px] min-[1351px]:gap-[6px] min-[1351px]:px-[10px] min-[1351px]:py-[6px] hb-mid:gap-[4px] hb-mid:px-[5px] hb-mid:py-[4px] min-[1351px]:max-[1450px]:px-[5px] min-[1351px]:max-[1450px]:py-[3px]"
+          >
+            <img
+              src="./images/home-page/02-hero/rope-icon.svg"
+              alt=""
+              aria-hidden="true"
+              class="shrink-0 w-[14px] h-[15px] object-contain xs:w-[15px] xs:h-[16px] sm:w-[16px] sm:h-[17px] sm2:w-[17px] sm2:h-[18px] md:w-[18px] md:h-[19px] lg:w-[19px] lg:h-[20px] xl:w-[20px] xl:h-[21px] min-[1351px]:w-[21.541px] min-[1351px]:h-[22px] min-[1651px]:max-[1860px]:w-[18px] min-[1651px]:max-[1860px]:h-[19px] hb-mid:w-[13px] hb-mid:h-[14px] min-[1351px]:max-[1450px]:w-[12px] min-[1351px]:max-[1450px]:h-[13px]"
+            />
+            <span
+              class="font-ryumin-h text-white leading-none text-[12px] xs:text-[13px] sm:text-[14px] sm2:text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px] min-[1351px]:text-[26px] min-[1651px]:max-[1860px]:text-[22px] hb-mid:text-[15px] min-[1351px]:max-[1450px]:text-[13px]"
+              >マナーが悪い…</span
+            >
+          </span>
+        </div>
+        <p
+          class="font-kozuka-r text-[#1A1A1A] text-[13px] leading-[21px] tracking-[0.13px] xs:text-[14px] xs:leading-[22px] xs:tracking-[0.14px] sm:text-[15px] sm:leading-[24px] sm:tracking-[0.15px] sm2:text-[16px] sm2:leading-[26px] sm2:tracking-[0.16px] md:text-[17px] md:leading-[28px] md:tracking-[0.17px] md2:text-[18px] md2:leading-[30px] md2:tracking-[0.18px] lg:text-[19px] lg:leading-[31px] lg:tracking-[0.19px] xl:text-[20px] xl:leading-[33px] xl:tracking-[0.2px] min-[1351px]:text-[24px] min-[1351px]:leading-[39px] min-[1351px]:tracking-[0.24px] min-[1651px]:max-[1860px]:text-[20px] min-[1651px]:max-[1860px]:leading-[33px] min-[1651px]:max-[1860px]:tracking-[0.2px] hb-mid:text-[15px] hb-mid:leading-[25px] hb-mid:tracking-[0.15px] min-[1351px]:max-[1450px]:text-[13px] min-[1351px]:max-[1450px]:leading-[22px] min-[1351px]:max-[1450px]:tracking-[0.13px]"
+        >
+          そんな<span class="font-noto-sans-b relative inline"
+            ><span class="relative z-[1]"
+              >“外国人採用のギャンブル”は今日で終わり</span
+            ><span
+              class="absolute left-0 bottom-[3px] w-full h-[4px] bg-[#ffe05f] z-0 pointer-events-none sm:bottom-[3px] sm:h-[4px] md:bottom-[4px] md:h-[5px] min-[1351px]:bottom-[4px] min-[1351px]:h-[5px] hb-mid:bottom-[2px] hb-mid:h-[3px]"
+              aria-hidden="true"
+            ></span></span
+          >です。<br />
+          世界中のトップテック企業が血眼で奪い合うインドの圧倒的若手才能を、<br />
+          『<span class="font-noto-sans-b">徹底教育済み</span
+          >』の即戦力として御社へ配属します。
+        </p>
+      </div>
+
+      <!-- Desktop photos — absolute row (hidden ≤1350) -->
+      <div class="absolute right-[-60px] bottom-0 flex z-[1] hb-max4:hidden">
+        <!-- Person 1 -->
+        <div class="relative">
+          <img
+            src="./images/home-page/02-hero/person-1.png"
+            alt="代表取締役社長 松野 小百合"
+            class="h-[240px] w-auto block hb-max:h-[210px] hb-max2:h-[180px]"
+          />
+          <div
+            class="absolute left-0 bottom-0 w-full h-[64px] flex flex-col justify-end pb-4 pl-[34px] bg-[rgba(35,26,20,0.5)] [clip-path:polygon(5.22%_0,85.07%_0,80.6%_100%,0.75%_100%)] hb-max:h-[56px] hb-max:pb-3 hb-max:pl-[28px] hb-max2:h-[50px] hb-max2:pb-2.5 hb-max2:pl-[24px]"
+          >
+            <p
+              class="font-ryumin-h text-white text-[18px] leading-[20px] hb-max:text-[15px] hb-max:leading-[17px] hb-max2:text-[13px] hb-max2:leading-[15px] hb-max3:text-[12px] hb-max3:leading-[14px]"
+            >
+              Hana Global Support
+            </p>
+            <p
+              class="font-ryumin-h text-white text-[18px] leading-[20px] hb-max:text-[15px] hb-max:leading-[17px] hb-max2:text-[13px] hb-max2:leading-[15px] hb-max3:text-[12px] hb-max3:leading-[14px]"
+            >
+              代表取締役社長 松野 小百合
+            </p>
+          </div>
+        </div>
+
+        <!-- Person 2 -->
+        <div class="relative -ml-[81px] hb-max:-ml-[71px] hb-max2:-ml-[61px]">
+          <img
+            src="./images/home-page/02-hero/person-2.png"
+            alt="取締役 韓 美憂"
+            class="h-[240px] w-auto block hb-max:h-[210px] hb-max2:h-[180px]"
+          />
+          <div
+            class="absolute left-0 bottom-0 w-full h-[64px] flex flex-col justify-end pb-4 pl-[34px] bg-[rgba(35,26,20,0.5)] [clip-path:polygon(5.22%_0,85.07%_0,80.6%_100%,0.75%_100%)] hb-max:h-[56px] hb-max:pb-3 hb-max:pl-[28px] hb-max2:h-[50px] hb-max2:pb-2.5 hb-max2:pl-[24px]"
+          >
+            <p
+              class="font-ryumin-h text-white text-[18px] leading-[20px] hb-max:text-[15px] hb-max:leading-[17px] hb-max2:text-[13px] hb-max2:leading-[15px] hb-max3:text-[12px] hb-max3:leading-[14px]"
+            >
+              取締役 韓 美憂
+            </p>
+          </div>
+        </div>
+
+        <!-- Person 3 -->
+        <div class="relative -ml-[82px] hb-max:-ml-[72px] hb-max2:-ml-[62px]">
+          <img
+            src="./images/home-page/02-hero/person-3.png"
+            alt="取締役 金 花仙"
+            class="h-[240px] w-auto block hb-max:h-[210px] hb-max2:h-[180px]"
+          />
+          <div
+            class="absolute left-0 bottom-0 w-full h-[64px] flex flex-col justify-end pb-4 pl-[34px] bg-[rgba(35,26,20,0.5)] [clip-path:polygon(5.22%_0,85.07%_0,80.6%_100%,0.75%_100%)] hb-max:h-[56px] hb-max:pb-3 hb-max:pl-[28px] hb-max2:h-[50px] hb-max2:pb-2.5 hb-max2:pl-[24px]"
+          >
+            <p
+              class="font-ryumin-h text-white text-[18px] leading-[20px] hb-max:text-[15px] hb-max:leading-[17px] hb-max2:text-[13px] hb-max2:leading-[15px] hb-max3:text-[12px] hb-max3:leading-[14px]"
+            >
+              取締役 金 花仙
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile photos — edge-to-edge 0–749px only (row hidden above 1350) -->
+      <div
+        class="hidden hb-max4:flex w-full px-0 md:px-10 md2:px-12 lg:px-[120px] xl:px-[160px]"
+      >
+        <div class="relative flex-1 min-w-0">
+          <img
+            src="./images/home-page/02-hero/person-1-mobile.png"
+            alt="代表取締役社長 松野 小百合"
+            class="w-full h-auto block"
+          />
+          <div
+            class="absolute left-0 bottom-0 w-full h-[44px] pb-1.5 px-[10px] xs:h-[54px] xs:pb-2 sm:h-[56px] sm2:h-[58px] md:h-[60px] md2:h-[62px] lg:h-[64px] lg:pb-4 lg:px-6 xl:px-7 flex flex-col justify-end bg-[rgba(35,26,20,0.5)]"
+          >
+            <p
+              class="font-ryumin-h text-white text-[6px] leading-[8px] xs:text-[10px] xs:leading-[12px] sm:text-[11px] sm:leading-[13px] sm2:text-[12px] sm2:leading-[14px] md:text-[13px] md:leading-[15px] md2:text-[14px] md2:leading-[16px] lg:text-[15px] lg:leading-[17px] xl:text-[17px] xl:leading-[19px]"
+            >
+              Hana Global Support
+            </p>
+            <p
+              class="font-ryumin-h text-white text-[6px] leading-[8px] xs:text-[10px] xs:leading-[12px] sm:text-[11px] sm:leading-[13px] sm2:text-[12px] sm2:leading-[14px] md:text-[13px] md:leading-[15px] md2:text-[14px] md2:leading-[16px] lg:text-[15px] lg:leading-[17px] xl:text-[17px] xl:leading-[19px]"
+            >
+              代表取締役社長 松野 小百合
+            </p>
+          </div>
+        </div>
+        <div class="relative flex-1 min-w-0">
+          <img
+            src="./images/home-page/02-hero/person-2-mobile.png"
+            alt="取締役 韓 美憂"
+            class="w-full h-auto block"
+          />
+          <div
+            class="absolute left-0 bottom-0 w-full h-[36px] pb-1.5 px-[10px] xs:h-[46px] xs:pb-2 sm:h-[48px] sm2:h-[50px] md:h-[52px] md2:h-[56px] lg:h-[60px] lg:pb-4 lg:px-6 xl:h-[64px] xl:px-7 flex flex-col justify-end bg-[rgba(35,26,20,0.5)]"
+          >
+            <p
+              class="font-ryumin-h text-white text-[6px] leading-[8px] xs:text-[10px] xs:leading-[12px] sm:text-[11px] sm:leading-[13px] sm2:text-[12px] sm2:leading-[14px] md:text-[13px] md:leading-[15px] md2:text-[14px] md2:leading-[16px] lg:text-[15px] lg:leading-[17px] xl:text-[17px] xl:leading-[19px]"
+            >
+              取締役 韓 美憂
+            </p>
+          </div>
+        </div>
+        <div class="relative flex-1 min-w-0">
+          <img
+            src="./images/home-page/02-hero/person-3-mobile.png"
+            alt="取締役 金 花仙"
+            class="w-full h-auto block"
+          />
+          <div
+            class="absolute left-0 bottom-0 w-full h-[36px] pb-1.5 px-[10px] xs:h-[46px] xs:pb-2 sm:h-[48px] sm2:h-[50px] md:h-[52px] md2:h-[56px] lg:h-[60px] lg:pb-4 lg:px-6 xl:h-[64px] xl:px-7 flex flex-col justify-end bg-[rgba(35,26,20,0.5)]"
+          >
+            <p
+              class="font-ryumin-h text-white text-[6px] leading-[8px] xs:text-[10px] xs:leading-[12px] sm:text-[11px] sm:leading-[13px] sm2:text-[12px] sm2:leading-[14px] md:text-[13px] md:leading-[15px] md2:text-[14px] md2:leading-[16px] lg:text-[15px] lg:leading-[17px] xl:text-[17px] xl:leading-[19px]"
+            >
+              取締役 金 花仙
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- Banner — CTA strip                                              -->
+    <!-- ================================================================ -->
+    <section
+      class="relative w-full max-w-[1920px] mx-auto overflow-hidden h-[159px] bg-[url('./images/home-page/03-banner/bg.png')] bg-cover bg-center bg-no-repeat"
+    >
+      <a
+        href="#contact"
+        class="flex h-full items-center justify-center text-center px-[10px] sm:px-5 hover:opacity-90 transition-opacity"
+      >
+        <div
+          class="font-noto-sans-b text-white text-[15px] leading-[24px] xs:text-[16px] xs:leading-[26px] sm:text-[18px] sm:leading-[28px] md:text-[22px] md:leading-[30px] lg:text-[28px] lg:leading-[40px]"
+        >
+          人手不足を劇的に解消する<span
+            class="inline-block bg-[#f7e8ee] text-[#990033] font-noto-sans-b px-[6px] text-[18px] leading-[24px] xs:text-[19px] xs:leading-[26px] sm:text-[21px] sm:leading-[28px] md:text-[26px] md:leading-[30px] lg:text-[34px] lg:leading-[40px]"
+            >インド即戦力人材</span
+          >に関する<br aria-hidden="true" />ご相談・お問い合わせはこちら
+        </div>
+      </a>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- About — about-stack ≤1100: flex-col + px ladder. Row above 1100   -->
+    <!-- ================================================================ -->
+    <section
+      class="w-full max-w-[1920px] mx-auto py-[36px] xs:py-[40px] sm:py-[48px] sm2:py-[52px] md:py-[56px] about-row:py-[60px]"
+    >
+      <!-- Header -->
+      <div
+        class="max-w-[1920px] mx-auto about-stack:px-[10px] about-sm:px-5 about-sm2:px-8 about-md:px-10 about-md2:px-12 about-row:px-0 text-center"
+      >
+        <p
+          class="font-noto-syriac-r text-[#B79D7B] text-[14px] leading-[24px] tracking-[2.2px] xs:text-[15px] xs:leading-[26px] xs:tracking-[2.4px] sm:text-[16px] sm:leading-[28px] sm:tracking-[2.6px] sm2:text-[17px] sm2:leading-[30px] sm2:tracking-[2.8px] md:text-[18px] md:leading-[32px] md:tracking-[3px] md2:text-[19px] md2:leading-[33px] md2:tracking-[3.1px] about-row:text-[20px] about-row:leading-[34px] about-row:tracking-[3.2px]"
+        >
+          ABOUT
+        </p>
+        <h2
+          class="font-noto-sans-b text-[#1A1A1A] text-[22px] leading-[32px] xs:text-[24px] xs:leading-[34px] sm:text-[26px] sm:leading-[38px] sm2:text-[28px] sm2:leading-[42px] md:text-[32px] md:leading-[46px] md2:text-[36px] md2:leading-[52px] about-row:text-[40px] about-row:leading-[59px]"
+        >
+          なぜ、Hana Globalの人材は<br />
+          <span class="font-noto-sans-b relative inline"
+            ><span class="relative z-[1]">入国初日から別格に動ける</span
+            ><span
+              class="absolute left-0 bottom-[2px] w-full h-[3px] bg-[#ffe05f] z-0 pointer-events-none sm:bottom-[3px] sm:h-[4px] md:bottom-[3px] md:h-[4px] about-row:bottom-[4px] about-row:h-[5px]"
+              aria-hidden="true"
+            ></span></span
+          >のか？
+        </h2>
+      </div>
+
+      <!-- Body — map watermark + fluid columns -->
+      <div
+        class="relative max-w-[1920px] mx-auto mt-[28px] xs:mt-[30px] sm:mt-[32px] md:mt-[36px] about-row:mt-[40px]"
+      >
+        <img
+          src="./images/home-page/04-about/bg-map.png"
+          alt=""
+          aria-hidden="true"
+          class="absolute top-0 left-0 about-stack:left-auto about-stack:right-0 w-[537.1255px] about-stack:w-[320px] max-w-full h-auto pointer-events-none z-0 select-none"
+        />
+        <div
+          class="relative z-[1] flex about-stack:flex-col items-start gap-[24px] sm:gap-[28px] about-row:gap-[32px] about-stack:px-[10px] about-sm:px-5 about-sm2:px-8 about-md:px-10 about-md2:px-12 about-row:pl-[20px]"
+        >
+          <!-- Text -->
+          <div
+            class="w-full min-w-0 max-w-[540px] about-stack:max-w-none shrink-0 ml-[max(0px,calc((100%-1120px)/2))] about-stack:ml-0"
+          >
+            <h3
+              class="font-noto-sans-b text-[#1A1A1A] text-[20px] leading-[30px] xs:text-[21px] xs:leading-[31px] sm:text-[22px] sm:leading-[32px] sm2:text-[24px] sm2:leading-[36px] md:text-[26px] md:leading-[38px] md2:text-[28px] md2:leading-[42px] about-row:text-[32px] about-row:leading-[48px]"
+            >
+              それは、<br />
+              バックにある組織のスケールが<br />
+              違うからです。
+            </h3>
+            <p
+              class="font-noto-sans-r text-[#1A1A1A] text-[14px] leading-[26px] xs:text-[14px] xs:leading-[26px] sm:text-[15px] sm:leading-[28px] sm2:text-[16px] sm2:leading-[30px] md:text-[17px] md:leading-[32px] md2:text-[17px] md2:leading-[32px] about-row:text-[18px] about-row:leading-[34px] mt-[20px] xs:mt-[22px] sm:mt-[24px] md:mt-[28px] about-row:mt-[32px]"
+            >
+              インドの現役首相がトップを務める国家級の公的教育機関「NAC」世界12カ国・約25,000人の従業員を擁する1,800億円規模のインフラメガ企業「ラムキーグループ」この国家・最高峰のインフラ企業ネットワークが、貴社のためにクリーンで優秀な人材を厳選・育成しています。
+            </p>
+
+            <!-- CTAs -->
+            <div
+              class="flex flex-col gap-[10px] xs:gap-[11px] sm:gap-[12px] about-row:gap-[14px] mt-[28px] xs:mt-[30px] sm:mt-[32px] md:mt-[36px] about-row:mt-[40px]"
+            >
+              <a href="#" class="group block w-fit max-w-full">
+                <span
+                  class="relative inline-flex items-center max-w-full h-[30px] pl-[10px] pr-[16px] group-hover:pr-[10px] xs:h-[31px] sm:h-[32px] md:h-[33px] about-row:h-[34px] about-row:pl-[12px] about-row:pr-[18px] about-row:group-hover:pr-[12px] bg-[#eae4e6] rounded-[2px] border-[2px] border-transparent group-hover:border-[#990033] font-noto-sans-r font-normal group-hover:!font-medium text-[#1A1A1A] text-[14px] leading-[30px] xs:text-[14px] sm:text-[15px] sm2:text-[16px] md:text-[17px] about-row:text-[18px] about-row:leading-[34px] whitespace-nowrap transition-[border-color,font-weight] duration-200"
+                  >教育体制を見てみる
+                  <svg
+                    aria-hidden="true"
+                    class="absolute top-1/2 -translate-y-1/2 right-[-16px] group-hover:right-[-24px] h-[3px] w-[20px] xs:h-[3px] xs:w-[21px] sm:h-[3.5px] sm:w-[22px] md:h-[3.5px] md:w-[24px] about-row:h-[4px] about-row:w-[26px] about-row:right-[-20px] about-row:group-hover:right-[-27px] fill-[#8c888a] group-hover:fill-[#990033] transition-all duration-200 pointer-events-none"
+                    viewBox="0 0 356 47"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M355 46L301 0L293 10L318 33H0V46H355Z" />
+                  </svg>
+                </span>
+              </a>
+              <a href="#" class="group block w-fit max-w-full">
+                <span
+                  class="relative inline-flex items-center max-w-full h-[30px] pl-[10px] pr-[16px] group-hover:pr-[10px] xs:h-[31px] sm:h-[32px] md:h-[33px] about-row:h-[34px] about-row:pl-[12px] about-row:pr-[18px] about-row:group-hover:pr-[12px] bg-[#eae4e6] rounded-[2px] border-[2px] border-transparent group-hover:border-[#990033] font-noto-sans-r font-normal group-hover:!font-medium text-[#1A1A1A] text-[14px] leading-[30px] xs:text-[14px] sm:text-[15px] sm2:text-[16px] md:text-[17px] about-row:text-[18px] about-row:leading-[34px] whitespace-nowrap transition-[border-color,font-weight] duration-200"
+                  >紹介可能な人材・職種はこちら
+                  <svg
+                    aria-hidden="true"
+                    class="absolute top-1/2 -translate-y-1/2 right-[-16px] group-hover:right-[-24px] h-[3px] w-[20px] xs:h-[3px] xs:w-[21px] sm:h-[3.5px] sm:w-[22px] md:h-[3.5px] md:w-[24px] about-row:h-[4px] about-row:w-[26px] about-row:right-[-20px] about-row:group-hover:right-[-27px] fill-[#8c888a] group-hover:fill-[#990033] transition-all duration-200 pointer-events-none"
+                    viewBox="0 0 356 47"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M355 46L301 0L293 10L318 33H0V46H355Z" />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Image — fluid width, caps at 900px, aligns right on large screens -->
+          <div
+            class="w-full min-w-0 flex flex-1 justify-end about-stack:block about-stack:flex-none"
+          >
+            <img
+              src="./images/home-page/04-about/section-image.png"
+              alt=""
+              class="block w-full max-w-[900px] ml-auto h-auto about-stack:max-w-none about-stack:ml-0"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- About B                                                         -->
+    <!-- ================================================================ -->
+    <section
+      class="w-full max-w-[1920px] mx-auto overflow-hidden pb-[36px] xs:pb-[40px] sm:pb-[48px] sm2:pb-[52px] md:pb-[56px] about-row:pb-[60px]"
+    >
+      <div class="max-w-[1920px] mx-auto">
+        <div
+          class="px-[10px] sm:px-5 sm2:px-8 md:px-10 md2:px-12 about-b-row:px-0"
+        >
+          <!-- Top accent line -->
+          <div
+            class="w-[1px] about-b-row:w-[2px] h-[80px] md:h-[120px] bg-[#990033] mx-auto"
+            aria-hidden="true"
+          ></div>
+
+          <!-- Heading -->
+          <h2
+            class="font-ryumin-h text-center bg-gradient-to-b from-[#990033] to-[#1A1A1A] bg-clip-text text-transparent text-[22px] leading-[30px] xs:text-[24px] xs:leading-[32px] sm:text-[28px] sm:leading-[36px] sm2:text-[32px] sm2:leading-[40px] md:text-[36px] md:leading-[46px] md2:text-[40px] md2:leading-[52px] about-b-row:text-[44px] about-b-row:leading-[58px] mt-[12px] xs:mt-[14px] sm:mt-[16px] md:mt-[18px] about-b-row:mt-[20px]"
+          >
+            社長、現場のこんな悲鳴に<br />
+            耳を塞いでいませんか？
+          </h2>
+        </div>
+
+        <!-- Pain points — man-bg (no outer px; px lives inside) -->
+        <div
+          class="w-full h-[420px] about-b-h2:h-[580px] about-b-h3:h-[606px] about-b-row:h-[472px] mt-[20px] xs:mt-[22px] sm:mt-[24px] md:mt-[28px] about-b-row:mt-[30px] pt-[16px] pb-[16px] xs:pt-[20px] xs:pb-[20px] sm:pt-[24px] sm:pb-[24px] sm2:pt-[28px] sm2:pb-[28px] md:pt-[32px] md:pb-[32px] md2:pt-[36px] md2:pb-[36px] about-b-row:py-[40px] px-[10px] sm:px-5 sm2:px-8 md:px-10 md2:px-12 about-b-row:px-[40px] rounded-[3px] flex flex-col items-start justify-start bg-[url('./images/home-page/04-about/man-bg.png')] bg-cover bg-no-repeat bg-right"
+        >
+          <ul
+            class="flex flex-col w-full about-b-row:w-fit gap-[16px] xs:gap-[18px] sm:gap-[20px] md:gap-[22px] about-b-row:gap-[24px] mx-auto"
+          >
+            <li
+              class="flex items-start gap-[4px] sm:gap-[5px] about-b-row:gap-[6px]"
+            >
+              <img
+                src="./images/home-page/04-about/check.svg"
+                alt=""
+                aria-hidden="true"
+                class="shrink-0 w-[14px] xs:w-[15px] sm:w-[16px] md:w-[18px] about-b-row:w-[20px] mt-[6px] xs:mt-[7px] sm:mt-[8px] about-b-row:mt-[10px]"
+              />
+              <p
+                class="font-noto-sans-r text-[#1A1A1A] text-[14px] leading-[26px] xs:text-[14px] xs:leading-[26px] sm:text-[15px] sm:leading-[28px] sm2:text-[16px] sm2:leading-[30px] md:text-[17px] md:leading-[32px] md2:text-[18px] md2:leading-[33px] about-b-row:text-[20px] about-b-row:leading-[34px]"
+              >
+                <span class="font-noto-sans-b about-b-uline"
+                  >人が足りない。</span
+                >このままでは次の現場の入札（受注）を諦めるしかない…
+              </p>
+            </li>
+            <li
+              class="flex items-start gap-[4px] sm:gap-[5px] about-b-row:gap-[6px]"
+            >
+              <img
+                src="./images/home-page/04-about/check.svg"
+                alt=""
+                aria-hidden="true"
+                class="shrink-0 w-[14px] xs:w-[15px] sm:w-[16px] md:w-[18px] about-b-row:w-[20px] mt-[6px] xs:mt-[7px] sm:mt-[8px] about-b-row:mt-[10px]"
+              />
+              <p
+                class="font-noto-sans-r text-[#1A1A1A] text-[14px] leading-[26px] xs:text-[14px] xs:leading-[26px] sm:text-[15px] sm:leading-[28px] sm2:text-[16px] sm2:leading-[30px] md:text-[17px] md:leading-[32px] md2:text-[18px] md2:leading-[33px] about-b-row:text-[20px] about-b-row:leading-[34px]"
+              >
+                外国人材を入れたが、<span class="about-b-uline"
+                  >指示が伝わらず、日本の現場マナーも守れなくて逆に<span
+                    class="font-noto-sans-b"
+                    >教育コストがかさむ</span
+                  >…</span
+                >
+              </p>
+            </li>
+            <li
+              class="flex items-start gap-[4px] sm:gap-[5px] about-b-row:gap-[6px]"
+            >
+              <img
+                src="./images/home-page/04-about/check.svg"
+                alt=""
+                aria-hidden="true"
+                class="shrink-0 w-[14px] xs:w-[15px] sm:w-[16px] md:w-[18px] about-b-row:w-[20px] mt-[6px] xs:mt-[7px] sm:mt-[8px] about-b-row:mt-[10px]"
+              />
+              <p
+                class="font-noto-sans-r text-[#1A1A1A] text-[14px] leading-[26px] xs:text-[14px] xs:leading-[26px] sm:text-[15px] sm:leading-[28px] sm2:text-[16px] sm2:leading-[30px] md:text-[17px] md:leading-[32px] md2:text-[18px] md2:leading-[33px] about-b-row:text-[20px] about-b-row:leading-[34px]"
+              >
+                特定技能やビザの、あの<span
+                  class="font-noto-sans-b about-b-uline"
+                  >複雑で膨大な行政手続きをやる社内リソースなんてどこにもない！</span
+                >
+              </p>
+            </li>
+            <li
+              class="flex items-start gap-[4px] sm:gap-[5px] about-b-row:gap-[6px]"
+            >
+              <img
+                src="./images/home-page/04-about/check.svg"
+                alt=""
+                aria-hidden="true"
+                class="shrink-0 w-[14px] xs:w-[15px] sm:w-[16px] md:w-[18px] about-b-row:w-[20px] mt-[6px] xs:mt-[7px] sm:mt-[8px] about-b-row:mt-[10px]"
+              />
+              <p
+                class="font-noto-sans-r text-[#1A1A1A] text-[14px] leading-[26px] xs:text-[14px] xs:leading-[26px] sm:text-[15px] sm:leading-[28px] sm2:text-[16px] sm2:leading-[30px] md:text-[17px] md:leading-[32px] md2:text-[18px] md2:leading-[33px] about-b-row:text-[20px] about-b-row:leading-[34px]"
+              >
+                せっかく多額の費用を払って採用したのに、<span
+                  class="font-noto-sans-b about-b-uline"
+                  >1年も経たずに失踪・早期離職</span
+                >されたら会社が傾く…
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Solution statement -->
+        <div
+          class="px-[10px] sm:px-5 sm2:px-8 md:px-10 md2:px-12 about-b-row:px-0"
+        >
+          <p
+            class="font-noto-sans-b text-[#1A1A1A] text-center text-[18px] leading-[28px] xs:text-[19px] xs:leading-[30px] sm:text-[21px] sm:leading-[34px] sm2:text-[23px] sm2:leading-[36px] md:text-[26px] md:leading-[42px] md2:text-[28px] md2:leading-[45px] about-b-row:text-[30px] about-b-row:leading-[49px] mt-[20px] xs:mt-[22px] sm:mt-[24px] md:mt-[28px] about-b-row:mt-[30px]"
+          >
+            これらの絶望的な課題、すべて<br />
+            <span class="text-[#990033]"
+              >「Hana Global Support コンソーシアム」</span
+            >が<br />
+            完全ワンストップで根こそぎ解決します。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- Banner — CTA strip                                              -->
+    <!-- ================================================================ -->
+    <section
+      class="relative w-full max-w-[1920px] mx-auto overflow-hidden h-[159px] bg-[url('./images/home-page/03-banner/bg.png')] bg-cover bg-center bg-no-repeat"
+    >
+      <a
+        href="#contact"
+        class="flex h-full items-center justify-center text-center px-[10px] sm:px-5 hover:opacity-90 transition-opacity"
+      >
+        <div
+          class="font-noto-sans-b text-white text-[15px] leading-[24px] xs:text-[16px] xs:leading-[26px] sm:text-[18px] sm:leading-[28px] md:text-[22px] md:leading-[30px] lg:text-[28px] lg:leading-[40px]"
+        >
+          人手不足を劇的に解消する<span
+            class="inline-block bg-[#f7e8ee] text-[#990033] font-noto-sans-b px-[6px] text-[18px] leading-[24px] xs:text-[19px] xs:leading-[26px] sm:text-[21px] sm:leading-[28px] md:text-[26px] md:leading-[30px] lg:text-[34px] lg:leading-[40px]"
+            >インド即戦力人材</span
+          >に関する<br aria-hidden="true" />ご相談・お問い合わせはこちら
+        </div>
+      </a>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- Footer                                                          -->
+    <!-- ================================================================ -->
+    <footer>
+      <div
+        class="bg-[#f7f7f7] max-w-[1920px] mx-auto py-[30px] px-[10px] sm:px-5 sm2:px-8 md:px-10 md2:px-12 lg:px-[48px]"
+      >
+        <div class="flex flex-col">
+          <!-- Logo + links -->
+          <div class="flex justify-center">
+            <div
+              class="flex justify-between items-start md:items-center gap-[16px] md:gap-[32px] w-full md:w-auto"
+            >
+              <!-- Logo -->
+              <div class="shrink-0">
+                <a href="#">
+                  <img
+                    src="./images/home-page/01-header-footer/logo.png"
+                    alt="Hana Global Edutech"
+                    class="w-[170px] h-auto block"
+                  />
+                </a>
+              </div>
+
+              <!-- Links (+ copyright on desktop) -->
+              <div class="flex flex-col">
+                <nav
+                  class="flex flex-col items-start gap-y-[30px] md:flex-row md:flex-wrap md:items-center md:gap-x-[32px] md:gap-y-[20px]"
+                >
+                  <a
+                    href="#"
+                    class="font-noto-sans-r text-[#1A1A1A] text-[16px] leading-none tracking-[0.16px] underline hover:opacity-60 transition-opacity whitespace-nowrap"
+                    >トップページ</a
+                  >
+                  <a
+                    href="#"
+                    class="font-noto-sans-r text-[#1A1A1A] text-[16px] leading-none tracking-[0.16px] underline hover:opacity-60 transition-opacity whitespace-nowrap"
+                    >独自の強み・教育体制</a
+                  >
+                  <a
+                    href="#"
+                    class="font-noto-sans-r text-[#1A1A1A] text-[16px] leading-none tracking-[0.16px] underline hover:opacity-60 transition-opacity whitespace-nowrap"
+                    >紹介可能な人材・職種</a
+                  >
+                  <a
+                    href="#"
+                    class="font-noto-sans-r text-[#1A1A1A] text-[16px] leading-none tracking-[0.16px] underline hover:opacity-60 transition-opacity whitespace-nowrap"
+                    >ご紹介の流れ・費用</a
+                  >
+                  <a
+                    href="#"
+                    class="font-noto-sans-r text-[#1A1A1A] text-[16px] leading-none tracking-[0.16px] underline hover:opacity-60 transition-opacity whitespace-nowrap"
+                    >運営体制・会社概要</a
+                  >
+                  <a
+                    href="#contact"
+                    class="font-noto-sans-r text-[#1A1A1A] text-[16px] leading-none tracking-[0.16px] underline hover:opacity-60 transition-opacity whitespace-nowrap"
+                    >お問い合わせ</a
+                  >
+                </nav>
+                <p
+                  class="hidden md:block font-noto-sans-r text-[#999999] text-[14px] leading-none tracking-[0.14px] mt-[24px]"
+                >
+                  © 2026 Hana Global Support
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Copyright — mobile only, centered below -->
+          <p
+            class="md:hidden font-noto-sans-r text-[#999999] text-[14px] leading-none tracking-[0.14px] text-center mt-[32px]"
+          >
+            © 2026 Hana Global Support
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Rest of the landing page content can go here -->
+
+    <script src="main.js"></script>
+  </body>
 </html>

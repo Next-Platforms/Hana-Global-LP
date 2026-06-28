@@ -1,109 +1,220 @@
-/* Global Settings */
-body {
-  background-color: #ffffff;
-  color: #1a1a1a;
-  font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 400;
-}
-
 /* Local Font Faces */
 @font-face {
-  font-family: 'A-OTF Gothic MB101 Pro';
-  src: url('./fonts/A-OTF Gothic MB101 Pro B.otf') format('opentype');
+  font-family: "A-OTF Gothic MB101 Pro";
+  src: url("./fonts/A-OTF Gothic MB101 Pro B.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'A-OTF Ryumin Pro';
-  src: url('./fonts/A-OTF Ryumin Pro H-KL.otf') format('opentype');
+  font-family: "A-OTF Ryumin Pro";
+  src: url("./fonts/A-OTF Ryumin Pro H-KL.otf") format("opentype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Noto Sans JP';
-  src: url('./fonts/NotoSansJP-Regular.ttf') format('truetype');
+  font-family: "Noto Sans JP";
+  src: url("./fonts/NotoSansJP-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Noto Sans JP';
-  src: url('./fonts/NotoSansJP-Medium.ttf') format('truetype');
+  font-family: "Noto Sans JP";
+  src: url("./fonts/NotoSansJP-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Noto Sans JP';
-  src: url('./fonts/NotoSansJP-Bold.ttf') format('truetype');
+  font-family: "Noto Sans JP";
+  src: url("./fonts/NotoSansJP-Bold.ttf") format("truetype");
   font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Syriac";
+  src: url("./fonts/NotoSansSyriac-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Syriac";
+  src: url("./fonts/NotoSansSyriac-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Syriac";
+  src: url("./fonts/NotoSansSyriac-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Syriac";
+  src: url("./fonts/NotoSansSyriac-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Syriac";
+  src: url("./fonts/NotoSansSyriac-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Syriac";
+  src: url("./fonts/NotoSansSyriac-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Syriac";
+  src: url("./fonts/NotoSansSyriac-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Syriac";
+  src: url("./fonts/NotoSansSyriac-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans Syriac";
+  src: url("./fonts/NotoSansSyriac-Black.ttf") format("truetype");
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 /* Font Helper Classes */
-
-/* 1. A-OTF Gothic MB101 Pro */
 .font-mb101-b {
-  font-family: 'A-OTF Gothic MB101 Pro', sans-serif;
+  font-family: "A-OTF Gothic MB101 Pro", sans-serif;
   font-weight: 700;
 }
 
-/* 2. A-OTF Ryumin Pro */
 .font-ryumin-h {
-  font-family: 'A-OTF Ryumin Pro', serif;
+  font-family: "A-OTF Ryumin Pro", serif;
   font-weight: 900;
 }
 
-/* 3. Noto Sans JP */
 .font-noto-sans-r {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: 400;
 }
 
 .font-noto-sans-m {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: 500;
 }
 
 .font-noto-sans-b {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-weight: 700;
 }
 
-/* 4. Kozuka Gothic Pr6N (Adobe Typekit) */
 .font-kozuka-el {
-  font-family: 'kozuka-gothic-pr6n', sans-serif;
+  font-family: "kozuka-gothic-pr6n", sans-serif;
   font-weight: 200;
 }
 
 .font-kozuka-l {
-  font-family: 'kozuka-gothic-pr6n', sans-serif;
+  font-family: "kozuka-gothic-pr6n", sans-serif;
   font-weight: 300;
 }
 
 .font-kozuka-r {
-  font-family: 'kozuka-gothic-pr6n', sans-serif;
+  font-family: "kozuka-gothic-pr6n", sans-serif;
   font-weight: 400;
 }
 
 .font-kozuka-m {
-  font-family: 'kozuka-gothic-pr6n', sans-serif;
+  font-family: "kozuka-gothic-pr6n", sans-serif;
   font-weight: 500;
 }
 
 .font-kozuka-b {
-  font-family: 'kozuka-gothic-pr6n', sans-serif;
+  font-family: "kozuka-gothic-pr6n", sans-serif;
   font-weight: 700;
 }
 
-.font-kozuka-h {
-  font-family: 'kozuka-gothic-pr6n', sans-serif;
+.font-noto-syriac-th {
+  font-family: "Noto Sans Syriac", sans-serif;
+  font-weight: 100;
+}
+
+.font-noto-syriac-el {
+  font-family: "Noto Sans Syriac", sans-serif;
+  font-weight: 200;
+}
+
+.font-noto-syriac-l {
+  font-family: "Noto Sans Syriac", sans-serif;
+  font-weight: 300;
+}
+
+.font-noto-syriac-r {
+  font-family: "Noto Sans Syriac", sans-serif;
+  font-weight: 400;
+}
+
+.font-noto-syriac-m {
+  font-family: "Noto Sans Syriac", sans-serif;
+  font-weight: 500;
+}
+
+.font-noto-syriac-sb {
+  font-family: "Noto Sans Syriac", sans-serif;
+  font-weight: 600;
+}
+
+.font-noto-syriac-b {
+  font-family: "Noto Sans Syriac", sans-serif;
+  font-weight: 700;
+}
+
+.font-noto-syriac-eb {
+  font-family: "Noto Sans Syriac", sans-serif;
+  font-weight: 800;
+}
+
+.font-noto-syriac-black {
+  font-family: "Noto Sans Syriac", sans-serif;
   font-weight: 900;
+}
+
+/* Yellow underline bar — multi-line, matches About h-[5px] at bottom-[4px] */
+.about-b-uline {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background-image: linear-gradient(
+    transparent calc(100% - 9px),
+    #ffe05f calc(100% - 9px),
+    #ffe05f calc(100% - 4px),
+    transparent calc(100% - 4px)
+  );
 }
