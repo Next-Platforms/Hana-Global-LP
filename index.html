@@ -74,6 +74,12 @@
       };
     </script>
 
+    <!-- Splide carousel -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide-core.min.css"
+    />
+
     <!-- Custom CSS (fonts only) -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -318,7 +324,7 @@
     </section>
 
     <!-- ================================================================ -->
-    <!-- Hero B — hb-max4 ≤1350: flex-col + mobile photos. Row above 1350       -->
+    <!-- Hero B — hb-max4 ≤1350: flex-col + mobile photos. Row above 1350  -->
     <!-- ================================================================ -->
     <section
       class="relative w-full max-w-[1920px] mx-auto overflow-hidden flex hb-max4:flex-col hb-min:grid hb-min:grid-cols-[55%_45%] h-[240px] hb-max:h-[210px] hb-max2:h-[180px] hb-max4:h-auto bg-[#f2f2f2]"
@@ -514,7 +520,7 @@
     </section>
 
     <!-- ================================================================ -->
-    <!-- Banner — CTA strip                                              -->
+    <!-- Banner — CTA strip                                               -->
     <!-- ================================================================ -->
     <section
       class="relative w-full max-w-[1920px] mx-auto overflow-hidden h-[159px] bg-[url('./images/home-page/03-banner/bg.png')] bg-cover bg-center bg-no-repeat"
@@ -643,7 +649,7 @@
     </section>
 
     <!-- ================================================================ -->
-    <!-- About B                                                         -->
+    <!-- About B                                                          -->
     <!-- ================================================================ -->
     <section
       class="w-full max-w-[1920px] mx-auto overflow-hidden pb-[36px] xs:pb-[40px] sm:pb-[48px] sm2:pb-[52px] md:pb-[56px] about-row:pb-[60px]"
@@ -667,9 +673,9 @@
           </h2>
         </div>
 
-        <!-- Pain points — man-bg (no outer px; px lives inside) -->
+        <!-- Pain points — man-bg capped at 1120px content width -->
         <div
-          class="w-full h-[420px] about-b-h2:h-[580px] about-b-h3:h-[606px] about-b-row:h-[472px] mt-[20px] xs:mt-[22px] sm:mt-[24px] md:mt-[28px] about-b-row:mt-[30px] pt-[16px] pb-[16px] xs:pt-[20px] xs:pb-[20px] sm:pt-[24px] sm:pb-[24px] sm2:pt-[28px] sm2:pb-[28px] md:pt-[32px] md:pb-[32px] md2:pt-[36px] md2:pb-[36px] about-b-row:py-[40px] px-[10px] sm:px-5 sm2:px-8 md:px-10 md2:px-12 about-b-row:px-[40px] rounded-[3px] flex flex-col items-start justify-start bg-[url('./images/home-page/04-about/man-bg.png')] bg-cover bg-no-repeat bg-right"
+          class="w-full max-w-[1120px] mx-auto h-[420px] about-b-h2:h-[580px] about-b-h3:h-[606px] about-b-row:h-[472px] mt-[20px] xs:mt-[22px] sm:mt-[24px] md:mt-[28px] about-b-row:mt-[30px] pt-[16px] pb-[16px] xs:pt-[20px] xs:pb-[20px] sm:pt-[24px] sm:pb-[24px] sm2:pt-[28px] sm2:pb-[28px] md:pt-[32px] md:pb-[32px] md2:pt-[36px] md2:pb-[36px] about-b-row:py-[40px] px-[10px] sm:px-5 sm2:px-8 md:px-10 md2:px-12 about-b-row:px-[40px] rounded-[3px] flex flex-col items-start justify-start bg-[url('./images/home-page/04-about/man-bg.png')] bg-cover bg-no-repeat bg-right"
         >
           <ul
             class="flex flex-col w-full about-b-row:w-fit gap-[16px] xs:gap-[18px] sm:gap-[20px] md:gap-[22px] about-b-row:gap-[24px] mx-auto"
@@ -768,7 +774,7 @@
     </section>
 
     <!-- ================================================================ -->
-    <!-- Banner — CTA strip                                              -->
+    <!-- Banner — CTA strip                                               -->
     <!-- ================================================================ -->
     <section
       class="relative w-full max-w-[1920px] mx-auto overflow-hidden h-[159px] bg-[url('./images/home-page/03-banner/bg.png')] bg-cover bg-center bg-no-repeat"
@@ -789,7 +795,621 @@
     </section>
 
     <!-- ================================================================ -->
-    <!-- Footer                                                          -->
+    <!-- Reason                                                           -->
+    <!-- ================================================================ -->
+    <section
+      class="w-full max-w-[1920px] mx-auto bg-white py-[36px] xs:py-[40px] sm:py-[48px] sm2:py-[52px] md:py-[56px] about-row:pt-[60px] about-row:pb-[80px]"
+    >
+      <!-- Section header -->
+      <div
+        class="max-w-[1920px] mx-auto text-center about-stack:px-[10px] about-sm:px-5 about-sm2:px-8 about-md:px-10 about-md2:px-12 about-row:px-0"
+      >
+        <p
+          class="font-noto-syriac-r text-[#B79D7B] text-[14px] leading-[24px] tracking-[2.2px] xs:text-[15px] xs:leading-[26px] xs:tracking-[2.4px] sm:text-[16px] sm:leading-[28px] sm:tracking-[2.6px] sm2:text-[17px] sm2:leading-[30px] sm2:tracking-[2.8px] md:text-[18px] md:leading-[32px] md:tracking-[3px] md2:text-[19px] md2:leading-[33px] md2:tracking-[3.1px] about-row:text-[20px] about-row:leading-[34px] about-row:tracking-[3.2px]"
+        >
+          REASON
+        </p>
+        <h2
+          class="font-noto-sans-b text-[#1A1A1A] text-[22px] leading-[32px] xs:text-[24px] xs:leading-[34px] sm:text-[26px] sm:leading-[38px] sm2:text-[28px] sm2:leading-[42px] md:text-[32px] md:leading-[46px] md2:text-[36px] md2:leading-[52px] about-row:text-[40px] about-row:leading-[59px]"
+        >
+          Hana Globalが選ばれる<br />
+          3つの理由
+        </h2>
+        <p
+          class="font-noto-sans-r text-[#1A1A1A] text-[14px] leading-[26px] xs:text-[14px] xs:leading-[26px] sm:text-[15px] sm:leading-[28px] sm2:text-[16px] sm2:leading-[30px] md:text-[17px] md:leading-[32px] md2:text-[17px] md2:leading-[32px] about-row:text-[18px] about-row:leading-[34px] mt-[16px] xs:mt-[18px] sm:mt-[20px] about-row:mt-[20px]"
+        >
+          私たちが提供するのは、単なる「人材の紹介」ではありません。<br />
+          入国したその日から日本の現場で輝ける、確かな仕組みを整えています。
+        </p>
+      </div>
+
+      <!-- Cards -->
+      <div
+        class="mt-[32px] xs:mt-[36px] sm:mt-[40px] md:mt-[48px] about-row:mt-[60px]"
+      >
+        <!-- Card 01 — text left, image right -->
+        <div
+          class="flex flex-col md:flex-row items-center gap-[24px] md:gap-[16px] md2:gap-[20px] lg:gap-[28px] about-row:gap-[48px] about-stack:px-[10px] about-sm:px-5 about-sm2:px-8 about-md:px-10 about-md2:px-12 about-row:px-0"
+        >
+          <div
+            class="w-full min-w-0 md:max-w-[45%] about-row:max-w-[560px] shrink-0 order-2 md:order-1 ml-[max(0px,calc((100%-1120px)/2))] about-stack:ml-0 about-row:pl-[20px]"
+          >
+            <div
+              class="flex items-start gap-[10px] sm:gap-[11px] md:gap-[8px] md2:gap-[10px] lg:gap-[12px] about-row:gap-[16px]"
+            >
+              <span
+                class="font-noto-sans-r text-[#B79D7B] text-[48px] leading-[52px] tracking-[0.96px] xs:text-[50px] xs:leading-[54px] sm:text-[52px] sm:leading-[56px] sm2:text-[54px] sm2:leading-[58px] md:text-[44px] md:leading-[48px] md2:text-[48px] md2:leading-[52px] lg:text-[56px] lg:leading-[62px] xl:text-[64px] xl:leading-[70px] about-row:text-[72px] about-row:leading-[78px] about-row:tracking-[1.44px] shrink-0"
+                >01</span
+              >
+              <h3
+                class="font-noto-sans-b text-[#1A1A1A] text-[18px] leading-[28px] xs:text-[19px] xs:leading-[29px] sm:text-[20px] sm:leading-[30px] sm2:text-[20px] sm2:leading-[30px] md:text-[17px] md:leading-[26px] md2:text-[18px] md2:leading-[28px] lg:text-[22px] lg:leading-[34px] xl:text-[24px] xl:leading-[40px] about-row:text-[28px] about-row:leading-[45px]"
+              >
+                インド国内15校以上の<br />
+                提携大学から<span
+                  class="text-[#990033] text-[22px] leading-[30px] xs:text-[22px] sm:text-[22px] sm2:text-[22px] md:text-[20px] md:leading-[28px] md2:text-[22px] md2:leading-[30px] lg:text-[26px] lg:leading-[38px] xl:text-[28px] xl:leading-[42px] about-row:text-[36px] about-row:leading-[51px]"
+                  >優秀層を厳選</span
+                >
+              </h3>
+            </div>
+            <p
+              class="font-noto-sans-r text-[#1A1A1A] text-[14px] leading-[26px] sm:text-[15px] sm:leading-[28px] sm2:text-[15px] sm2:leading-[28px] md:text-[14px] md:leading-[26px] md2:text-[15px] md2:leading-[28px] lg:text-[16px] lg:leading-[30px] xl:text-[17px] xl:leading-[32px] about-row:text-[18px] about-row:leading-[34px] mt-[16px] sm:mt-[18px] md:mt-[20px] lg:mt-[24px] about-row:mt-[32px]"
+            >
+              単なる労働力の募集ではなく、就業意欲やコミュニケーション能力を総合的に評価し、適性のある人材のみを選抜・育成しています。
+            </p>
+          </div>
+          <div
+            class="w-full md:flex-1 md:min-w-0 flex order-1 md:order-2 md:justify-end"
+          >
+            <img
+              src="./images/home-page/05-reason/01.png"
+              alt=""
+              class="block w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+
+        <!-- Card 02 — image left, text right -->
+        <div
+          class="flex flex-col md:flex-row items-center gap-[24px] md:gap-[16px] md2:gap-[20px] lg:gap-[28px] about-row:gap-[48px] mt-[40px] xs:mt-[44px] sm:mt-[48px] about-row:mt-[40px] about-stack:px-[10px] about-sm:px-5 about-sm2:px-8 about-md:px-10 about-md2:px-12 about-row:px-0"
+        >
+          <div
+            class="w-full md:flex-1 md:min-w-0 flex order-1 md:justify-start"
+          >
+            <img
+              src="./images/home-page/05-reason/02.png"
+              alt=""
+              class="block w-full h-auto object-cover"
+            />
+          </div>
+          <div
+            class="w-full min-w-0 md:max-w-[45%] about-row:max-w-[560px] shrink-0 order-2 mr-[max(0px,calc((100%-1120px)/2))] about-stack:mr-0 about-row:pr-[20px]"
+          >
+            <div
+              class="flex items-start gap-[10px] sm:gap-[11px] md:gap-[8px] md2:gap-[10px] lg:gap-[12px] about-row:gap-[16px]"
+            >
+              <span
+                class="font-noto-sans-r text-[#B79D7B] text-[48px] leading-[52px] tracking-[0.96px] xs:text-[50px] xs:leading-[54px] sm:text-[52px] sm:leading-[56px] sm2:text-[54px] sm2:leading-[58px] md:text-[44px] md:leading-[48px] md2:text-[48px] md2:leading-[52px] lg:text-[56px] lg:leading-[62px] xl:text-[64px] xl:leading-[70px] about-row:text-[72px] about-row:leading-[78px] about-row:tracking-[1.44px] shrink-0"
+                >02</span
+              >
+              <h3
+                class="font-noto-sans-b text-[#1A1A1A] text-[18px] leading-[28px] xs:text-[19px] xs:leading-[29px] sm:text-[20px] sm:leading-[30px] sm2:text-[20px] sm2:leading-[30px] md:text-[17px] md:leading-[26px] md2:text-[18px] md2:leading-[28px] lg:text-[22px] lg:leading-[34px] xl:text-[24px] xl:leading-[40px] about-row:text-[28px] about-row:leading-[45px]"
+              >
+                5ヶ月間・<span
+                  class="text-[#990033] text-[22px] leading-[30px] xs:text-[22px] sm:text-[22px] sm2:text-[22px] md:text-[20px] md:leading-[28px] md2:text-[22px] md2:leading-[30px] lg:text-[26px] lg:leading-[38px] xl:text-[28px] xl:leading-[42px] about-row:text-[36px] about-row:leading-[51px]"
+                  >徹底教育</span
+                >による、<br />
+                確かな日本語力と日本式マナーの習得
+              </h3>
+            </div>
+            <p
+              class="font-noto-sans-r text-[#1A1A1A] text-[14px] leading-[26px] sm:text-[15px] sm:leading-[28px] sm2:text-[15px] sm2:leading-[28px] md:text-[14px] md:leading-[26px] md2:text-[15px] md2:leading-[28px] lg:text-[16px] lg:leading-[30px] xl:text-[17px] xl:leading-[32px] about-row:text-[18px] about-row:leading-[34px] mt-[16px] sm:mt-[18px] md:mt-[20px] lg:mt-[24px] about-row:mt-[32px]"
+            >
+              時間管理や日本の職場文化、ゴミの分別まで、日本の社会にスムーズに適応するための就業・生活ルールを事前に徹底教育します。
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 03 — text left, image right -->
+        <div
+          class="flex flex-col md:flex-row items-center gap-[24px] md:gap-[16px] md2:gap-[20px] lg:gap-[28px] about-row:gap-[48px] mt-[40px] xs:mt-[44px] sm:mt-[48px] about-row:mt-[40px] about-stack:px-[10px] about-sm:px-5 about-sm2:px-8 about-md:px-10 about-md2:px-12 about-row:px-0"
+        >
+          <div
+            class="w-full min-w-0 md:max-w-[45%] about-row:max-w-[560px] shrink-0 order-2 md:order-1 ml-[max(0px,calc((100%-1120px)/2))] about-stack:ml-0 about-row:pl-[20px]"
+          >
+            <div
+              class="flex items-start gap-[10px] sm:gap-[11px] md:gap-[8px] md2:gap-[10px] lg:gap-[12px] about-row:gap-[16px]"
+            >
+              <span
+                class="font-noto-sans-r text-[#B79D7B] text-[48px] leading-[52px] tracking-[0.96px] xs:text-[50px] xs:leading-[54px] sm:text-[52px] sm:leading-[56px] sm2:text-[54px] sm2:leading-[58px] md:text-[44px] md:leading-[48px] md2:text-[48px] md2:leading-[52px] lg:text-[56px] lg:leading-[62px] xl:text-[64px] xl:leading-[70px] about-row:text-[72px] about-row:leading-[78px] about-row:tracking-[1.44px] shrink-0"
+                >03</span
+              >
+              <h3
+                class="font-noto-sans-b text-[#1A1A1A] text-[18px] leading-[28px] xs:text-[19px] xs:leading-[29px] sm:text-[20px] sm:leading-[30px] sm2:text-[20px] sm2:leading-[30px] md:text-[17px] md:leading-[26px] md2:text-[18px] md2:leading-[28px] lg:text-[22px] lg:leading-[34px] xl:text-[24px] xl:leading-[40px] about-row:text-[28px] about-row:leading-[45px]"
+              >
+                日印4社コンソーシアムによる<br />
+                <span
+                  class="text-[#990033] text-[22px] leading-[30px] xs:text-[22px] sm:text-[22px] sm2:text-[22px] md:text-[20px] md:leading-[28px] md2:text-[22px] md2:leading-[30px] lg:text-[26px] lg:leading-[38px] xl:text-[28px] xl:leading-[42px] about-row:text-[36px] about-row:leading-[51px]"
+                  >完全ワンストップ</span
+                >の手続き・定着支援
+              </h3>
+            </div>
+            <p
+              class="font-noto-sans-r text-[#1A1A1A] text-[14px] leading-[26px] sm:text-[15px] sm:leading-[28px] sm2:text-[15px] sm2:leading-[28px] md:text-[14px] md:leading-[26px] md2:text-[15px] md2:leading-[28px] lg:text-[16px] lg:leading-[30px] xl:text-[17px] xl:leading-[32px] about-row:text-[18px] about-row:leading-[34px] mt-[16px] sm:mt-[18px] md:mt-[20px] lg:mt-[24px] about-row:mt-[32px]"
+            >
+              現地の教育・選抜から、日本の登録支援機関、日本語学校がシームレスに連携。
+              面倒な行政手続きから、入国後の継続的な語学・生活サポート、メンタルケアまで一貫して伴走いたします。
+            </p>
+          </div>
+          <div
+            class="w-full md:flex-1 md:min-w-0 flex order-1 md:order-2 md:justify-end"
+          >
+            <img
+              src="./images/home-page/05-reason/03.png"
+              alt=""
+              class="block w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- Member                                                           -->
+    <!-- ================================================================ -->
+    <section
+      class="w-full max-w-[1920px] mx-auto bg-[#f7f7f7] py-[36px] xs:py-[40px] sm:py-[48px] sm2:py-[52px] md:py-[56px] lg:pt-[60px] lg:pb-[80px]"
+    >
+      <div
+        class="max-w-[1920px] mx-auto px-[10px] sm:px-5 sm2:px-8 md:px-10 md2:px-12 lg:px-[48px] text-center"
+      >
+        <!-- Label -->
+        <p
+          class="font-noto-syriac-r text-[#B79D7B] text-[14px] leading-[24px] tracking-[2.2px] xs:text-[15px] xs:leading-[26px] xs:tracking-[2.4px] sm:text-[16px] sm:leading-[28px] sm:tracking-[2.6px] sm2:text-[17px] sm2:leading-[30px] sm2:tracking-[2.8px] md:text-[18px] md:leading-[32px] md:tracking-[3px] md2:text-[19px] md2:leading-[33px] md2:tracking-[3.1px] lg:text-[20px] lg:leading-[34px] lg:tracking-[3.2px]"
+        >
+          MEMBER
+        </p>
+
+        <!-- H2 -->
+        <h2
+          class="font-noto-sans-b text-[#1A1A1A] text-[22px] leading-[32px] xs:text-[24px] xs:leading-[34px] sm:text-[26px] sm:leading-[38px] sm2:text-[28px] sm2:leading-[42px] md:text-[32px] md:leading-[46px] md2:text-[36px] md2:leading-[52px] lg:text-[40px] lg:leading-[59px] mt-[6px] sm:mt-[7px] lg:mt-[8px]"
+        >
+          入国初日から現場で即戦力になる<br />
+          <span class="member-uline">即戦力インド人材メンバー</span>
+        </h2>
+
+        <!-- Body copy -->
+        <p
+          class="font-noto-sans-r text-left lg:text-center text-[#1A1A1A] text-[13px] leading-[22px] xs:text-[14px] xs:leading-[24px] sm:text-[15px] sm:leading-[26px] sm2:text-[16px] sm2:leading-[28px] md:text-[17px] md:leading-[30px] md2:text-[17px] md2:leading-[30px] lg:text-[18px] lg:leading-[34px] mt-[16px] xs:mt-[18px] sm:mt-[20px] lg:mt-[24px]"
+        >
+          「誰でもいいから採用する」のはやめましょう。<br />
+          インド有数の提携大学から意欲と知性で厳選されたエリートのみ。<br />
+          言葉の壁を越え、<span class="font-noto-sans-b"
+            >御社の成長エンジンとなる若者</span
+          >たちが、来日に向けて現在猛特訓中です。
+        </p>
+
+        <!-- Grid -->
+        <div
+          class="grid grid-cols-2 sm2:grid-cols-2 md:grid-cols-4 gap-[16px] xs:gap-[18px] sm:gap-[20px] sm2:gap-[24px] md:gap-[20px] lg:gap-[28px] xl:gap-[40px] max-w-[1400px] mx-auto mt-[28px] xs:mt-[32px] sm:mt-[36px] lg:mt-[48px]"
+        >
+          <!-- 01 -->
+          <div class="flex flex-col items-start">
+            <img
+              src="./images/home-page/06-member/01.png"
+              alt=""
+              class="w-full h-[220px] xs:h-[240px] sm:h-[280px] sm2:h-[300px] md:h-[280px] lg:h-[340px] xl:h-[380px] 2xl:h-[440px] object-cover block"
+            />
+            <span
+              class="mt-[8px] sm:mt-[10px] lg:mt-[16px] inline-flex items-center border-2 border-[#990033] text-[#990033] font-noto-sans-r text-[10px] leading-[22px] xs:text-[11px] sm:text-[11px] sm:leading-[24px] md:text-[12px] lg:text-[13px] lg:leading-[29px] rounded-full px-[6px] sm:px-[8px] lg:px-[10px]"
+              >卒業生</span
+            >
+            <p
+              class="font-noto-sans-r text-[#1A1A1A] text-[13px] leading-[20px] xs:text-[14px] xs:leading-[22px] sm:text-[14px] sm:leading-[22px] md:text-[14px] md:leading-[22px] lg:text-[16px] lg:leading-[28px] xl:text-[18px] xl:leading-[30px] 2xl:text-[20px] 2xl:leading-[34px] mt-[4px] sm:mt-[5px] lg:mt-[6px]"
+            >
+              名前が入ります。
+            </p>
+          </div>
+
+          <!-- 02 -->
+          <div class="flex flex-col items-start">
+            <img
+              src="./images/home-page/06-member/02.png"
+              alt=""
+              class="w-full h-[220px] xs:h-[240px] sm:h-[280px] sm2:h-[300px] md:h-[280px] lg:h-[340px] xl:h-[380px] 2xl:h-[440px] object-cover block"
+            />
+            <span
+              class="mt-[8px] sm:mt-[10px] lg:mt-[16px] inline-flex items-center bg-[#b25b5b] text-white font-noto-sans-r text-[10px] leading-[22px] xs:text-[11px] sm:text-[11px] sm:leading-[24px] md:text-[12px] lg:text-[13px] lg:leading-[29px] rounded-full px-[6px] sm:px-[8px] lg:px-[10px]"
+              >厳選訓練中</span
+            >
+            <p
+              class="font-noto-sans-r text-[#1A1A1A] text-[13px] leading-[20px] xs:text-[14px] xs:leading-[22px] sm:text-[14px] sm:leading-[22px] md:text-[14px] md:leading-[22px] lg:text-[16px] lg:leading-[28px] xl:text-[18px] xl:leading-[30px] 2xl:text-[20px] 2xl:leading-[34px] mt-[4px] sm:mt-[5px] lg:mt-[6px]"
+            >
+              名前が入ります。
+            </p>
+          </div>
+
+          <!-- 03 -->
+          <div class="flex flex-col items-start">
+            <img
+              src="./images/home-page/06-member/03.png"
+              alt=""
+              class="w-full h-[220px] xs:h-[240px] sm:h-[280px] sm2:h-[300px] md:h-[280px] lg:h-[340px] xl:h-[380px] 2xl:h-[440px] object-cover block"
+            />
+            <span
+              class="mt-[8px] sm:mt-[10px] lg:mt-[16px] inline-flex items-center border-2 border-[#990033] text-[#990033] font-noto-sans-r text-[10px] leading-[22px] xs:text-[11px] sm:text-[11px] sm:leading-[24px] md:text-[12px] lg:text-[13px] lg:leading-[29px] rounded-full px-[6px] sm:px-[8px] lg:px-[10px]"
+              >卒業生</span
+            >
+            <p
+              class="font-noto-sans-r text-[#1A1A1A] text-[13px] leading-[20px] xs:text-[14px] xs:leading-[22px] sm:text-[14px] sm:leading-[22px] md:text-[14px] md:leading-[22px] lg:text-[16px] lg:leading-[28px] xl:text-[18px] xl:leading-[30px] 2xl:text-[20px] 2xl:leading-[34px] mt-[4px] sm:mt-[5px] lg:mt-[6px]"
+            >
+              名前が入ります。
+            </p>
+          </div>
+
+          <!-- 04 -->
+          <div class="flex flex-col items-start">
+            <img
+              src="./images/home-page/06-member/04.png"
+              alt=""
+              class="w-full h-[220px] xs:h-[240px] sm:h-[280px] sm2:h-[300px] md:h-[280px] lg:h-[340px] xl:h-[380px] 2xl:h-[440px] object-cover block"
+            />
+            <span
+              class="mt-[8px] sm:mt-[10px] lg:mt-[16px] inline-flex items-center bg-[#b25b5b] text-white font-noto-sans-r text-[10px] leading-[22px] xs:text-[11px] sm:text-[11px] sm:leading-[24px] md:text-[12px] lg:text-[13px] lg:leading-[29px] rounded-full px-[6px] sm:px-[8px] lg:px-[10px]"
+              >厳選訓練中</span
+            >
+            <p
+              class="font-noto-sans-r text-[#1A1A1A] text-[13px] leading-[20px] xs:text-[14px] xs:leading-[22px] sm:text-[14px] sm:leading-[22px] md:text-[14px] md:leading-[22px] lg:text-[16px] lg:leading-[28px] xl:text-[18px] xl:leading-[30px] 2xl:text-[20px] 2xl:leading-[34px] mt-[4px] sm:mt-[5px] lg:mt-[6px]"
+            >
+              名前が入ります。
+            </p>
+          </div>
+
+          <!-- 05 -->
+          <div class="flex flex-col items-start">
+            <img
+              src="./images/home-page/06-member/05.png"
+              alt=""
+              class="w-full h-[220px] xs:h-[240px] sm:h-[280px] sm2:h-[300px] md:h-[280px] lg:h-[340px] xl:h-[380px] 2xl:h-[440px] object-cover block"
+            />
+            <span
+              class="mt-[8px] sm:mt-[10px] lg:mt-[16px] inline-flex items-center border-2 border-[#990033] text-[#990033] font-noto-sans-r text-[10px] leading-[22px] xs:text-[11px] sm:text-[11px] sm:leading-[24px] md:text-[12px] lg:text-[13px] lg:leading-[29px] rounded-full px-[6px] sm:px-[8px] lg:px-[10px]"
+              >卒業生</span
+            >
+            <p
+              class="font-noto-sans-r text-[#1A1A1A] text-[13px] leading-[20px] xs:text-[14px] xs:leading-[22px] sm:text-[14px] sm:leading-[22px] md:text-[14px] md:leading-[22px] lg:text-[16px] lg:leading-[28px] xl:text-[18px] xl:leading-[30px] 2xl:text-[20px] 2xl:leading-[34px] mt-[4px] sm:mt-[5px] lg:mt-[6px]"
+            >
+              名前が入ります。
+            </p>
+          </div>
+
+          <!-- 06 -->
+          <div class="flex flex-col items-start">
+            <img
+              src="./images/home-page/06-member/06.png"
+              alt=""
+              class="w-full h-[220px] xs:h-[240px] sm:h-[280px] sm2:h-[300px] md:h-[280px] lg:h-[340px] xl:h-[380px] 2xl:h-[440px] object-cover block"
+            />
+            <span
+              class="mt-[8px] sm:mt-[10px] lg:mt-[16px] inline-flex items-center bg-[#b25b5b] text-white font-noto-sans-r text-[10px] leading-[22px] xs:text-[11px] sm:text-[11px] sm:leading-[24px] md:text-[12px] lg:text-[13px] lg:leading-[29px] rounded-full px-[6px] sm:px-[8px] lg:px-[10px]"
+              >厳選訓練中</span
+            >
+            <p
+              class="font-noto-sans-r text-[#1A1A1A] text-[13px] leading-[20px] xs:text-[14px] xs:leading-[22px] sm:text-[14px] sm:leading-[22px] md:text-[14px] md:leading-[22px] lg:text-[16px] lg:leading-[28px] xl:text-[18px] xl:leading-[30px] 2xl:text-[20px] 2xl:leading-[34px] mt-[4px] sm:mt-[5px] lg:mt-[6px]"
+            >
+              名前が入ります。
+            </p>
+          </div>
+
+          <!-- 07 -->
+          <div class="flex flex-col items-start">
+            <img
+              src="./images/home-page/06-member/07.png"
+              alt=""
+              class="w-full h-[220px] xs:h-[240px] sm:h-[280px] sm2:h-[300px] md:h-[280px] lg:h-[340px] xl:h-[380px] 2xl:h-[440px] object-cover block"
+            />
+            <span
+              class="mt-[8px] sm:mt-[10px] lg:mt-[16px] inline-flex items-center border-2 border-[#990033] text-[#990033] font-noto-sans-r text-[10px] leading-[22px] xs:text-[11px] sm:text-[11px] sm:leading-[24px] md:text-[12px] lg:text-[13px] lg:leading-[29px] rounded-full px-[6px] sm:px-[8px] lg:px-[10px]"
+              >卒業生</span
+            >
+            <p
+              class="font-noto-sans-r text-[#1A1A1A] text-[13px] leading-[20px] xs:text-[14px] xs:leading-[22px] sm:text-[14px] sm:leading-[22px] md:text-[14px] md:leading-[22px] lg:text-[16px] lg:leading-[28px] xl:text-[18px] xl:leading-[30px] 2xl:text-[20px] 2xl:leading-[34px] mt-[4px] sm:mt-[5px] lg:mt-[6px]"
+            >
+              名前が入ります。
+            </p>
+          </div>
+
+          <!-- 08 -->
+          <div class="flex flex-col items-start">
+            <img
+              src="./images/home-page/06-member/08.png"
+              alt=""
+              class="w-full h-[220px] xs:h-[240px] sm:h-[280px] sm2:h-[300px] md:h-[280px] lg:h-[340px] xl:h-[380px] 2xl:h-[440px] object-cover block"
+            />
+            <span
+              class="mt-[8px] sm:mt-[10px] lg:mt-[16px] inline-flex items-center bg-[#b25b5b] text-white font-noto-sans-r text-[10px] leading-[22px] xs:text-[11px] sm:text-[11px] sm:leading-[24px] md:text-[12px] lg:text-[13px] lg:leading-[29px] rounded-full px-[6px] sm:px-[8px] lg:px-[10px]"
+              >厳選訓練中</span
+            >
+            <p
+              class="font-noto-sans-r text-[#1A1A1A] text-[13px] leading-[20px] xs:text-[14px] xs:leading-[22px] sm:text-[14px] sm:leading-[22px] md:text-[14px] md:leading-[22px] lg:text-[16px] lg:leading-[28px] xl:text-[18px] xl:leading-[30px] 2xl:text-[20px] 2xl:leading-[34px] mt-[4px] sm:mt-[5px] lg:mt-[6px]"
+            >
+              名前が入ります。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- Banner — CTA strip                                               -->
+    <!-- ================================================================ -->
+    <section
+      class="relative w-full max-w-[1920px] mx-auto overflow-hidden h-[159px] bg-[url('./images/home-page/03-banner/bg.png')] bg-cover bg-center bg-no-repeat"
+    >
+      <a
+        href="#contact"
+        class="flex h-full items-center justify-center text-center px-[10px] sm:px-5 hover:opacity-90 transition-opacity"
+      >
+        <div
+          class="font-noto-sans-b text-white text-[15px] leading-[24px] xs:text-[16px] xs:leading-[26px] sm:text-[18px] sm:leading-[28px] md:text-[22px] md:leading-[30px] lg:text-[28px] lg:leading-[40px]"
+        >
+          人手不足を劇的に解消する<span
+            class="inline-block bg-[#f7e8ee] text-[#990033] font-noto-sans-b px-[6px] text-[18px] leading-[24px] xs:text-[19px] xs:leading-[26px] sm:text-[21px] sm:leading-[28px] md:text-[26px] md:leading-[30px] lg:text-[34px] lg:leading-[40px]"
+            >インド即戦力人材</span
+          >に関する<br aria-hidden="true" />ご相談・お問い合わせはこちら
+        </div>
+      </a>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- News & Carousel                                                  -->
+    <!-- ================================================================ -->
+    <section
+      class="w-full max-w-[1920px] mx-auto overflow-hidden pt-[40px] pb-[60px] px-[10px] sm:px-5 sm:pt-[48px] sm:pb-[72px] sm2:px-8 md:px-10 md2:px-12 lg:px-[48px] lg:pt-[60px] lg:pb-[80px]"
+    >
+      <!-- Header -->
+      <div class="text-center">
+        <!-- 知らなきゃ大損!? pill label -->
+        <p
+          class="inline-flex items-center justify-center mb-[14px] w-[190px] h-[44px] bg-[url('./images/home-page/07-news/main-text-bg.png')] bg-no-repeat bg-[length:190px_44px] font-noto-sans-b text-[#1A1A1A] text-[16px] leading-none pb-[5px] xs:w-[210px] xs:h-[48px] xs:bg-[length:210px_48px] xs:text-[18px] sm:w-[230px] sm:h-[53px] sm:bg-[length:230px_53px] sm:text-[20px] md:w-[255px] md:h-[58px] md:bg-[length:255px_58px] md:text-[22px] lg:mb-[20px] lg:w-[280px] lg:h-[64px] lg:bg-[length:280px_64px] lg:text-[24px]"
+        >
+          知らなきゃ大損!?
+        </p>
+
+        <!-- Headline -->
+        <h2
+          class="font-noto-sans-b text-[#1A1A1A] text-[22px] leading-[34px] xs:text-[24px] xs:leading-[36px] sm:text-[26px] sm:leading-[40px] sm2:text-[28px] sm2:leading-[42px] md:text-[32px] md:leading-[48px] md2:text-[36px] md2:leading-[54px] lg:text-[40px] lg:leading-[59px]"
+        >
+          日印コンソーシアムが届ける<br />
+          外国人材活用コラム＆最新活動ニュース
+        </h2>
+
+        <!-- Body copy -->
+        <p
+          class="font-kozuka-r text-left lg:text-center text-[#1A1A1A] text-[13px] leading-[22px] mt-[16px] xs:text-[14px] xs:leading-[23px] xs:mt-[18px] sm:text-[15px] sm:leading-[25px] sm:mt-[20px] sm2:text-[16px] sm2:leading-[27px] md:text-[17px] md:leading-[29px] md:mt-[22px] lg:text-[20px] lg:leading-[34px] lg:mt-[24px]"
+        >
+          <span class="font-kozuka-b">激変する制度対応のコツ</span>から、<span
+            class="font-kozuka-b"
+            >在校生たちの生々しい授業風景</span
+          >まで、<br />
+          どこよりもリアルな情報を最速でお届けします。<br />
+          初めての外国人採用でも迷わない、確かな知識と日々の活動実績を大公開！
+        </p>
+      </div>
+
+      <!-- Splide carousel -->
+      <div
+        id="news-splide"
+        class="splide mt-[24px] xs:mt-[28px] sm:mt-[32px] md:mt-[40px] lg:mt-[48px]"
+      >
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div class="border border-[#990033] rounded-[2px] relative">
+                <span
+                  class="absolute top-0 left-0 z-[1] font-noto-sans-b text-white text-[11px] leading-[22px] px-[6px] xs:text-[12px] sm:text-[13px] sm:leading-[24px] sm:px-[8px] md:text-[14px] md:leading-[26px] md:px-[9px] lg:text-[16px] lg:leading-[30px] lg:px-[10px] bg-[#990033]"
+                  >お知らせ</span
+                >
+                <img
+                  src="./images/home-page/07-news/carousel/carousel-card-bg.png"
+                  alt=""
+                  class="w-full h-auto block"
+                />
+              </div>
+              <p
+                class="font-noto-sans-b text-[#1A1A1A] text-[12px] leading-[20px] mt-[6px] xs:text-[13px] xs:leading-[21px] sm:text-[14px] sm:leading-[22px] sm:mt-[7px] md:text-[15px] md:leading-[25px] md:mt-[8px] lg:text-[18px] lg:leading-[30px] lg:mt-[10px]"
+              >
+                タイトルは30文字以上は…となりますサンプルテキストサンプ…
+              </p>
+            </li>
+            <li class="splide__slide">
+              <div class="border border-[#990033] rounded-[2px] relative">
+                <span
+                  class="absolute top-0 left-0 z-[1] font-noto-sans-b text-white text-[11px] leading-[22px] px-[6px] xs:text-[12px] sm:text-[13px] sm:leading-[24px] sm:px-[8px] md:text-[14px] md:leading-[26px] md:px-[9px] lg:text-[16px] lg:leading-[30px] lg:px-[10px] bg-[#990033]"
+                  >コラム</span
+                >
+                <img
+                  src="./images/home-page/07-news/carousel/carousel-card-bg.png"
+                  alt=""
+                  class="w-full h-auto block"
+                />
+              </div>
+              <p
+                class="font-noto-sans-b text-[#1A1A1A] text-[12px] leading-[20px] mt-[6px] xs:text-[13px] xs:leading-[21px] sm:text-[14px] sm:leading-[22px] sm:mt-[7px] md:text-[15px] md:leading-[25px] md:mt-[8px] lg:text-[18px] lg:leading-[30px] lg:mt-[10px]"
+              >
+                タイトルは30文字以上は…となりますサンプルテキストサンプ…
+              </p>
+            </li>
+            <li class="splide__slide">
+              <div class="border border-[#990033] rounded-[2px] relative">
+                <span
+                  class="absolute top-0 left-0 z-[1] font-noto-sans-b text-white text-[11px] leading-[22px] px-[6px] xs:text-[12px] sm:text-[13px] sm:leading-[24px] sm:px-[8px] md:text-[14px] md:leading-[26px] md:px-[9px] lg:text-[16px] lg:leading-[30px] lg:px-[10px] bg-[#990033]"
+                  >お知らせ</span
+                >
+                <img
+                  src="./images/home-page/07-news/carousel/carousel-card-bg.png"
+                  alt=""
+                  class="w-full h-auto block"
+                />
+              </div>
+              <p
+                class="font-noto-sans-b text-[#1A1A1A] text-[12px] leading-[20px] mt-[6px] xs:text-[13px] xs:leading-[21px] sm:text-[14px] sm:leading-[22px] sm:mt-[7px] md:text-[15px] md:leading-[25px] md:mt-[8px] lg:text-[18px] lg:leading-[30px] lg:mt-[10px]"
+              >
+                タイトルは30文字以上は…となりますサンプルテキストサンプ…
+              </p>
+            </li>
+            <li class="splide__slide">
+              <div class="border border-[#990033] rounded-[2px] relative">
+                <span
+                  class="absolute top-0 left-0 z-[1] font-noto-sans-b text-white text-[11px] leading-[22px] px-[6px] xs:text-[12px] sm:text-[13px] sm:leading-[24px] sm:px-[8px] md:text-[14px] md:leading-[26px] md:px-[9px] lg:text-[16px] lg:leading-[30px] lg:px-[10px] bg-[#990033]"
+                  >コラム</span
+                >
+                <img
+                  src="./images/home-page/07-news/carousel/carousel-card-bg.png"
+                  alt=""
+                  class="w-full h-auto block"
+                />
+              </div>
+              <p
+                class="font-noto-sans-b text-[#1A1A1A] text-[12px] leading-[20px] mt-[6px] xs:text-[13px] xs:leading-[21px] sm:text-[14px] sm:leading-[22px] sm:mt-[7px] md:text-[15px] md:leading-[25px] md:mt-[8px] lg:text-[18px] lg:leading-[30px] lg:mt-[10px]"
+              >
+                タイトルは30文字以上は…となりますサンプルテキストサンプ…
+              </p>
+            </li>
+            <li class="splide__slide">
+              <div class="border border-[#990033] rounded-[2px] relative">
+                <span
+                  class="absolute top-0 left-0 z-[1] font-noto-sans-b text-white text-[11px] leading-[22px] px-[6px] xs:text-[12px] sm:text-[13px] sm:leading-[24px] sm:px-[8px] md:text-[14px] md:leading-[26px] md:px-[9px] lg:text-[16px] lg:leading-[30px] lg:px-[10px] bg-[#990033]"
+                  >お知らせ</span
+                >
+                <img
+                  src="./images/home-page/07-news/carousel/carousel-card-bg.png"
+                  alt=""
+                  class="w-full h-auto block"
+                />
+              </div>
+              <p
+                class="font-noto-sans-b text-[#1A1A1A] text-[12px] leading-[20px] mt-[6px] xs:text-[13px] xs:leading-[21px] sm:text-[14px] sm:leading-[22px] sm:mt-[7px] md:text-[15px] md:leading-[25px] md:mt-[8px] lg:text-[18px] lg:leading-[30px] lg:mt-[10px]"
+              >
+                タイトルは30文字以上は…となりますサンプルテキストサンプ…
+              </p>
+            </li>
+            <li class="splide__slide">
+              <div class="border border-[#990033] rounded-[2px] relative">
+                <span
+                  class="absolute top-0 left-0 z-[1] font-noto-sans-b text-white text-[11px] leading-[22px] px-[6px] xs:text-[12px] sm:text-[13px] sm:leading-[24px] sm:px-[8px] md:text-[14px] md:leading-[26px] md:px-[9px] lg:text-[16px] lg:leading-[30px] lg:px-[10px] bg-[#990033]"
+                  >コラム</span
+                >
+                <img
+                  src="./images/home-page/07-news/carousel/carousel-card-bg.png"
+                  alt=""
+                  class="w-full h-auto block"
+                />
+              </div>
+              <p
+                class="font-noto-sans-b text-[#1A1A1A] text-[12px] leading-[20px] mt-[6px] xs:text-[13px] xs:leading-[21px] sm:text-[14px] sm:leading-[22px] sm:mt-[7px] md:text-[15px] md:leading-[25px] md:mt-[8px] lg:text-[18px] lg:leading-[30px] lg:mt-[10px]"
+              >
+                タイトルは30文字以上は…となりますサンプルテキストサンプ…
+              </p>
+            </li>
+            <li class="splide__slide">
+              <div class="border border-[#990033] rounded-[2px] relative">
+                <span
+                  class="absolute top-0 left-0 z-[1] font-noto-sans-b text-white text-[11px] leading-[22px] px-[6px] xs:text-[12px] sm:text-[13px] sm:leading-[24px] sm:px-[8px] md:text-[14px] md:leading-[26px] md:px-[9px] lg:text-[16px] lg:leading-[30px] lg:px-[10px] bg-[#990033]"
+                  >お知らせ</span
+                >
+                <img
+                  src="./images/home-page/07-news/carousel/carousel-card-bg.png"
+                  alt=""
+                  class="w-full h-auto block"
+                />
+              </div>
+              <p
+                class="font-noto-sans-b text-[#1A1A1A] text-[12px] leading-[20px] mt-[6px] xs:text-[13px] xs:leading-[21px] sm:text-[14px] sm:leading-[22px] sm:mt-[7px] md:text-[15px] md:leading-[25px] md:mt-[8px] lg:text-[18px] lg:leading-[30px] lg:mt-[10px]"
+              >
+                タイトルは30文字以上は…となりますサンプルテキストサンプ…
+              </p>
+            </li>
+            <li class="splide__slide">
+              <div class="border border-[#990033] rounded-[2px] relative">
+                <span
+                  class="absolute top-0 left-0 z-[1] font-noto-sans-b text-white text-[11px] leading-[22px] px-[6px] xs:text-[12px] sm:text-[13px] sm:leading-[24px] sm:px-[8px] md:text-[14px] md:leading-[26px] md:px-[9px] lg:text-[16px] lg:leading-[30px] lg:px-[10px] bg-[#990033]"
+                  >コラム</span
+                >
+                <img
+                  src="./images/home-page/07-news/carousel/carousel-card-bg.png"
+                  alt=""
+                  class="w-full h-auto block"
+                />
+              </div>
+              <p
+                class="font-noto-sans-b text-[#1A1A1A] text-[12px] leading-[20px] mt-[6px] xs:text-[13px] xs:leading-[21px] sm:text-[14px] sm:leading-[22px] sm:mt-[7px] md:text-[15px] md:leading-[25px] md:mt-[8px] lg:text-[18px] lg:leading-[30px] lg:mt-[10px]"
+              >
+                タイトルは30文字以上は…となりますサンプルテキストサンプ…
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Custom controls: arrow · dots · arrow -->
+      <div
+        id="news-controls"
+        class="flex items-center justify-center gap-[8px] mt-[24px] sm:gap-[10px] sm:mt-[28px] md:mt-[32px] lg:gap-[12px] lg:mt-[40px]"
+      >
+        <button
+          id="news-prev"
+          type="button"
+          aria-label="前へ"
+          class="hover:opacity-60 transition-opacity"
+        >
+          <img
+            src="./images/home-page/07-news/carousel/arrow-left.svg"
+            alt=""
+            class="w-[20px] h-auto sm:w-[24px] md:w-[27px] lg:w-[30.5px]"
+          />
+        </button>
+        <div
+          id="news-dots"
+          class="flex items-center gap-[8px] sm:gap-[10px] lg:gap-[12px]"
+        ></div>
+        <button
+          id="news-next"
+          type="button"
+          aria-label="次へ"
+          class="hover:opacity-60 transition-opacity"
+        >
+          <img
+            src="./images/home-page/07-news/carousel/arrow-right.svg"
+            alt=""
+            class="w-[20px] h-auto sm:w-[24px] md:w-[27px] lg:w-[30.5px]"
+          />
+        </button>
+      </div>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- Banner — CTA strip                                               -->
+    <!-- ================================================================ -->
+    <section
+      class="relative w-full max-w-[1920px] mx-auto overflow-hidden h-[159px] bg-[url('./images/home-page/03-banner/bg.png')] bg-cover bg-center bg-no-repeat"
+    >
+      <a
+        href="#contact"
+        class="flex h-full items-center justify-center text-center px-[10px] sm:px-5 hover:opacity-90 transition-opacity"
+      >
+        <div
+          class="font-noto-sans-b text-white text-[15px] leading-[24px] xs:text-[16px] xs:leading-[26px] sm:text-[18px] sm:leading-[28px] md:text-[22px] md:leading-[30px] lg:text-[28px] lg:leading-[40px]"
+        >
+          人手不足を劇的に解消する<span
+            class="inline-block bg-[#f7e8ee] text-[#990033] font-noto-sans-b px-[6px] text-[18px] leading-[24px] xs:text-[19px] xs:leading-[26px] sm:text-[21px] sm:leading-[28px] md:text-[26px] md:leading-[30px] lg:text-[34px] lg:leading-[40px]"
+            >インド即戦力人材</span
+          >に関する<br aria-hidden="true" />ご相談・お問い合わせはこちら
+        </div>
+      </a>
+    </section>
+
+    <!-- ================================================================ -->
+    <!-- Footer                                                           -->
     <!-- ================================================================ -->
     <footer>
       <div
@@ -867,8 +1487,7 @@
       </div>
     </footer>
 
-    <!-- Rest of the landing page content can go here -->
-
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>

@@ -42,3 +42,61 @@ document.addEventListener("DOMContentLoaded", () => {
     if (window.innerWidth >= 1024) setMenuOpen(false);
   });
 });
+
+// News Carousel
+document.addEventListener("DOMContentLoaded", () => {
+  const splideEl = document.getElementById("news-splide");
+  if (!splideEl) return;
+
+  const splide = new Splide(splideEl, {
+    type: "slide",
+    perPage: 5,
+    perMove: 1,
+    gap: "40px",
+    arrows: false,
+    pagination: false,
+    rewind: false,
+    breakpoints: {
+      1399: { gap: "24px" },
+      1023: { perPage: 4, gap: "20px" },
+      899: { perPage: 3, gap: "18px" },
+      749: { perPage: 2, gap: "16px" },
+      479: { perPage: 2, gap: "12px" },
+    },
+  }).mount();
+
+  const dotsContainer = document.getElementById("news-dots");
+  const prevBtn = document.getElementById("news-prev");
+  const nextBtn = document.getElementById("news-next");
+
+  const totalPages = splide.Components.Controller.getEnd() + 1;
+
+  // Build dots
+  const dots = [];
+  for (let i = 0; i < totalPages; i++) {
+    const img = document.createElement("img");
+    img.src =
+      i === 0
+        ? "./images/home-page/07-news/carousel/active-dot.svg"
+        : "./images/home-page/07-news/carousel/dot.svg";
+    img.alt = "";
+    img.className = "w-[8px] h-[8px] cursor-pointer";
+    img.addEventListener("click", () => splide.go(i));
+    dots.push(img);
+    dotsContainer.appendChild(img);
+  }
+
+  const updateDots = (index) => {
+    dots.forEach((d, i) => {
+      d.src =
+        i === index
+          ? "./images/home-page/07-news/carousel/active-dot.svg"
+          : "./images/home-page/07-news/carousel/dot.svg";
+    });
+  };
+
+  splide.on("moved", (index) => updateDots(index));
+
+  prevBtn?.addEventListener("click", () => splide.go("<"));
+  nextBtn?.addEventListener("click", () => splide.go(">"));
+});
