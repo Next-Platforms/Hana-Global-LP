@@ -18,7 +18,9 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Outfit:wght@300;400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Outfit:wght@300;400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap"
+    rel="stylesheet">
 
   <style>
     :root {
@@ -28,7 +30,11 @@
       --text-dark: #2d3142;
     }
 
-    html, body { overflow-x: hidden; }
+    html,
+    body {
+      overflow-x: hidden;
+    }
+
     body {
       font-family: "Zen Kaku Gothic New", sans-serif;
       color: var(--text-dark);
@@ -36,34 +42,76 @@
       line-height: 1.75;
     }
 
-    h1, h2, h3, h4, h5, h6 { font-family: "Noto Sans JP", sans-serif; }
-    .font-en { font-family: "Outfit", sans-serif; }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Noto Sans JP", sans-serif;
+    }
+
+    .font-en {
+      font-family: "Outfit", sans-serif;
+    }
 
     /* Yellow highlighter accent (behind text) */
-    .accent-yellow { position: relative; display: inline; z-index: 1; }
+    .accent-yellow {
+      position: relative;
+      display: inline;
+      z-index: 1;
+    }
+
     .accent-yellow::after {
-      content: ""; position: absolute; left: 4px; right: 4px; bottom: 2px;
-      height: 8px; background: linear-gradient(90deg, #ffe166, #ffe082); z-index: -1;
+      content: "";
+      position: absolute;
+      left: 4px;
+      right: 4px;
+      bottom: 2px;
+      height: 8px;
+      background: linear-gradient(90deg, #ffe166, #ffe082);
+      z-index: -1;
     }
 
     /* India outline watermark */
-    .india-watermark { position: relative; overflow-x: clip; }
-    .india-watermark::before {
-      content: ""; position: absolute; left: -20px; top: -20px;
-      width: min(380px, 50vw); height: min(380px, 50vw);
-      background: url("https://upload.wikimedia.org/wikipedia/commons/d/d0/India_outline.png") no-repeat top left;
-      background-size: contain; opacity: 0.08; pointer-events: none; z-index: 0;
+    .india-watermark {
+      position: relative;
+      overflow-x: clip;
     }
-    .india-watermark > * { position: relative; z-index: 1; }
+
+    .india-watermark::before {
+      content: "";
+      position: absolute;
+      left: -20px;
+      top: -20px;
+      width: min(380px, 50vw);
+      height: min(380px, 50vw);
+      background: url("https://upload.wikimedia.org/wikipedia/commons/d/d0/India_outline.png") no-repeat top left;
+      background-size: contain;
+      opacity: 0.08;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .india-watermark>* {
+      position: relative;
+      z-index: 1;
+    }
 
     /* Large index number (01 / 02 / 03 / 04) */
     .reason-number {
-      font-family: "Outfit", sans-serif; font-weight: 300;
-      font-size: 3.2rem; line-height: 1; color: var(--number-tan); letter-spacing: 0.02em;
+      font-family: "Outfit", sans-serif;
+      font-weight: 300;
+      font-size: 3.2rem;
+      line-height: 1;
+      color: var(--number-tan);
+      letter-spacing: 0.02em;
     }
 
     @media (max-width: 767px) {
-      .reason-number { font-size: 2.2rem; }
+      .reason-number {
+        font-size: 2.2rem;
+      }
     }
   </style>
 </head>
@@ -161,33 +209,109 @@
   <main class="py-10 md:py-16">
 
     <!-- HERO / TOP SECTION -->
-    <section class="mb-16 md:mb-24 px-4 sm:px-6">
-      <div class="mx-auto max-w-[1140px]">
-        <!-- Top Label -->
-        <span class="font-en block text-center text-[0.78rem] md:text-[0.88rem] font-semibold tracking-[3px] text-[#c29d53] uppercase mb-3">About us</span>
-        
-        <!-- Main Heading -->
-        <h1 class="text-center font-bold text-[1.45rem] sm:text-[1.8rem] md:text-[2.25rem] leading-[1.45] mb-8 md:mb-12 text-[#2d3142]">
-          日印の法律と実績に裏付けられた <span class="inline-block">「<span class="accent-yellow font-bold">最強のコンソーシアム</span>」</span>
+    <section
+      class="relative w-full max-w-[1920px] mx-auto overflow-hidden flex hb-max4:flex-col hb-min:grid hb-min:grid-cols-[55%_45%] min-h-[240px] hb-max:min-h-[210px] hb-max2:min-h-[180px] hb-max4:h-auto bg-[#f2f2f2] mb-16 md:mb-24"
+    >
+      <!-- Text content -->
+      <div
+        class="flex flex-col justify-center z-[2] w-full hb-min:min-w-0 px-[10px] py-6 sm:px-6 sm2:px-8 md:px-10 md2:px-12 lg:px-[80px] xl:px-[120px] hb-min:py-8 hb-min:pl-[120px] hb-mid:pl-[80px] hb-min:pr-4"
+      >
+        <span
+          class="font-en block text-[0.78rem] md:text-[0.88rem] font-semibold tracking-[3px] text-[#c29d53] uppercase mb-2">About
+          us</span>
+        <h1
+          class="font-bold text-[#2d3142] text-[1.3rem] xs:text-[1.45rem] sm:text-[1.7rem] md:text-[1.9rem] lg:text-[2.1rem] leading-[1.35] mb-3">
+          日印の法律と実績に裏付けられた<br />
+          <span class="inline-block">「<span class="accent-yellow font-bold">最強のコンソーシアム</span>」</span>
         </h1>
+        <p
+          class="font-kozuka-r text-[#1A1A1A] text-[13px] leading-[21px] tracking-[0.13px] xs:text-[14px] xs:leading-[22px] sm:text-[15px] sm:leading-[24px] md:text-[16px] md:leading-[26px] lg:text-[17px] lg:leading-[28px] max-w-[680px]">
+          Hana Global Support コンソーシアムは、<br class="hidden sm:inline" />
+          ブローカーのような不透明な組織とは一線を画します。<br class="hidden sm:inline" />
+          日本の法律を完全に遵守し、<span class="accent-yellow font-bold">公的機関からも認められた優良法人の連合体</span>です。
+        </p>
+      </div>
 
-        <!-- Hero Box Container -->
-        <div class="bg-[#f4f5f7] rounded-[12px] overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] grid grid-cols-1 md:grid-cols-12 items-stretch">
-          <!-- Left Text Box -->
-          <div class="md:col-span-6 p-6 sm:p-8 md:p-10 flex flex-col justify-center">
-            <p class="font-bold text-[0.95rem] sm:text-[1.1rem] md:text-[1.2rem] leading-[1.85] text-[#2d3142]">
-              Hana Global Support コンソーシアムは、<br class="hidden sm:inline">
-              ブローカーのような不透明な組織とは一線を画します。<br class="hidden sm:inline">
-              日本の法律を完全に遵守し、<span class="accent-yellow font-bold">公的機関からも認められた優良法人の連合体</span>です。
+      <!-- Desktop photos — absolute row (hidden ≤1350) -->
+      <div class="absolute right-[-60px] bottom-0 flex z-[1] hb-max4:hidden">
+        <!-- Person 1 -->
+        <div class="relative">
+          <img src="./images/home-page/02-hero/person-1.png" alt="代表取締役社長 松野 小百合"
+            class="h-[240px] w-auto block hb-max:h-[210px] hb-max2:h-[180px]" />
+          <div
+            class="absolute left-0 bottom-0 w-full h-[64px] flex flex-col justify-end pb-4 pl-[34px] bg-[rgba(35,26,20,0.5)] [clip-path:polygon(5.22%_0,85.07%_0,80.6%_100%,0.75%_100%)] hb-max:h-[56px] hb-max:pb-3 hb-max:pl-[28px] hb-max2:h-[50px] hb-max2:pb-2.5 hb-max2:pl-[24px]">
+            <p
+              class="font-ryumin-h text-white text-[18px] leading-[20px] hb-max:text-[15px] hb-max:leading-[17px] hb-max2:text-[13px] hb-max2:leading-[15px] hb-max3:text-[12px] hb-max3:leading-[14px]">
+              Hana Global Support
+            </p>
+            <p
+              class="font-ryumin-h text-white text-[18px] leading-[20px] hb-max:text-[15px] hb-max:leading-[17px] hb-max2:text-[13px] hb-max2:leading-[15px] hb-max3:text-[12px] hb-max3:leading-[14px]">
+              代表取締役社長 松野 小百合
             </p>
           </div>
+        </div>
 
-          <!-- Right Image Placeholder Gap -->
-          <div class="md:col-span-6 min-h-[240px] sm:min-h-[280px] bg-gray-200 border-2 border-dashed border-gray-300 relative overflow-hidden flex flex-col items-center justify-center p-6 text-center text-gray-500">
-            <img src="" alt="役員画像 (代表取締役社長 松野 小百合 / 取締役 幢 美憂 / 取締役 金 花仙)" class="hidden w-full h-full object-cover" />
-            <svg class="w-12 h-12 mb-3 text-gray-400 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 002-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-            <span class="font-bold text-[0.95rem] text-gray-600">【画像スペース：役員3名】</span>
-            <span class="text-xs text-gray-500 mt-1">（代表取締役社長 松野 小百合 / 取締役 幢 美憂 / 取締役 金 花仙）</span>
+        <!-- Person 2 -->
+        <div class="relative -ml-[81px] hb-max:-ml-[71px] hb-max2:-ml-[61px]">
+          <img src="./images/home-page/02-hero/person-2.png" alt="取締役 韓 美憂"
+            class="h-[240px] w-auto block hb-max:h-[210px] hb-max2:h-[180px]" />
+          <div
+            class="absolute left-0 bottom-0 w-full h-[64px] flex flex-col justify-end pb-4 pl-[34px] bg-[rgba(35,26,20,0.5)] [clip-path:polygon(5.22%_0,85.07%_0,80.6%_100%,0.75%_100%)] hb-max:h-[56px] hb-max:pb-3 hb-max:pl-[28px] hb-max2:h-[50px] hb-max2:pb-2.5 hb-max2:pl-[24px]">
+            <p
+              class="font-ryumin-h text-white text-[18px] leading-[20px] hb-max:text-[15px] hb-max:leading-[17px] hb-max2:text-[13px] hb-max2:leading-[15px] hb-max3:text-[12px] hb-max3:leading-[14px]">
+              取締役 韓 美憂
+            </p>
+          </div>
+        </div>
+
+        <!-- Person 3 -->
+        <div class="relative -ml-[82px] hb-max:-ml-[72px] hb-max2:-ml-[62px]">
+          <img src="./images/home-page/02-hero/person-3.png" alt="取締役 金 花仙"
+            class="h-[240px] w-auto block hb-max:h-[210px] hb-max2:h-[180px]" />
+          <div
+            class="absolute left-0 bottom-0 w-full h-[64px] flex flex-col justify-end pb-4 pl-[34px] bg-[rgba(35,26,20,0.5)] [clip-path:polygon(5.22%_0,85.07%_0,80.6%_100%,0.75%_100%)] hb-max:h-[56px] hb-max:pb-3 hb-max:pl-[28px] hb-max2:h-[50px] hb-max2:pb-2.5 hb-max2:pl-[24px]">
+            <p
+              class="font-ryumin-h text-white text-[18px] leading-[20px] hb-max:text-[15px] hb-max:leading-[17px] hb-max2:text-[13px] hb-max2:leading-[15px] hb-max3:text-[12px] hb-max3:leading-[14px]">
+              取締役 金 花仙
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile photos — edge-to-edge 0–749px only (row hidden above 1350) -->
+      <div class="hidden hb-max4:flex w-full px-0 md:px-10 md2:px-12 lg:px-[120px] xl:px-[160px]">
+        <div class="relative flex-1 min-w-0">
+          <img src="./images/home-page/02-hero/person-1-mobile.png" alt="代表取締役社長 松野 小百合" class="w-full h-auto block" />
+          <div
+            class="absolute left-0 bottom-0 w-full h-[44px] pb-1.5 px-[10px] xs:h-[54px] xs:pb-2 sm:h-[56px] sm2:h-[58px] md:h-[60px] md2:h-[62px] lg:h-[64px] lg:pb-4 lg:px-6 xl:px-7 flex flex-col justify-end bg-[rgba(35,26,20,0.5)]">
+            <p
+              class="font-ryumin-h text-white text-[6px] leading-[8px] xs:text-[10px] xs:leading-[12px] sm:text-[11px] sm:leading-[13px] sm2:text-[12px] sm2:leading-[14px] md:text-[13px] md:leading-[15px] md2:text-[14px] md2:leading-[16px] lg:text-[15px] lg:leading-[17px] xl:text-[17px] xl:leading-[19px]">
+              Hana Global Support
+            </p>
+            <p
+              class="font-ryumin-h text-white text-[6px] leading-[8px] xs:text-[10px] xs:leading-[12px] sm:text-[11px] sm:leading-[13px] sm2:text-[12px] sm2:leading-[14px] md:text-[13px] md:leading-[15px] md2:text-[14px] md2:leading-[16px] lg:text-[15px] lg:leading-[17px] xl:text-[17px] xl:leading-[19px]">
+              代表取締役社長 松野 小百合
+            </p>
+          </div>
+        </div>
+        <div class="relative flex-1 min-w-0">
+          <img src="./images/home-page/02-hero/person-2-mobile.png" alt="取締役 韓 美憂" class="w-full h-auto block" />
+          <div
+            class="absolute left-0 bottom-0 w-full h-[36px] pb-1.5 px-[10px] xs:h-[46px] xs:pb-2 sm:h-[48px] sm2:h-[50px] md:h-[52px] md2:h-[56px] lg:h-[60px] lg:pb-4 lg:px-6 xl:h-[64px] xl:px-7 flex flex-col justify-end bg-[rgba(35,26,20,0.5)]">
+            <p
+              class="font-ryumin-h text-white text-[6px] leading-[8px] xs:text-[10px] xs:leading-[12px] sm:text-[11px] sm:leading-[13px] sm2:text-[12px] sm2:leading-[14px] md:text-[13px] md:leading-[15px] md2:text-[14px] md2:leading-[16px] lg:text-[15px] lg:leading-[17px] xl:text-[17px] xl:leading-[19px]">
+              取締役 韓 美憂
+            </p>
+          </div>
+        </div>
+        <div class="relative flex-1 min-w-0">
+          <img src="./images/home-page/02-hero/person-3-mobile.png" alt="取締役 金 花仙" class="w-full h-auto block" />
+          <div
+            class="absolute left-0 bottom-0 w-full h-[36px] pb-1.5 px-[10px] xs:h-[46px] xs:pb-2 sm:h-[48px] sm2:h-[50px] md:h-[52px] md2:h-[56px] lg:h-[60px] lg:pb-4 lg:px-6 xl:h-[64px] xl:px-7 flex flex-col justify-end bg-[rgba(35,26,20,0.5)]">
+            <p
+              class="font-ryumin-h text-white text-[6px] leading-[8px] xs:text-[10px] xs:leading-[12px] sm:text-[11px] sm:leading-[13px] sm2:text-[12px] sm2:leading-[14px] md:text-[13px] md:leading-[15px] md2:text-[14px] md2:leading-[16px] lg:text-[15px] lg:leading-[17px] xl:text-[17px] xl:leading-[19px]">
+              取締役 金 花仙
+            </p>
           </div>
         </div>
       </div>
@@ -201,12 +325,13 @@
           <!-- Building Clipboard Icon SVG -->
           <div class="w-9 h-11 flex-shrink-0">
             <svg viewBox="0 0 36 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-              <rect x="3" y="6" width="30" height="35" rx="3" stroke="#2d3142" stroke-width="2.5" fill="#ffffff"/>
-              <path d="M12 6V4C12 2.89543 12.8954 2 14 2H22C23.1046 2 24 2.89543 24 4V6" stroke="#2d3142" stroke-width="2.5" fill="#ffe082"/>
-              <line x1="9" y1="14" x2="27" y2="14" stroke="#2d3142" stroke-width="2" stroke-linecap="round"/>
-              <line x1="9" y1="21" x2="27" y2="21" stroke="#2d3142" stroke-width="2" stroke-linecap="round"/>
-              <line x1="9" y1="28" x2="27" y2="28" stroke="#2d3142" stroke-width="2" stroke-linecap="round"/>
-              <line x1="9" y1="34" x2="20" y2="34" stroke="#2d3142" stroke-width="2" stroke-linecap="round"/>
+              <rect x="3" y="6" width="30" height="35" rx="3" stroke="#2d3142" stroke-width="2.5" fill="#ffffff" />
+              <path d="M12 6V4C12 2.89543 12.8954 2 14 2H22C23.1046 2 24 2.89543 24 4V6" stroke="#2d3142"
+                stroke-width="2.5" fill="#ffe082" />
+              <line x1="9" y1="14" x2="27" y2="14" stroke="#2d3142" stroke-width="2" stroke-linecap="round" />
+              <line x1="9" y1="21" x2="27" y2="21" stroke="#2d3142" stroke-width="2" stroke-linecap="round" />
+              <line x1="9" y1="28" x2="27" y2="28" stroke="#2d3142" stroke-width="2" stroke-linecap="round" />
+              <line x1="9" y1="34" x2="20" y2="34" stroke="#2d3142" stroke-width="2" stroke-linecap="round" />
             </svg>
           </div>
           <h2 class="font-bold text-[1.4rem] sm:text-[1.7rem] md:text-[2rem] text-[#2d3142] tracking-wide">
@@ -231,29 +356,25 @@
               <div class="mt-4 space-y-2.5 text-[0.88rem] md:text-[0.95rem] leading-[1.8] text-[#4a4e69]">
                 <p><span class="font-bold text-[#2d3142]">代表：</span>松野 小百合（代表取締役社長）</p>
                 <p><span class="font-bold text-[#2d3142]">事業内容：</span>インドにおける日本語教育、多様な産業（特定技能・IT 等）向けの人材教育・紹介。</p>
-                <p><span class="font-bold text-[#2d3142]">特徴：</span>日本の小学校での教職や、長年日本語教育業界で留学生の指導・日常生活支援・ビザ申請に携わってきた韓美愛（取締役）を中心に、確実な教育を提供。</p>
+                <p><span
+                    class="font-bold text-[#2d3142]">特徴：</span>日本の小学校での教職や、長年日本語教育業界で留学生の指導・日常生活支援・ビザ申請に携わってきた韓美愛（取締役）を中心に、確実な教育を提供。
+                </p>
               </div>
             </div>
-            <!-- Image Placeholder Gap (Right on Desktop) -->
+            <!-- Image Container (Right on Desktop) -->
             <div class="md:col-span-6 order-2">
-              <div class="w-full aspect-[16/10] bg-gray-100 border-2 border-dashed border-gray-300 rounded-[12px] flex flex-col items-center justify-center p-4 text-center text-gray-400">
-                <img src="" alt="Hana Global Support インド現地授業風景" class="hidden w-full h-full object-cover rounded-[10px]" />
-                <svg class="w-10 h-10 mb-2 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 002-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                <span class="font-bold text-[0.9rem] text-gray-500">【画像スペース：01 Hana Global Support】</span>
-                <span class="text-xs text-gray-400 mt-1">（現地授業・生徒集合写真）</span>
+              <div class="w-full aspect-[16/10]">
+                <img src="assets/About-us/Asset 1.png" alt="Hana Global Support インド現地授業風景" class="w-full h-full object-cover block" />
               </div>
             </div>
           </div>
 
           <!-- 02 大東グローバル株式会社 -->
           <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pb-6">
-            <!-- Image Placeholder Gap (Left on Desktop) -->
+            <!-- Image Container (Left on Desktop) -->
             <div class="md:col-span-6 order-2 md:order-1">
-              <div class="w-full aspect-[16/10] bg-gray-100 border-2 border-dashed border-gray-300 rounded-[12px] flex flex-col items-center justify-center p-4 text-center text-gray-400">
-                <img src="" alt="大東グローバル 建設・都市風景" class="hidden w-full h-full object-cover rounded-[10px]" />
-                <svg class="w-10 h-10 mb-2 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 002-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                <span class="font-bold text-[0.9rem] text-gray-500">【画像スペース：02 大東グローバル株式会社】</span>
-                <span class="text-xs text-gray-400 mt-1">（建設クレーン・都市風景写真）</span>
+              <div class="w-full aspect-[16/10]">
+                <img src="assets/About-us/Asset 2.png" alt="大東グローバル 建設・都市風景" class="w-full h-full object-cover block" />
               </div>
             </div>
             <!-- Text Content (Right on Desktop) -->
@@ -290,26 +411,20 @@
                 法務省出入国在留管理局が認定した「適正校」であり、奈良県内で在籍生数No.1を誇る日本語学校。長年の実績に基づき、入国後も日本で働くためのマナー・独自の語学カリキュラムを提供します。
               </p>
             </div>
-            <!-- Image Placeholder Gap (Right on Desktop) -->
+            <!-- Image Container (Right on Desktop) -->
             <div class="md:col-span-6 order-2">
-              <div class="w-full aspect-[16/10] bg-gray-100 border-2 border-dashed border-gray-300 rounded-[12px] flex flex-col items-center justify-center p-4 text-center text-gray-400">
-                <img src="" alt="エイム奈良国際アカデミー 入学式" class="hidden w-full h-full object-cover rounded-[10px]" />
-                <svg class="w-10 h-10 mb-2 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 002-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                <span class="font-bold text-[0.9rem] text-gray-500">【画像スペース：03 エイム奈良国際アカデミー】</span>
-                <span class="text-xs text-gray-400 mt-1">（大講堂での入学式写真）</span>
+              <div class="w-full aspect-[16/10]">
+                <img src="assets/About-us/Asset 3.png" alt="エイム奈良国際アカデミー 入学式" class="w-full h-full object-cover block" />
               </div>
             </div>
           </div>
 
           <!-- 04 エルエスパートナーズ株式会社／P9株式会社 -->
           <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pb-6">
-            <!-- Image Placeholder Gap (Left on Desktop) -->
+            <!-- Image Container (Left on Desktop) -->
             <div class="md:col-span-6 order-2 md:order-1">
-              <div class="w-full aspect-[16/10] bg-gray-100 border-2 border-dashed border-gray-300 rounded-[12px] flex flex-col items-center justify-center p-4 text-center text-gray-400">
-                <img src="" alt="エルエスパートナーズ／P9株式会社 役員" class="hidden w-full h-full object-cover rounded-[10px]" />
-                <svg class="w-10 h-10 mb-2 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 002-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                <span class="font-bold text-[0.9rem] text-gray-500">【画像スペース：04 エルエスパートナーズ／P9】</span>
-                <span class="text-xs text-gray-400 mt-1">（代表役員ツーショット写真）</span>
+              <div class="w-full aspect-[16/10]">
+                <img src="assets/About-us/Asset 4.png" alt="エルエスパートナーズ／P9株式会社 役員" class="w-full h-full object-cover block" />
               </div>
             </div>
             <!-- Text Content (Right on Desktop) -->
@@ -339,11 +454,12 @@
           <!-- Clipboard Icon SVG -->
           <div class="w-9 h-11 flex-shrink-0">
             <svg viewBox="0 0 36 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-              <rect x="3" y="6" width="30" height="35" rx="3" stroke="#2d3142" stroke-width="2.5" fill="#ffffff"/>
-              <path d="M12 6V4C12 2.89543 12.8954 2 14 2H22C23.1046 2 24 2.89543 24 4V6" stroke="#2d3142" stroke-width="2.5" fill="#ffe082"/>
-              <line x1="9" y1="14" x2="27" y2="14" stroke="#2d3142" stroke-width="2" stroke-linecap="round"/>
-              <line x1="9" y1="21" x2="27" y2="21" stroke="#2d3142" stroke-width="2" stroke-linecap="round"/>
-              <line x1="9" y1="28" x2="27" y2="28" stroke="#2d3142" stroke-width="2" stroke-linecap="round"/>
+              <rect x="3" y="6" width="30" height="35" rx="3" stroke="#2d3142" stroke-width="2.5" fill="#ffffff" />
+              <path d="M12 6V4C12 2.89543 12.8954 2 14 2H22C23.1046 2 24 2.89543 24 4V6" stroke="#2d3142"
+                stroke-width="2.5" fill="#ffe082" />
+              <line x1="9" y1="14" x2="27" y2="14" stroke="#2d3142" stroke-width="2" stroke-linecap="round" />
+              <line x1="9" y1="21" x2="27" y2="21" stroke="#2d3142" stroke-width="2" stroke-linecap="round" />
+              <line x1="9" y1="28" x2="27" y2="28" stroke="#2d3142" stroke-width="2" stroke-linecap="round" />
             </svg>
           </div>
           <h2 class="font-bold text-[1.4rem] sm:text-[1.7rem] md:text-[2rem] text-[#2d3142] tracking-wide">
@@ -366,33 +482,28 @@
                 1994年設立、グループ従業員約25,000人、世界12カ国に拠点を置く13億米ドル（約1,800億円）規模の主要インフラ企業。インドの産業廃棄物処理の最大手であり、日本の北九州市とも包括連携協定を締結し、環境省や経済産業省とも深く連携しています。
               </p>
             </div>
-            <!-- Image Placeholder Gap (Right on Desktop) -->
+            <!-- Image Container (Right on Desktop) -->
             <div class="md:col-span-6 order-2">
-              <div class="w-full aspect-[16/10] bg-gray-100 border-2 border-dashed border-gray-300 rounded-[12px] flex flex-col items-center justify-center p-4 text-center text-gray-400">
-                <img src="" alt="Ramky Group オフィスカウンター" class="hidden w-full h-full object-cover rounded-[10px]" />
-                <svg class="w-10 h-10 mb-2 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 002-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                <span class="font-bold text-[0.9rem] text-gray-500">【画像スペース：ラムキーグループ】</span>
-                <span class="text-xs text-gray-400 mt-1">（Ramky Group 受付カウンター写真）</span>
+              <div class="w-full aspect-[16/10]">
+                <img src="assets/About-us/Asset 5.png" alt="Ramky Group オフィスカウンター" class="w-full h-full object-cover block" />
               </div>
             </div>
           </div>
 
           <!-- Partner 2: 国立土木学院 -->
           <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pb-6">
-            <!-- Image Placeholder Gap (Left on Desktop) -->
+            <!-- Image Container (Left on Desktop) -->
             <div class="md:col-span-6 order-2 md:order-1">
-              <div class="w-full aspect-[16/10] bg-gray-100 border-2 border-dashed border-gray-300 rounded-[12px] flex flex-col items-center justify-center p-4 text-center text-gray-400">
-                <img src="" alt="国立土木学院 (NAC) 建物" class="hidden w-full h-full object-cover rounded-[10px]" />
-                <svg class="w-10 h-10 mb-2 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 002-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                <span class="font-bold text-[0.9rem] text-gray-500">【画像スペース：国立土木学院】</span>
-                <span class="text-xs text-gray-400 mt-1">（NAC 校舎外観写真）</span>
+              <div class="w-full aspect-[16/10]">
+                <img src="assets/About-us/Asset 6.png" alt="国立土木学院 (NAC) 建物" class="w-full h-full object-cover block" />
               </div>
             </div>
             <!-- Text Content (Right on Desktop) -->
             <div class="md:col-span-6 order-1 md:order-2">
               <h3 class="font-bold text-[1.2rem] sm:text-[1.35rem] md:text-[1.5rem] text-[#2d3142] leading-[1.35] mb-4">
                 国立土木学院<br>
-                <span class="text-[0.95rem] md:text-[1.1rem] font-medium text-[#4a4e69]">（National Academy of Construction）</span>
+                <span class="text-[0.95rem] md:text-[1.1rem] font-medium text-[#4a4e69]">（National Academy of
+                  Construction）</span>
               </h3>
               <p class="text-[0.88rem] md:text-[0.95rem] leading-[1.8] text-[#4a4e69]">
                 1998年にインド州政府主導により設立された国立の建設専門訓練機関。テランガナ州首相がChairman（トップ）を務める公的機関であり、実践的な技術指導や安全管理教育において、インド国内で最高峰の評価を得ています。
@@ -408,19 +519,31 @@
     <section>
       <div class="text-center py-12 md:py-16 px-4">
         <h2 class="font-bold text-[1.25rem] sm:text-[1.55rem] md:text-[2rem] leading-[1.5] text-[#2d3142]">
-          さあ、人手不足で頭を悩ませる毎日に、<span class="inline-block"><span class="accent-yellow font-bold">今すぐ終止符を打ちましょう。</span></span>
+          さあ、人手不足で頭を悩ませる毎日に、<span class="inline-block"><span
+              class="accent-yellow font-bold">今すぐ終止符を打ちましょう。</span></span>
         </h2>
       </div>
+    </section>
 
-      <!-- Red Banner -->
-      <div class="w-full bg-[#990033] py-8 sm:py-10 md:py-12 text-center text-white px-4">
-        <a href="#contact" class="inline-block transition-transform hover:scale-[1.01] active:scale-[0.99]">
-          <p class="font-bold text-[1.1rem] sm:text-[1.4rem] md:text-[1.8rem] leading-[1.55] tracking-wide">
-            人手不足を劇的に解決する <span class="bg-[#ffe082] text-[#2d3142] px-2.5 py-0.5 rounded mx-1 font-bold inline-block shadow-sm">インド即戦力人材</span> に関する<br class="hidden sm:inline">
-            ご相談・お問い合わせはこちら
-          </p>
-        </a>
-      </div>
+    <!-- ================================================================ -->
+    <!-- Banner — CTA strip                                               -->
+    <!-- ================================================================ -->
+    <section
+      class="relative w-full max-w-[1920px] mx-auto overflow-hidden h-[159px] bg-[url('./images/home-page/03-banner/bg.png')] bg-cover bg-center bg-no-repeat"
+    >
+      <a
+        href="#contact"
+        class="flex h-full items-center justify-center text-center px-[10px] sm:px-5 hover:opacity-90 transition-opacity"
+      >
+        <div
+          class="font-noto-sans-b text-white text-[15px] leading-[24px] xs:text-[16px] xs:leading-[26px] sm:text-[18px] sm:leading-[28px] md:text-[22px] md:leading-[30px] lg:text-[28px] lg:leading-[40px]"
+        >
+          人手不足を劇的に解消する<span
+            class="inline-block bg-[#f7e8ee] text-[#990033] font-noto-sans-b px-[6px] text-[18px] leading-[24px] xs:text-[19px] xs:leading-[26px] sm:text-[21px] sm:leading-[28px] md:text-[26px] md:leading-[30px] lg:text-[34px] lg:leading-[40px]"
+            >インド即戦力人材</span
+          >に関する<br aria-hidden="true" />ご相談・お問い合わせはこちら
+        </div>
+      </a>
     </section>
 
   </main>
