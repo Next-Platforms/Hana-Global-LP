@@ -1,0 +1,78 @@
+/* ==========================================
+   Candidate Page Specific Styles (Candidate.css)
+   ========================================== */
+
+:root {
+  --brand-red: #990033;
+  --brand-gold: #c29d53;
+  --number-tan: #c2a878;
+  --text-dark: #2d3142;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  color: var(--text-dark);
+  background: #ffffff;
+  line-height: 1.75;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.font-en {
+  font-family: "Outfit", sans-serif;
+}
+
+/* Yellow highlighter accent (behind text) */
+.accent-yellow {
+  position: relative;
+  display: inline;
+  z-index: 1;
+}
+
+.accent-yellow::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  height: 8px;
+  background: linear-gradient(90deg, #ffe166, #ffe082);
+  z-index: -1;
+}
+
+/* India outline watermark */
+.india-watermark {
+  position: relative;
+  overflow-x: clip;
+}
+
+.india-watermark::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  width: min(420px, 55vw);
+  height: min(420px, 55vw);
+  background: url("https://upload.wikimedia.org/wikipedia/commons/d/d0/India_outline.png") no-repeat top left;
+  background-size: contain;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.india-watermark > * {
+  position: relative;
+  z-index: 1;
+}

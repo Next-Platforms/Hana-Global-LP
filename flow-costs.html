@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ご紹介の流れ・費用 | Hana Global Support</title>
+
+  <!--
+    NOTE FOR WP / FRONT-END TEAM
+    - This page's BODY CONTENT (hero, 6-step flow, cost table) is built with Tailwind utilities.
+    - Tailwind is loaded via the Play CDN for standalone preview only. Replace it with your
+      compiled Tailwind build during WordPress integration; the markup stays as-is.
+    - Brand tokens are written as arbitrary values (e.g. bg-[#990033]) so no tailwind.config is required.
+    - HEADER, FOOTER and CTA bar are intentionally left as placeholders — handled by the main team.
+  -->
+
+  <!-- Core Local Fonts stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Tailwind (preview only — swap for compiled build in WP) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Outfit:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --brand-red: #990033;
+      --brand-gold: #c29d53;
+      --price-brown: #754c24;
+      --grey-cell: #e6e6e6;
+      --text-dark: #2d3142;
+    }
+
+    html, body { overflow-x: hidden; }
+    body {
+      font-family: "Zen Kaku Gothic New", sans-serif;
+      color: var(--text-dark);
+      background: #ffffff;
+      line-height: 1.75;
+    }
+
+    h1, h2, h3, h4, h5, h6 { font-family: "Noto Sans JP", sans-serif; }
+    .font-en { font-family: "Outfit", sans-serif; }
+
+    /* Yellow highlighter accent (behind text) */
+    .accent-yellow { position: relative; display: inline; z-index: 1; }
+    .accent-yellow::after {
+      content: ""; position: absolute; left: 4px; right: 4px; bottom: 2px;
+      height: 8px; background: linear-gradient(90deg, #ffe166, #ffe082); z-index: -1;
+    }
+
+    /* India outline watermark (bottom-left, faint) */
+    .india-watermark { position: relative; overflow-x: clip; }
+    .india-watermark::before {
+      content: ""; position: absolute; left: 0; bottom: 0;
+      width: min(420px, 55vw); height: min(420px, 55vw);
+      background: url("https://upload.wikimedia.org/wikipedia/commons/d/d0/India_outline.png") no-repeat bottom left;
+      background-size: contain; opacity: 0.1; pointer-events: none; z-index: 0;
+    }
+    .india-watermark > * { position: relative; z-index: 1; }
+
+    /* ---- Flow step cards ---- */
+    .flow-card {
+      border: 1px solid var(--brand-red); border-radius: 28px; overflow: hidden;
+      background: #fff; box-shadow: 0 8px 32px rgba(45, 49, 66, 0.06);
+    }
+    .flow-card__head {
+      background: var(--brand-red); color: #fff; text-align: center;
+      font-weight: 700; font-size: 1.4rem; padding: 0.6rem 1.5rem; line-height: 1.5;
+    }
+    .flow-card__body { padding: 1rem 2.5rem; font-size: 0.8rem; line-height: 1.75; }
+
+    /* ---- Cost table ---- */
+    .cost-table { border-collapse: collapse; width: 100%; }
+    .cost-table th {
+      background: var(--brand-red); color: #fff; font-weight: 700;
+      text-align: center; padding: 0.7rem 0.5rem; font-size: 1.15rem;
+      border: 1px solid #eaeaeb; white-space: nowrap;
+    }
+    .cost-table td {
+      padding: 0.5rem 0.7rem; border: 1px solid #fff;
+      vertical-align: middle; font-size: 0.86rem; line-height: 1.6;
+      height: 3.1rem;
+    }
+    .cost-table .c-proc {
+      background: var(--grey-cell); font-weight: 700; text-align: left;
+    }
+    .cost-table .c-proc--white { background: #fff; font-weight: 700; text-align: left; }
+    .cost-table .c-item { font-weight: 700; text-align: left; }
+    .cost-table .c-price {
+      color: var(--price-brown); font-weight: 900; text-align: center; white-space: nowrap;
+    }
+    .cost-table .c-price small { color: #000; font-weight: 900; }
+    .cost-table .c-remark { font-size: 0.56rem; font-weight: 400; line-height: 1.5; }
+    .cost-table .is-grey { background: var(--grey-cell); }
+
+    @media (max-width: 1023px) {
+      .flow-card__head { font-size: 1.15rem; }
+      .flow-card__body { padding: 0.85rem 1.25rem; font-size: 0.85rem; }
+    }
+    /* Mobile: table shrinks to fit the screen (per SP design) — compact uniform rows, no horizontal scroll */
+    @media (max-width: 767px) {
+      .cost-table th { font-size: 0.58rem; padding: 0.35rem 0.18rem; }
+      .cost-table td { font-size: 0.52rem; padding: 0.28rem 0.2rem; line-height: 1.35; height: auto; }
+      .cost-table .c-item .font-normal { font-size: 0.46rem; }
+      .cost-table .c-remark { font-size: 0.44rem; line-height: 1.3; }
+      .cost-table .c-price { font-size: 0.52rem; }
+      .cost-table .c-price small { font-size: 0.9em; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header Section -->
+  <header
+    class="w-full bg-white border-b-2 border-[#e2b774] relative z-50 h-[96px] px-[10px] xs:h-[100px] sm:h-[106px] sm:px-6 sm2:h-[112px] sm2:px-8 md:h-[120px] md:px-10 md2:h-[125px] lg:h-[129px] lg:px-12 xl:px-14 2xl:px-16">
+    <div class="w-full max-w-[1920px] mx-auto h-full flex items-center justify-between">
+      <!-- Logo -->
+      <a href="index.html"
+        class="flex shrink-0 h-[68px] xs:h-[74px] sm:h-[82px] sm2:h-[88px] md:h-[94px] md2:h-[98px] lg:h-[104.1372px]">
+        <img src="./images/home-page/01-header-footer/logo.png" alt="Hana Global Edutech"
+          class="h-full w-auto object-contain" />
+      </a>
+
+      <!-- Right side: nav + CTA + hamburger -->
+      <div class="flex items-center shrink-0 gap-3 sm:gap-4 md2:gap-5 xl:gap-6 2xl:gap-10">
+        <nav class="hidden lg:flex items-center h-full gap-2 xl:gap-3 2xl:gap-8 font-noto-sans-r">
+          <a href="strengths.html"
+            class="text-[#1A1A1A] whitespace-nowrap hover:opacity-60 transition-opacity text-[13px] leading-[48px] tracking-[0.13px] xl:text-[14px] xl:leading-[54px] xl:tracking-[0.14px] 2xl:text-[18px] 2xl:leading-[63px] 2xl:tracking-[0.18px]">独自の強み・教育体制</a>
+          <a href="Candidate.html"
+            class="text-[#1A1A1A] whitespace-nowrap hover:opacity-60 transition-opacity text-[13px] leading-[48px] tracking-[0.13px] xl:text-[14px] xl:leading-[54px] xl:tracking-[0.14px] 2xl:text-[18px] 2xl:leading-[63px] 2xl:tracking-[0.18px]">紹介可能な人材・職種</a>
+          <a href="flow-costs.html"
+            class="text-[#990033] font-noto-sans-b whitespace-nowrap hover:opacity-60 transition-opacity text-[13px] leading-[48px] tracking-[0.13px] xl:text-[14px] xl:leading-[54px] xl:tracking-[0.14px] 2xl:text-[18px] 2xl:leading-[63px] 2xl:tracking-[0.18px]">ご紹介の流れ・費用</a>
+          <a href="company.html"
+            class="text-[#1A1A1A] whitespace-nowrap hover:opacity-60 transition-opacity text-[13px] leading-[48px] tracking-[0.13px] xl:text-[14px] xl:leading-[54px] xl:tracking-[0.14px] 2xl:text-[18px] 2xl:leading-[63px] 2xl:tracking-[0.18px]">運営体制・会社概要</a>
+        </nav>
+
+        <a href="#contact"
+          class="hidden lg:flex flex-col items-center justify-center self-center rounded-full bg-[#990033] hover:opacity-60 transition-opacity w-[210px] h-[54px] lg:w-[250px] lg:h-[64px] xl:w-[280px] xl:h-[72px] 2xl:w-[313px] 2xl:h-[80px]">
+          <div
+            class="bg-[#f9f2f2] text-center font-noto-sans-b text-[#990033] tracking-[0.05em] rounded-sm leading-none py-[2px] px-[4px] text-[9px] lg:py-[3px] lg:px-[5px] lg:text-[11px] xl:text-[13px] 2xl:text-[15px]">
+            24時間365日受付中／全国対応
+          </div>
+          <div
+            class="flex items-center justify-center text-white leading-none font-noto-sans-b gap-1.5 mt-0.5 text-[13px] lg:gap-2 lg:mt-1 lg:text-[15px] xl:text-[18px] 2xl:text-[22px]">
+            <img src="./images/home-page/01-header-footer/mail-icon.svg" alt=""
+              class="object-contain w-[15px] h-[11px] lg:w-[17px] lg:h-[12px] xl:w-[19px] xl:h-[14px] 2xl:w-[22px] 2xl:h-4" />
+            <span>お問い合わせはこちら</span>
+          </div>
+        </a>
+
+        <!-- Hamburger (below lg / 1024px — when nav links are hidden) -->
+        <button id="mobile-menu-btn" type="button"
+          class="flex lg:hidden items-center justify-center focus:outline-none w-10 h-10 xs:w-11 xs:h-11 sm:w-12 sm:h-12"
+          aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-menu">
+          <img src="./images/home-page/01-header-footer/hamburger-icon.svg" alt="MENU"
+            class="w-full h-full object-contain" />
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Backdrop -->
+    <div id="mobile-menu-backdrop"
+      class="fixed inset-0 bg-black/50 z-[55] opacity-0 invisible transition-all duration-300 lg:hidden"
+      aria-hidden="true"></div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu"
+      class="fixed inset-0 w-full h-full bg-white z-[60] translate-x-full transition-transform duration-300 ease-in-out flex flex-col overflow-y-auto lg:hidden"
+      aria-hidden="true">
+      <div
+        class="flex items-center justify-end border-b-2 border-[#e2b774] shrink-0 h-[96px] px-[10px] xs:h-[100px] sm:h-[106px] sm:px-6 sm2:h-[112px] sm2:px-8 md:h-[120px] md:px-10 md2:h-[125px] md2:px-10 lg:h-[129px] lg:px-12">
+        <button id="mobile-menu-close" type="button"
+          class="flex items-center justify-center hover:opacity-60 transition-opacity focus:outline-none w-10 h-10 xs:w-11 xs:h-11 sm:w-12 sm:h-12"
+          aria-label="メニューを閉じる">
+          <img src="./images/home-page/01-header-footer/close-icon.svg" alt="" class="w-full h-full object-contain" />
+        </button>
+      </div>
+
+      <nav class="flex flex-col px-[10px] sm:px-6 sm2:px-8 md:px-10">
+        <a href="strengths.html"
+          class="font-noto-sans-r text-[#1A1A1A] border-b border-gray-100 hover:opacity-60 transition-opacity text-[15px] leading-[48px] tracking-[0.15px] xs:text-[16px] xs:leading-[52px] xs:tracking-[0.16px] sm:text-[17px] sm:leading-[56px] sm:tracking-[0.17px] sm2:text-[18px] sm2:leading-[60px] sm2:tracking-[0.18px] md:text-[18px] md:leading-[63px] md:tracking-[0.18px]">独自の強み・教育体制</a>
+        <a href="Candidate.html"
+          class="font-noto-sans-r text-[#1A1A1A] border-b border-gray-100 hover:opacity-60 transition-opacity text-[15px] leading-[48px] tracking-[0.15px] xs:text-[16px] xs:leading-[52px] xs:tracking-[0.16px] sm:text-[17px] sm:leading-[56px] sm:tracking-[0.17px] sm2:text-[18px] sm2:leading-[60px] sm2:tracking-[0.18px] md:text-[18px] md:leading-[63px] md:tracking-[0.18px]">紹介可能な人材・職種</a>
+        <a href="flow-costs.html"
+          class="font-noto-sans-b text-[#990033] border-b border-gray-100 hover:opacity-60 transition-opacity text-[15px] leading-[48px] tracking-[0.15px] xs:text-[16px] xs:leading-[52px] xs:tracking-[0.16px] sm:text-[17px] sm:leading-[56px] sm:tracking-[0.17px] sm2:text-[18px] sm2:leading-[60px] sm2:tracking-[0.18px] md:text-[18px] md:leading-[63px] md:tracking-[0.18px]">ご紹介の流れ・費用</a>
+        <a href="company.html"
+          class="font-noto-sans-r text-[#1A1A1A] border-b border-gray-100 hover:opacity-60 transition-opacity text-[15px] leading-[48px] tracking-[0.15px] xs:text-[16px] xs:leading-[52px] xs:tracking-[0.16px] sm:text-[17px] sm:leading-[56px] sm:tracking-[0.17px] sm2:text-[18px] sm2:leading-[60px] sm2:tracking-[0.18px] md:text-[18px] md:leading-[63px] md:tracking-[0.18px]">運営体制・会社概要</a>
+      </nav>
+
+      <a href="#contact"
+        class="flex items-center justify-center shrink-0 rounded-full bg-[#990033] hover:opacity-60 transition-opacity mx-auto gap-1.5 w-[260px] max-w-[calc(100%-32px)] h-[64px] mt-5 mb-6 xs:gap-2 xs:w-[280px] xs:max-w-[calc(100%-40px)] xs:h-[68px] xs:mt-6 sm:w-[300px] sm:h-[72px] sm2:w-[313px] sm2:h-[76px] md:h-[80px] md:mb-8">
+        <img src="./images/home-page/01-header-footer/mail-icon.svg" alt=""
+          class="object-contain shrink-0 w-[16px] h-[12px] xs:w-[18px] xs:h-[13px] sm:w-5 sm:h-[15px]" />
+        <span
+          class="font-noto-sans-b text-white text-[18px] leading-none xs:text-[19px] sm:text-[20px] sm2:text-[21px] md:text-[22px]">お問い合わせはこちら</span>
+      </a>
+    </div>
+  </header>
+
+
+  <!-- ===================== PAGE CONTENT START ===================== -->
+  <main>
+
+    <!-- Hero / Intro -->
+    <section class="pt-10 pb-6 md:pt-12 md:pb-8">
+      <div class="mx-auto max-w-[1100px] px-5 text-center">
+        <span class="font-en block text-[0.8rem] font-semibold tracking-[3px] text-[#c29d53] mb-3">Flow</span>
+        <h2 class="font-bold leading-[1.45] text-[#2d3142] text-[clamp(1.2rem,5.4vw,1.4rem)] md:text-[1.9rem] mb-4">
+          現地選抜から就業・定着までの<br class="md:hidden">
+          <span class="accent-yellow font-bold">「不満ゼロ」</span>6ステップ
+        </h2>
+        <p class="mx-auto max-w-[980px] text-[1.05rem] md:text-[1.22rem] leading-[1.45] font-medium text-[#2d3142]">
+          特定技能外国人材を受け入れる企業（特定技能所属機関）様から見た、採用から就業、そして安心の長期定着までの標準的なプロセス例です。最も煩雑とされる行政手続きや受入準備も、コンソーシアムが徹底的にサポートいたします。
+        </p>
+      </div>
+    </section>
+
+    <!-- 6-Step Flow -->
+    <section class="india-watermark pt-2 pb-12">
+      <div class="mx-auto max-w-[876px] px-5">
+
+        <div class="flow-card">
+          <div class="flow-card__head">①現地選抜・教育（約5ヶ月間）</div>
+          <div class="flow-card__body">有力な提携大学から厳選した優秀な若者を対象に、約5ヶ月間で日本語・日本文化教育、および NAC 等での業種別専門研修を実施。</div>
+        </div>
+
+        <div class="flex justify-center py-3" aria-hidden="true">
+          <svg width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 3L15 14L27 3" stroke="#2d3142" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <div class="flow-card">
+          <div class="flow-card__head">②マッチング・面接</div>
+          <div class="flow-card__body">御社の要件に合致した人材のみをご提案し、面接・内定へ。</div>
+        </div>
+
+        <div class="flex justify-center py-3" aria-hidden="true">
+          <svg width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 3L15 14L27 3" stroke="#2d3142" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <div class="flow-card">
+          <div class="flow-card__head">③行政手続き（約1.5〜3ヶ月）</div>
+          <div class="flow-card__body">CCUS（建設キャリアアップシステム）事業者登録、JAC加入、国交省受入計画申請など、最も煩雑な手続きをすべて代行・サポート。</div>
+        </div>
+
+        <div class="flex justify-center py-3" aria-hidden="true">
+          <svg width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 3L15 14L27 3" stroke="#2d3142" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <div class="flow-card">
+          <div class="flow-card__head">④COE申請・受け入れ準備</div>
+          <div class="flow-card__body">入管への代理申請を行い、スムーズなビザ発給を確定。</div>
+        </div>
+
+        <div class="flex justify-center py-3" aria-hidden="true">
+          <svg width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 3L15 14L27 3" stroke="#2d3142" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <div class="flow-card">
+          <div class="flow-card__head">⑤就業開始</div>
+          <div class="flow-card__body">住居の確保、住民票の登録や口座開設など、日本での初期生活基盤をすべて整えて現場へ配属。</div>
+        </div>
+
+        <div class="flex justify-center py-3" aria-hidden="true">
+          <svg width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 3L15 14L27 3" stroke="#2d3142" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <div class="flow-card">
+          <div class="flow-card__head">⑥徹底した定着支援</div>
+          <div class="flow-card__body">入国後も、定期面談によるメンタルケア、継続的な日本語学習支援を行い、失踪や早期離職を未然に防ぎます。</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Cost Table -->
+    <section class="pt-2 pb-14">
+      <div class="mx-auto max-w-[1180px] px-5">
+
+        <div class="text-center mb-6">
+          <span class="font-en block text-[0.8rem] font-semibold tracking-[3px] text-[#c29d53] mb-3">Budget Plan</span>
+          <h2 class="font-black leading-[1.45] text-[#2d3142] text-[clamp(1.15rem,5.2vw,1.5rem)] md:text-[1.9rem] mb-3">
+            <span class="accent-yellow font-black">1名あたりの明確なコストイメージ</span>
+          </h2>
+          <p class="mx-auto max-w-[900px] text-[0.95rem] font-medium text-[#2d3142]">
+            ※以下はコストイメージです。与件をお打ち合わせさせて頂いたのち、正式なお見積書を提出させていただきます。
+          </p>
+        </div>
+
+        <div class="mx-auto max-w-[1075px] rounded-[20px] overflow-hidden shadow-[0_8px_32px_rgba(45,49,66,0.08)] border border-[#eaeaea]">
+          <table class="cost-table">
+            <thead>
+              <tr>
+                <th class="w-[20%]">実施プロセス</th>
+                <th class="w-[21%]">項目</th>
+                <th class="w-[19%]">予算イメージ（税別）</th>
+                <th class="w-[40%]">備考</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Group ①〜② (white) -->
+              <tr>
+                <td class="c-proc--white">上記①〜②<br>選考・マッチングフェーズ</td>
+                <td class="c-item">コンサルティング費用<br>事前教育費等</td>
+                <td class="c-price">200,000円 <small>／1人</small></td>
+                <td class="c-remark">企業様との与件整理打合せ、提携大学・機関を通じた人材のスクリーニング、日本語教育・日本教育を受講した人材が受講する NAC での実践的かつ建設・土木修学費用が含まれています。企業様との面談調整、およびインド政府の送出規則に完全準拠した人材紹介・渡航サポートなどが含まれます。</td>
+              </tr>
+
+              <!-- Group ③〜④ (grey) -->
+              <tr>
+                <td class="c-proc" rowspan="2">上記③〜④<br>申請・受け入れ準備フェーズ</td>
+                <td class="c-item is-grey">建設業特有の手続き<br>在留資格（COE）申請代行</td>
+                <td class="c-price is-grey">150,000円 <small>／1人</small></td>
+                <td class="c-remark is-grey">建設特定技能受入計画の作成、CCUS・JAC関連、行政書士によるビザ申請代行等 ※自社で手続き・申請される場合は費用を抑えることが可能です。</td>
+              </tr>
+              <tr>
+                <td class="c-item is-grey">法定登録料・手数料等</td>
+                <td class="c-price is-grey"><span class="text-black font-black">実費（数万円程度）</span></td>
+                <td class="c-remark is-grey">CCUS事業者・技能者登録料、ビザ発給手数料等。企業規模や既存の加入状況により変動します。</td>
+              </tr>
+
+              <!-- Group ⑤ (white) -->
+              <tr>
+                <td class="c-proc--white" rowspan="3">上記⑤<br>入国・生活開始フェーズ</td>
+                <td class="c-item">渡航費用・入国前健康診断</td>
+                <td class="c-price">100,000円 <small>／1人</small></td>
+                <td class="c-remark">インドからの航空券代（時期により変動）、ビザ発給関連費用、および現地医療機関での健康診断費用。</td>
+              </tr>
+              <tr>
+                <td class="c-item">入国初期支援費用<br><span class="font-normal text-[0.7rem]">（送迎・公的手続同行・生活オリエン）</span></td>
+                <td class="c-price">100,000円 <small>／1人</small></td>
+                <td class="c-remark">空港からの送迎、市役所等での公的手続同行、生活インフラ（通信・金融）の契約支援、現場安全ルールの母国語オリエンテーション等、生活立ち上げを支える初期サポート費。</td>
+              </tr>
+              <tr>
+                <td class="c-item">住居確保・生活備品準備<br><span class="font-normal text-[0.7rem]">（※企業側で直接手配可能）</span></td>
+                <td class="c-price">150,000 〜 300,000円 <small>／1人</small></td>
+                <td class="c-remark">アパートの敷金・礼金、家具家電一式。自社の既存寮や社宅を利用する場合はこの費用を大幅に圧縮可能。</td>
+              </tr>
+
+              <!-- Group ⑥ (grey) -->
+              <tr>
+                <td class="c-proc" rowspan="3">上記⑥<br>定着支援フェーズ</td>
+                <td class="c-item is-grey">登録支援機関 委託費用<br>（月額費用）</td>
+                <td class="c-price is-grey"><span class="text-black font-black">1人目</span> 100,000円<small>／月</small><br><span class="text-black font-black">2人目から</span> 100,000円<small>／月</small></td>
+                <td class="c-remark is-grey">法定の定期面談、母国語でのトラブル対応窓口。Hana Global Edutechと連携したインド母国側からの継続的なメンタルケア体制を含む、質の高い定着支援パッケージ。</td>
+              </tr>
+              <tr>
+                <td class="c-item is-grey">JAC 受入負担金<br>（月額費用）</td>
+                <td class="c-price is-grey">12,500円 <small>／1人</small></td>
+                <td class="c-remark is-grey">特定技能外国人の受入企業が JAC に対して毎月負担する法的義務費用（採用ルートにより変動）</td>
+              </tr>
+              <tr>
+                <td class="c-item is-grey">在留資格更新費用<br>（年1回発生）</td>
+                <td class="c-price is-grey"><span class="text-black font-black">更新費用</span> 50,000円 <small>／1人</small><br><span class="text-[0.8em] font-normal"><span class="text-black font-black">印紙代</span> 6,000円／1人</span></td>
+                <td class="c-remark is-grey">特定技能1号の在留期間更新に関わる行政書士への代行費用、および印紙代</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section — Call to Action Banner -->
+    <section>
+      <div class="text-center py-12 md:py-16 px-4">
+        <h2 class="font-bold text-[1.25rem] sm:text-[1.55rem] md:text-[2rem] leading-[1.5] text-[#2d3142]">
+          さあ、人手不足で頭を悩ませる毎日に、<span class="inline-block"><span class="accent-yellow font-bold">今すぐ終止符を打ちましょう。</span></span>
+        </h2>
+      </div>
+
+      <!-- Red Banner -->
+      <div class="w-full bg-[#990033] py-8 sm:py-10 md:py-12 text-center text-white px-4">
+        <a href="#contact" class="inline-block transition-transform hover:scale-[1.01] active:scale-[0.99]">
+          <p class="font-bold text-[1.1rem] sm:text-[1.4rem] md:text-[1.8rem] leading-[1.55] tracking-wide">
+            人手不足を劇的に解決する <span class="bg-[#ffe082] text-[#2d3142] px-2.5 py-0.5 rounded mx-1 font-bold inline-block shadow-sm">インド即戦力人材</span> に関する<br class="hidden sm:inline">
+            ご相談・お問い合わせはこちら
+          </p>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div
+      class="bg-[#f7f7f7] max-w-[1920px] mx-auto py-[30px] px-[10px] sm:px-5 sm2:px-8 md:px-10 md2:px-12 lg:px-[48px]">
+      <div class="flex flex-col">
+        <!-- Logo + links -->
+        <div class="flex justify-center">
+          <div class="flex justify-between items-start md:items-center gap-[16px] md:gap-[32px] w-full md:w-auto">
+            <!-- Logo -->
+            <div class="shrink-0">
+              <a href="index.html">
+                <img src="./images/home-page/01-header-footer/logo.png" alt="Hana Global Edutech"
+                  class="w-[170px] h-auto block" />
+              </a>
+            </div>
+
+            <!-- Links (+ copyright on desktop) -->
+            <div class="flex flex-col">
+              <nav
+                class="flex flex-col items-start gap-y-[30px] md:flex-row md:flex-wrap md:items-center md:gap-x-[32px] md:gap-y-[20px]">
+                <a href="index.html"
+                  class="font-noto-sans-r text-[#1A1A1A] text-[16px] leading-none tracking-[0.16px] underline hover:opacity-60 transition-opacity whitespace-nowrap">トップページ</a>
+                <a href="strengths.html"
+                  class="font-noto-sans-r text-[#1A1A1A] text-[16px] leading-none tracking-[0.16px] underline hover:opacity-60 transition-opacity whitespace-nowrap">独自の強み・教育体制</a>
+                <a href="Candidate.html"
+                  class="font-noto-sans-r text-[#1A1A1A] text-[16px] leading-none tracking-[0.16px] underline hover:opacity-60 transition-opacity whitespace-nowrap">紹介可能な人材・職種</a>
+                <a href="flow-costs.html"
+                  class="font-noto-sans-r text-[#1A1A1A] text-[16px] leading-none tracking-[0.16px] underline hover:opacity-60 transition-opacity whitespace-nowrap">ご紹介の流れ・費用</a>
+                <a href="company.html"
+                  class="font-noto-sans-r text-[#1A1A1A] text-[16px] leading-none tracking-[0.16px] underline hover:opacity-60 transition-opacity whitespace-nowrap">運営体制・会社概要</a>
+                <a href="#contact"
+                  class="font-noto-sans-r text-[#1A1A1A] text-[16px] leading-none tracking-[0.16px] underline hover:opacity-60 transition-opacity whitespace-nowrap">お問い合わせ</a>
+              </nav>
+              <p
+                class="hidden md:block font-noto-sans-r text-[#999999] text-[14px] leading-none tracking-[0.14px] mt-[24px]">
+                © 2026 Hana Global Support
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright — mobile only, centered below -->
+        <p
+          class="md:hidden font-noto-sans-r text-[#999999] text-[14px] leading-none tracking-[0.14px] text-center mt-[32px]">
+          © 2026 Hana Global Support
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+</body>
+
+</html>

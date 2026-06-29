@@ -1,0 +1,145 @@
+/* ==========================================
+   Strengths Page Specific Styles (strengths.css)
+   ========================================== */
+
+:root {
+  --brand-red: #990033;
+  --brand-gold: #c29d53;
+  --number-tan: #c2a878;
+  --text-dark: #2d3142;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  color: var(--text-dark);
+  background: #ffffff;
+  line-height: 1.75;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.font-en {
+  font-family: "Outfit", sans-serif;
+}
+
+/* Yellow highlighter accent (behind text) */
+.accent-yellow {
+  position: relative;
+  display: inline;
+  z-index: 1;
+}
+
+.accent-yellow::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  bottom: 2px;
+  height: 8px;
+  background: linear-gradient(90deg, #ffe166, #ffe082);
+  z-index: -1;
+}
+
+/* India outline watermark (bottom-left, faint) */
+.india-watermark {
+  position: relative;
+  overflow-x: clip;
+}
+
+.india-watermark::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: min(420px, 55vw);
+  height: min(420px, 55vw);
+  background: url("https://upload.wikimedia.org/wikipedia/commons/d/d0/India_outline.png") no-repeat bottom left;
+  background-size: contain;
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.india-watermark > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Large index number (01 / 02 / 03) */
+.reason-number {
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+  font-size: 3.05rem;
+  line-height: 1;
+  color: var(--number-tan);
+  letter-spacing: 0.02em;
+}
+
+/* Bracket list (block 02) */
+.bracket-list {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.bracket-item {
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.bracket-item b {
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+/* Video play button */
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110px;
+  height: 80px;
+  border: 6px solid rgba(255, 255, 255, 0.95);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.play-btn:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.play-btn::after {
+  content: "";
+  border-style: solid;
+  border-width: 13px 0 13px 22px;
+  border-color: transparent transparent transparent #ffffff;
+  margin-left: 6px;
+}
+
+@media (max-width: 767px) {
+  .reason-number {
+    font-size: 2rem;
+  }
+  .bracket-item {
+    font-size: 0.58rem;
+  }
+}
