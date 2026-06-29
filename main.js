@@ -1,10 +1,13 @@
-document.addEventListener("DOMContentLoaded", () => {
+function initMobileMenu() {
   const menuBtn = document.getElementById("mobile-menu-btn");
   const closeBtn = document.getElementById("mobile-menu-close");
   const mobileMenu = document.getElementById("mobile-menu");
   const backdrop = document.getElementById("mobile-menu-backdrop");
 
   if (!menuBtn || !mobileMenu || !backdrop) return;
+
+  if (menuBtn.dataset.menuBound === "true") return;
+  menuBtn.dataset.menuBound = "true";
 
   const isOpen = () => mobileMenu.classList.contains("translate-x-0");
 
@@ -31,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   closeBtn?.addEventListener("click", () => setMenuOpen(false));
-
   backdrop.addEventListener("click", () => setMenuOpen(false));
 
   mobileMenu.querySelectorAll("a").forEach((link) => {
@@ -41,9 +43,12 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", () => {
     if (window.innerWidth >= 1024) setMenuOpen(false);
   });
-});
+}
 
-// News Carousel
+document.addEventListener("DOMContentLoaded", initMobileMenu);
+document.addEventListener("partials:loaded", initMobileMenu);
+
+// News Carousel (home page only)
 document.addEventListener("DOMContentLoaded", () => {
   const splideEl = document.getElementById("news-splide");
   if (!splideEl) return;
@@ -71,7 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const totalPages = splide.Components.Controller.getEnd() + 1;
 
-  // Build dots
   const dots = [];
   for (let i = 0; i < totalPages; i++) {
     const img = document.createElement("img");

@@ -1,0 +1,234 @@
+/* ==========================================
+   Shared Subpage Styles (shared.css)
+   Linked on all subpages alongside style.css
+   ========================================== */
+
+:root {
+  --brand-red: #990033;
+  --brand-gold: #c29d53;
+  --number-tan: #c2a878;
+  --text-dark: #2d3142;
+  --price-brown: #754c24;
+  --grey-cell: #e6e6e6;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body.partials-loading #site-header {
+  min-height: 96px;
+}
+
+@media (min-width: 750px) {
+  body.partials-loading #site-header {
+    min-height: 120px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body.partials-loading #site-header {
+    min-height: 129px;
+  }
+}
+
+/* Yellow highlighter accent (behind text) */
+.accent-yellow {
+  position: relative;
+  display: inline;
+  z-index: 1;
+}
+
+.accent-yellow::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  bottom: 2px;
+  height: 8px;
+  background: linear-gradient(90deg, #ffe166, #ffe082);
+  z-index: -1;
+}
+
+/* India outline watermark — shared asset: images/shared/india-outline.png */
+.india-watermark {
+  position: relative;
+  overflow-x: clip;
+}
+
+.india-watermark > * {
+  position: relative;
+  z-index: 1;
+}
+
+.india-watermark--bottom-left::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: min(420px, 55vw);
+  height: min(420px, 55vw);
+  background: url("./images/shared/india-outline.png") no-repeat bottom left;
+  background-size: contain;
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.india-watermark--top-left::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  width: min(420px, 55vw);
+  height: min(420px, 55vw);
+  background: url("./images/shared/india-outline.png") no-repeat top left;
+  background-size: contain;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.india-watermark--top-left-sm::before {
+  width: min(380px, 50vw);
+  height: min(380px, 50vw);
+}
+
+/* Shared CTA banner strip */
+.banner-cta-strip {
+  background-image: url("./images/shared/banner-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Large index numbers (01 / 02 …) — pair with font-noto-syriac-b in HTML */
+.reason-number {
+  font-size: 3.05rem;
+  line-height: 1;
+  color: var(--number-tan);
+  letter-spacing: 0.02em;
+}
+
+.reason-number--lg {
+  font-size: 3.2rem;
+}
+
+/* Subpage layout helpers */
+.subpage-main {
+  padding-top: 1.25rem;
+  padding-bottom: 0;
+}
+
+@media (min-width: 750px) {
+  .subpage-main {
+    padding-top: 4rem;
+  }
+}
+
+/* Banner sits flush above footer (matches home page) */
+#site-banner-cta,
+#site-banner-cta .banner-cta-strip,
+#site-footer,
+#site-footer footer {
+  margin: 0;
+}
+
+.subpage-section {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 480px) {
+  .subpage-section {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 750px) {
+  .subpage-section {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+/* Horizontal scroll wrapper for wide tables */
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-scroll .cost-table {
+  min-width: 640px;
+}
+
+/* Candidates genre card — prevent image clip on small screens */
+.genre-card-figure {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin-bottom: -0.5rem;
+  position: relative;
+  z-index: 0;
+  padding-left: 0.75rem;
+  overflow: hidden;
+}
+
+@media (min-width: 480px) {
+  .genre-card-figure {
+    padding-left: 1rem;
+  }
+}
+
+@media (min-width: 750px) {
+  .genre-card-figure {
+    padding-left: 1.25rem;
+  }
+}
+
+.genre-card-figure img {
+  height: 7rem;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.08));
+  margin-left: -12%;
+  max-width: 130%;
+}
+
+@media (min-width: 480px) {
+  .genre-card-figure img {
+    height: 11rem;
+    margin-left: -18%;
+  }
+}
+
+@media (min-width: 750px) {
+  .genre-card-figure img {
+    height: 13.125rem;
+    margin-left: -24%;
+  }
+}
+
+.genre-card-figure--offset-light img {
+  margin-left: -2%;
+}
+
+@media (min-width: 480px) {
+  .genre-card-figure--offset-light img {
+    margin-left: -4%;
+  }
+}
+
+@media (min-width: 750px) {
+  .genre-card-figure--offset-light img {
+    margin-left: -8%;
+  }
+}
+
+@media (max-width: 767px) {
+  .reason-number,
+  .reason-number--lg {
+    font-size: 2rem;
+  }
+}

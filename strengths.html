@@ -5,193 +5,35 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO Meta Tags -->
   <title>独自の強み・教育体制 | Hana Global Support</title>
   <meta name="description" content="Hana Global Supportの独自の強みと、妥協なき選抜・スパルタ式日本適応訓練による超・徹底教育体制について紹介します。">
 
-  <!-- Adobe Typekit Script (Kozuka Gothic Pr6N) -->
-  <script>
-    (function (d) {
-      var config = {
-        kitId: "lsu1ewf",
-        scriptTimeout: 3000,
-        async: true,
-      },
-        h = d.documentElement,
-        t = setTimeout(function () {
-          h.className =
-            h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
-        }, config.scriptTimeout),
-        tk = d.createElement("script"),
-        f = false,
-        s = d.getElementsByTagName("script")[0],
-        a;
-      h.className += " wf-loading";
-      tk.src = "https://use.typekit.net/" + config.kitId + ".js";
-      tk.async = true;
-      tk.onload = tk.onreadystatechange = function () {
-        a = this.readyState;
-        if (f || (a && a != "complete" && a != "loaded")) return;
-        f = true;
-        clearTimeout(t);
-        try {
-          Typekit.load(config);
-        } catch (e) { }
-      };
-      s.parentNode.insertBefore(tk, s);
-    })(document);
-  </script>
-
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        screens: {
-          xs: "375px",
-          sm: "480px",
-          sm2: "600px",
-          md: "750px",
-          md2: "900px",
-          lg: "1024px",
-          xl: "1280px",
-          "2xl": "1440px",
-          "3xl": "1920px",
-          "hb-max": { max: "1860px" },
-          "hb-max2": { max: "1650px" },
-          "hb-max3": { max: "1450px" },
-          "hb-max4": { max: "1350px" },
-          "hb-min": "1351px",
-          "hb-mid": { min: "1351px", max: "1650px" },
-          "about-stack": { max: "1100px" },
-          "about-row": "1101px",
-          "about-sm": { min: "480px", max: "1100px" },
-          "about-sm2": { min: "600px", max: "1100px" },
-          "about-md": { min: "750px", max: "1100px" },
-          "about-md2": { min: "900px", max: "1100px" },
-          "about-b-stack": { max: "1000px" },
-          "about-b-h2": { min: "500px", max: "749px" },
-          "about-b-h3": { min: "750px", max: "1000px" },
-          "about-b-row": "1001px",
-        },
-      },
-    };
-  </script>
+  <script src="tailwind-config.js"></script>
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Outfit:wght@300;400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap"
-    rel="stylesheet">
-
-  <!-- Core Local Fonts stylesheet -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="shared.css">
+  <link rel="stylesheet" href="strengths.css">
 </head>
 
-<body class="bg-white text-[#1A1A1A] font-noto-sans-r min-h-screen">
+<body class="bg-white text-[#1A1A1A] font-noto-sans-r min-h-screen" data-active-page="strengths">
 
-  <!-- Header Section -->
-  <header
-    class="w-full bg-white border-b-2 border-[#e2b774] relative z-50 h-[96px] px-[10px] xs:h-[100px] sm:h-[106px] sm:px-6 sm2:h-[112px] sm2:px-8 md:h-[120px] md:px-10 md2:h-[125px] lg:h-[129px] lg:px-12 xl:px-14 2xl:px-16">
-    <div class="w-full max-w-[1920px] mx-auto h-full flex items-center justify-between">
-      <!-- Logo -->
-      <a href="index.html"
-        class="flex shrink-0 h-[68px] xs:h-[74px] sm:h-[82px] sm2:h-[88px] md:h-[94px] md2:h-[98px] lg:h-[104.1372px]">
-        <img src="./images/home-page/01-header-footer/logo.png" alt="Hana Global Edutech"
-          class="h-full w-auto object-contain" />
-      </a>
+  <div id="site-header"></div>
 
-      <!-- Right side: nav + CTA + hamburger -->
-      <div class="flex items-center shrink-0 gap-3 sm:gap-4 md2:gap-5 xl:gap-6 2xl:gap-10">
-        <nav class="hidden lg:flex items-center h-full gap-2 xl:gap-3 2xl:gap-8 font-noto-sans-r">
-          <a href="strengths.html"
-            class="text-[#990033] font-noto-sans-b whitespace-nowrap hover:opacity-60 transition-opacity text-[13px] leading-[48px] tracking-[0.13px] xl:text-[14px] xl:leading-[54px] xl:tracking-[0.14px] 2xl:text-[18px] 2xl:leading-[63px] 2xl:tracking-[0.18px]">独自の強み・教育体制</a>
-          <a href="Candidate.html"
-            class="text-[#1A1A1A] whitespace-nowrap hover:opacity-60 transition-opacity text-[13px] leading-[48px] tracking-[0.13px] xl:text-[14px] xl:leading-[54px] xl:tracking-[0.14px] 2xl:text-[18px] 2xl:leading-[63px] 2xl:tracking-[0.18px]">紹介可能な人材・職種</a>
-          <a href="flow-costs.html"
-            class="text-[#1A1A1A] whitespace-nowrap hover:opacity-60 transition-opacity text-[13px] leading-[48px] tracking-[0.13px] xl:text-[14px] xl:leading-[54px] xl:tracking-[0.14px] 2xl:text-[18px] 2xl:leading-[63px] 2xl:tracking-[0.18px]">ご紹介の流れ・費用</a>
-          <a href="company.html"
-            class="text-[#1A1A1A] whitespace-nowrap hover:opacity-60 transition-opacity text-[13px] leading-[48px] tracking-[0.13px] xl:text-[14px] xl:leading-[54px] xl:tracking-[0.14px] 2xl:text-[18px] 2xl:leading-[63px] 2xl:tracking-[0.18px]">運営体制・会社概要</a>
-        </nav>
-
-        <a href="#contact"
-          class="hidden lg:flex flex-col items-center justify-center self-center rounded-full bg-[#990033] hover:opacity-60 transition-opacity w-[210px] h-[54px] lg:w-[250px] lg:h-[64px] xl:w-[280px] xl:h-[72px] 2xl:w-[313px] 2xl:h-[80px]">
-          <div
-            class="bg-[#f9f2f2] text-center font-noto-sans-b text-[#990033] tracking-[0.05em] rounded-sm leading-none py-[2px] px-[4px] text-[9px] lg:py-[3px] lg:px-[5px] lg:text-[11px] xl:text-[13px] 2xl:text-[15px]">
-            24時間365日受付中／全国対応
-          </div>
-          <div
-            class="flex items-center justify-center text-white leading-none font-noto-sans-b gap-1.5 mt-0.5 text-[13px] lg:gap-2 lg:mt-1 lg:text-[15px] xl:text-[18px] 2xl:text-[22px]">
-            <img src="./images/home-page/01-header-footer/mail-icon.svg" alt=""
-              class="object-contain w-[15px] h-[11px] lg:w-[17px] lg:h-[12px] xl:w-[19px] xl:h-[14px] 2xl:w-[22px] 2xl:h-4" />
-            <span>お問い合わせはこちら</span>
-          </div>
-        </a>
-
-        <!-- Hamburger (below lg / 1024px — when nav links are hidden) -->
-        <button id="mobile-menu-btn" type="button"
-          class="flex lg:hidden items-center justify-center focus:outline-none w-10 h-10 xs:w-11 xs:h-11 sm:w-12 sm:h-12"
-          aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-menu">
-          <img src="./images/home-page/01-header-footer/hamburger-icon.svg" alt="MENU"
-            class="w-full h-full object-contain" />
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile Drawer Backdrop -->
-    <div id="mobile-menu-backdrop"
-      class="fixed inset-0 bg-black/50 z-[55] opacity-0 invisible transition-all duration-300 lg:hidden"
-      aria-hidden="true"></div>
-
-    <!-- Mobile Drawer Menu -->
-    <div id="mobile-menu"
-      class="fixed inset-0 w-full h-full bg-white z-[60] translate-x-full transition-transform duration-300 ease-in-out flex flex-col overflow-y-auto lg:hidden"
-      aria-hidden="true">
-      <div
-        class="flex items-center justify-end border-b-2 border-[#e2b774] shrink-0 h-[96px] px-[10px] xs:h-[100px] sm:h-[106px] sm:px-6 sm2:h-[112px] sm2:px-8 md:h-[120px] md:px-10 md2:h-[125px] md2:px-10 lg:h-[129px] lg:px-12">
-        <button id="mobile-menu-close" type="button"
-          class="flex items-center justify-center hover:opacity-60 transition-opacity focus:outline-none w-10 h-10 xs:w-11 xs:h-11 sm:w-12 sm:h-12"
-          aria-label="メニューを閉じる">
-          <img src="./images/home-page/01-header-footer/close-icon.svg" alt="" class="w-full h-full object-contain" />
-        </button>
-      </div>
-
-      <nav class="flex flex-col px-[10px] sm:px-6 sm2:px-8 md:px-10">
-        <a href="strengths.html"
-          class="font-noto-sans-b text-[#990033] border-b border-gray-100 hover:opacity-60 transition-opacity text-[15px] leading-[48px] tracking-[0.15px] xs:text-[16px] xs:leading-[52px] xs:tracking-[0.16px] sm:text-[17px] sm:leading-[56px] sm:tracking-[0.17px] sm2:text-[18px] sm2:leading-[60px] sm2:tracking-[0.18px] md:text-[18px] md:leading-[63px] md:tracking-[0.18px]">独自の強み・教育体制</a>
-        <a href="Candidate.html"
-          class="font-noto-sans-r text-[#1A1A1A] border-b border-gray-100 hover:opacity-60 transition-opacity text-[15px] leading-[48px] tracking-[0.15px] xs:text-[16px] xs:leading-[52px] xs:tracking-[0.16px] sm:text-[17px] sm:leading-[56px] sm:tracking-[0.17px] sm2:text-[18px] sm2:leading-[60px] sm2:tracking-[0.18px] md:text-[18px] md:leading-[63px] md:tracking-[0.18px]">紹介可能な人材・職種</a>
-        <a href="flow-costs.html"
-          class="font-noto-sans-r text-[#1A1A1A] border-b border-gray-100 hover:opacity-60 transition-opacity text-[15px] leading-[48px] tracking-[0.15px] xs:text-[16px] xs:leading-[52px] xs:tracking-[0.16px] sm:text-[17px] sm:leading-[56px] sm:tracking-[0.17px] sm2:text-[18px] sm2:leading-[60px] sm2:tracking-[0.18px] md:text-[18px] md:leading-[63px] md:tracking-[0.18px]">ご紹介の流れ・費用</a>
-        <a href="company.html"
-          class="font-noto-sans-r text-[#1A1A1A] border-b border-gray-100 hover:opacity-60 transition-opacity text-[15px] leading-[48px] tracking-[0.15px] xs:text-[16px] xs:leading-[52px] xs:tracking-[0.16px] sm:text-[17px] sm:leading-[56px] sm:tracking-[0.17px] sm2:text-[18px] sm2:leading-[60px] sm2:tracking-[0.18px] md:text-[18px] md:leading-[63px] md:tracking-[0.18px]">運営体制・会社概要</a>
-      </nav>
-
-      <a href="#contact"
-        class="flex items-center justify-center shrink-0 rounded-full bg-[#990033] hover:opacity-60 transition-opacity mx-auto gap-1.5 w-[260px] max-w-[calc(100%-32px)] h-[64px] mt-5 mb-6 xs:gap-2 xs:w-[280px] xs:max-w-[calc(100%-40px)] xs:h-[68px] xs:mt-6 sm:w-[300px] sm:h-[72px] sm2:w-[313px] sm2:h-[76px] md:h-[80px] md:mb-8">
-        <img src="./images/home-page/01-header-footer/mail-icon.svg" alt=""
-          class="object-contain shrink-0 w-[16px] h-[12px] xs:w-[18px] xs:h-[13px] sm:w-5 sm:h-[15px]" />
-        <span
-          class="font-noto-sans-b text-white text-[18px] leading-none xs:text-[19px] sm:text-[20px] sm2:text-[21px] md:text-[22px]">お問い合わせはこちら</span>
-      </a>
-    </div>
-  </header>
-
-  <!-- Main Content Area -->
-  <main class="pt-5 pb-10 md:py-16">
+  <!-- ===================== PAGE CONTENT START ===================== -->
+  <main class="subpage-main">
 
     <!-- ================================================================ -->
-    <!-- Section 1 — Strength Hero / Introduction                         -->
+    <!-- Hero — intro                                                       -->
     <!-- ================================================================ -->
     <section
       class="pb-6 md:pb-8 w-full max-w-[1920px] mx-auto px-[10px] sm:px-5 sm2:px-8 md:px-10 md2:px-12 lg:px-[48px]">
       <div class="mx-auto text-center">
         <span
-          class="font-noto-syriac-b text-[#B79D7B] block text-center text-[16px] leading-[28px] tracking-[2.6px] md:text-[18px] md:leading-[32px] md:tracking-[3px] about-row:text-[20px] about-row:leading-[34px] about-row:tracking-[3.2px] mb-3">Strength</span>
+          class="font-noto-syriac-r text-[#B79D7B] block text-center text-[14px] leading-[24px] tracking-[2.2px] xs:text-[15px] xs:leading-[26px] xs:tracking-[2.4px] sm:text-[16px] sm:leading-[28px] sm:tracking-[2.6px] sm2:text-[17px] sm2:leading-[30px] sm2:tracking-[2.8px] md:text-[18px] md:leading-[32px] md:tracking-[3px] md2:text-[19px] md2:leading-[33px] md2:tracking-[3.1px] about-row:text-[20px] about-row:leading-[34px] about-row:tracking-[3.2px] mb-3">Strength</span>
         <h1
-          class="font-noto-sans-r text-[#1A1A1A] text-[26px] leading-[38px] sm:text-[32px] sm:leading-[46px] md:text-[38px] md:leading-[54px] lg:text-[42px] lg:leading-[60px] mb-4">
-          精神に焼き付く<span class="font-noto-sans-r relative inline"><span class="relative z-[1]">「超・徹底教育」</span>
+          class="font-noto-sans-b text-[#1A1A1A] text-[26px] leading-[38px] sm:text-[32px] sm:leading-[46px] md:text-[38px] md:leading-[54px] lg:text-[42px] lg:leading-[60px] mb-4">
+          精神に焼き付く<span class="font-noto-sans-b relative inline"><span class="relative z-[1]">「超・徹底教育」</span>
             <span class="absolute left-0 bottom-[3px] w-full h-[8px] sm:h-[10px] bg-[#ffe05f] z-0 pointer-events-none"
               aria-hidden="true"></span></span>
         </h1>
@@ -205,14 +47,14 @@
     </section>
 
     <!-- ================================================================ -->
-    <!-- Section 2 — Detail Blocks (01 / 02 / 03 Reasons)                -->
+    <!-- Education — 3 detail blocks (images/strengths-page/03-education/) -->
     <!-- ================================================================ -->
     <section
-      class="relative overflow-x-clip py-8 md:py-16 w-full max-w-[1920px] mx-auto before:content-[''] before:absolute before:left-0 before:bottom-0 before:w-[min(420px,55vw)] before:h-[min(420px,55vw)] before:bg-[url('https://upload.wikimedia.org/wikipedia/commons/d/d0/India_outline.png')] before:bg-no-repeat before:bg-bottom before:bg-left before:bg-contain before:opacity-10 before:pointer-events-none before:z-0 [&>*]:relative [&>*]:z-1">
+      class="india-watermark india-watermark--bottom-left overflow-x-clip py-8 md:py-16 w-full max-w-[1920px] mx-auto">
       <div class="mx-auto max-w-[1200px] px-4 sm:px-6 md:px-8 lg:px-12 flex flex-col gap-16 md:gap-24">
 
         <!-- Block 01: University Screening -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 lg:gap-14 items-start">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-14 items-start">
           <div class="flex flex-col">
             <div class="flex items-start ">
               <div class="font-noto-syriac-b text-[42px]  sm:text-[56px] md:text-[68px] text-[#c2a878]">
@@ -229,17 +71,17 @@
             </div>
             <p
               class="mt-5 font-noto-sans-m text-[#1A1A1A] text-[15px] leading-[28px] sm:text-[16px] sm:leading-[30px] md:text-[15px] md:leading-[30px]">
-              インド国内の有力大学（25万人超のネットワークを誇るJNTUなど）</br>から、ただの労働者ではなく「日本でキャリアを築きたい」という猛</br>烈な熱意を持った若者だけをテストし、トップ層のみを選抜しています。母集団の質が、そもそも他社と違います。
+              インド国内の有力大学（25万人超のネットワークを誇るJNTUなど）<br>から、ただの労働者ではなく「日本でキャリアを築きたい」という猛<br>烈な熱意を持った若者だけをテストし、トップ層のみを選抜しています。母集団の質が、そもそも他社と違います。
             </p>
           </div>
           <div class="w-full">
-            <img src="images/strength-page/01-Education_level/Asset 1.png" class="w-full h-auto object-cover block"
+            <img src="./images/strengths-page/03-education/01.png" class="w-full h-auto object-cover block"
               alt="厳選された人材">
           </div>
         </div>
 
         <!-- Block 02: Intensive Training -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 lg:gap-14 items-start">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-14 items-start">
           <div class="flex flex-col">
             <div class="flex items-start gap-3 sm:gap-4">
               <div class="font-noto-syriac-b text-[42px]  sm:text-[56px] md:text-[68px] text-[#c2a878]">
@@ -256,35 +98,35 @@
             </div>
             <p
               class="mt-5 font-noto-sans-m text-[#1A1A1A] text-[15px] leading-[28px] sm:text-[16px] sm:leading-[30px] md:text-[15px] md:leading-[30px]">
-              「日本語を少し話せる」程度では、現場では何の役にも立ちません。</br>私たちは、日本のビジネス習慣・生活マナーを“無意識に動けるレベ</br>ル”まで身体に叩き込みます。
+              「日本語を少し話せる」程度では、現場では何の役にも立ちません。<br>私たちは、日本のビジネス習慣・生活マナーを“無意識に動けるレベ<br>ル”まで身体に叩き込みます。
             </p>
             <div
               class="font-noto-sans-m text-[#1A1A1A] text-[15px] leading-[28px] sm:text-[16px] sm:leading-[30px] md:text-[15px] md:leading-[30px]">
               <div>
                 <b
-                  class="font-noto-sans-m text-[#1A1A1A] text-[15px] leading-[28px] sm:text-[16px] sm:leading-[30px] md:text-[15px] md:leading-[30px]">【時間管理】</b><br>
+                  class="font-noto-sans-b text-[#1A1A1A] text-[15px] leading-[28px] sm:text-[16px] sm:leading-[30px] md:text-[15px] md:leading-[30px]">【時間管理】</b><br>
                 遅刻は1分たりとも許さない徹底的な時間厳守の習慣化。
               </div>
               <div>
                 <b
-                  class="font-noto-sans-m text-[#1A1A1A] text-[15px] leading-[28px] sm:text-[16px] sm:leading-[30px] md:text-[15px] md:leading-[30px]">【現場の「報連相」】</b><br>
+                  class="font-noto-sans-b text-[#1A1A1A] text-[15px] leading-[28px] sm:text-[16px] sm:leading-[30px] md:text-[15px] md:leading-[30px]">【現場の「報連相」】</b><br>
                 トラブルを未然に防ぐ「報告・連絡・相談」の実戦ロールプレイ。
               </div>
               <div>
                 <b
-                  class="font-noto-sans-m text-[#1A1A1A] text-[15px] leading-[28px] sm:text-[16px] sm:leading-[30px] md:text-[15px] md:leading-[30px]">【近隣住民トラブルゼロ】</b><br>
-                日本の複雑なゴミの分別、電車やバスの公共マナー、共有空間の使い</br>方の完全マスター。
+                  class="font-noto-sans-b text-[#1A1A1A] text-[15px] leading-[28px] sm:text-[16px] sm:leading-[30px] md:text-[15px] md:leading-[30px]">【近隣住民トラブルゼロ】</b><br>
+                日本の複雑なゴミの分別、電車やバスの公共マナー、共有空間の使い<br>方の完全マスター。
               </div>
             </div>
           </div>
           <div class="w-full">
-            <img src="images/strength-page/01-Education_level/Asset 2.png" class="w-full h-auto object-cover block"
+            <img src="./images/strengths-page/03-education/02.png" class="w-full h-auto object-cover block"
               alt="スパルタ式日本適応訓練">
           </div>
         </div>
 
         <!-- Block 03: Construction Specialization (NAC) -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 lg:gap-14 items-start">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-14 items-start">
           <div class="flex flex-col">
             <div class="flex items-start gap-3 sm:gap-4">
               <div class="font-noto-syriac-b text-[42px]  sm:text-[56px] md:text-[68px] text-[#c2a878]">
@@ -308,7 +150,7 @@
             </p>
           </div>
           <div class="w-full">
-            <img src="images/strength-page/01-Education_level/Asset 3.png" class="w-full h-auto object-cover block"
+            <img src="./images/strengths-page/03-education/03.png" class="w-full h-auto object-cover block"
               alt="国立土木学院 NAC">
           </div>
         </div>
@@ -317,16 +159,16 @@
     </section>
 
     <!-- ================================================================ -->
-    <!-- Section 3 — Video Showcase                                       -->
+    <!-- Video — showcase (images/strengths-page/04-video/)                 -->
     <!-- ================================================================ -->
     <section
       class="py-10 md:py-14 w-full max-w-[1920px] mx-auto px-[10px] sm:px-5 sm2:px-8 md:px-10 md2:px-12 lg:px-[48px]">
       <div class="mx-auto max-w-[1200px] px-5">
         <div class="text-center mb-8 md:mb-10">
           <span
-            class="font-noto-syriac-sb text-[#B79D7B] block text-center text-[16px] leading-[28px] tracking-[2.6px] md:text-[18px] md:leading-[32px] md:tracking-[3px] about-row:text-[20px] about-row:leading-[34px] about-row:tracking-[3.2px] mb-3">Video</span>
-          <h2 class="font-noto-sans-r text-[clamp(1.05rem,5.8vw,1.35rem)] md:text-[2rem] leading-[1.45] mb-4">
-            <span class="font-noto-sans-r relative inline"><span class="relative z-[1]">現地での教育の様子を、動画でも</span><span
+            class="font-noto-syriac-r text-[#B79D7B] block text-center text-[14px] leading-[24px] tracking-[2.2px] xs:text-[15px] xs:leading-[26px] xs:tracking-[2.4px] sm:text-[16px] sm:leading-[28px] sm:tracking-[2.6px] sm2:text-[17px] sm2:leading-[30px] sm2:tracking-[2.8px] md:text-[18px] md:leading-[32px] md:tracking-[3px] md2:text-[19px] md2:leading-[33px] md2:tracking-[3.1px] about-row:text-[20px] about-row:leading-[34px] about-row:tracking-[3.2px] mb-3">Video</span>
+          <h2 class="font-noto-sans-b text-[clamp(1.05rem,5.8vw,1.35rem)] md:text-[2rem] leading-[1.45] mb-4">
+            <span class="font-noto-sans-b relative inline"><span class="relative z-[1]">現地での教育の様子を、動画でも</span><span
                 class="absolute left-0 bottom-[2px] w-full h-[4px] bg-[#ffe05f] z-0 pointer-events-none sm:bottom-[3px] sm:h-[4px] md:bottom-[2px] md:h-[8px]"
                 aria-hidden="true"></span></span>
           </h2>
@@ -339,7 +181,7 @@
 
         <div class="mx-auto max-w-[860px]">
           <div class="relative overflow-hidden">
-            <img src="images/strength-page/Video/Asset 1.png" class="w-full block" alt="授業風景動画サムネイル">
+            <img src="./images/strengths-page/04-video/thumbnail.png" class="w-full block" alt="授業風景動画サムネイル">
             <button
               class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110px] h-[80px] border-[6px] border-white/95 rounded-[22px] bg-white/12 flex items-center justify-center cursor-pointer transition-colors duration-250 hover:bg-white/28 after:content-[''] after:border-solid after:border-y-[13px] after:border-r-0 after:border-l-[22px] after:border-y-transparent after:border-l-white after:ml-[6px]"
               data-video-open aria-label="動画を再生"></button>
@@ -348,92 +190,11 @@
       </div>
     </section>
 
-    <!-- ================================================================ -->
-    <!-- Section 4 — Call to Action Banner                               -->
-    <!-- ================================================================ -->
-    <section>
-      <div class="text-center py-12 md:py-16 px-4">
-        <h2 class="font-noto-sans-b text-[1.25rem] sm:text-[1.55rem] md:text-[2rem] leading-[1.5] text-[#2d3142]">
-          さあ、人手不足で頭を悩ませる毎日に、<span class="inline-block"><span class="font-noto-sans-b relative inline"><span
-                class="relative z-[1]">今すぐ終止符を打ちましょう。</span><span
-                class="absolute left-0 bottom-[2px] w-full h-[4px] bg-[#ffe05f] z-0 pointer-events-none sm:bottom-[3px] sm:h-[4px] md:bottom-[4px] md:h-[5px]"
-                aria-hidden="true"></span></span></span>
-        </h2>
-      </div>
-    </section>
-
-    <!-- ================================================================ -->
-    <!-- Banner — CTA strip                                               -->
-    <!-- ================================================================ -->
-    <section
-      class="relative w-full max-w-[1920px] mx-auto overflow-hidden h-[159px] bg-[url('./images/home-page/03-banner/bg.png')] bg-cover bg-center bg-no-repeat"
-    >
-      <a
-        href="#contact"
-        class="flex h-full items-center justify-center text-center px-[10px] sm:px-5 hover:opacity-90 transition-opacity"
-      >
-        <div
-          class="font-noto-sans-b text-white text-[15px] leading-[24px] xs:text-[16px] xs:leading-[26px] sm:text-[18px] sm:leading-[28px] md:text-[22px] md:leading-[30px] lg:text-[28px] lg:leading-[40px]"
-        >
-          人手不足を劇的に解消する<span
-            class="inline-block bg-[#f7e8ee] text-[#990033] font-noto-sans-b px-[6px] text-[18px] leading-[24px] xs:text-[19px] xs:leading-[26px] sm:text-[21px] sm:leading-[28px] md:text-[26px] md:leading-[30px] lg:text-[34px] lg:leading-[40px]"
-            >インド即戦力人材</span
-          >に関する<br aria-hidden="true" />ご相談・お問い合わせはこちら
-        </div>
-      </a>
-    </section>
-
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <div
-      class="bg-[#f7f7f7] max-w-[1920px] mx-auto py-[30px] px-[10px] sm:px-5 sm2:px-8 md:px-10 md2:px-12 lg:px-[48px]">
-      <div class="flex flex-col">
-        <!-- Logo + links -->
-        <div class="flex justify-center">
-          <div class="flex justify-between items-start md:items-center gap-[16px] md:gap-[32px] w-full md:w-auto">
-            <!-- Logo -->
-            <div class="shrink-0">
-              <a href="index.html">
-                <img src="./images/home-page/01-header-footer/logo.png" alt="Hana Global Edutech"
-                  class="w-[170px] h-auto block" />
-              </a>
-            </div>
-
-            <!-- Links (+ copyright on desktop) -->
-            <div class="flex flex-col">
-              <nav
-                class="flex flex-col items-start gap-y-[30px] md:flex-row md:flex-wrap md:items-center md:gap-x-[32px] md:gap-y-[20px]">
-                <a href="index.html"
-                  class="font-noto-sans-r text-[#1A1A1A] text-[16px] leading-none tracking-[0.16px] underline hover:opacity-60 transition-opacity whitespace-nowrap">トップページ</a>
-                <a href="strengths.html"
-                  class="font-noto-sans-r text-[#1A1A1A] text-[16px] leading-none tracking-[0.16px] underline hover:opacity-60 transition-opacity whitespace-nowrap">独自の強み・教育体制</a>
-                <a href="Candidate.html"
-                  class="font-noto-sans-r text-[#1A1A1A] text-[16px] leading-none tracking-[0.16px] underline hover:opacity-60 transition-opacity whitespace-nowrap">紹介可能な人材・職種</a>
-                <a href="flow-costs.html"
-                  class="font-noto-sans-r text-[#1A1A1A] text-[16px] leading-none tracking-[0.16px] underline hover:opacity-60 transition-opacity whitespace-nowrap">ご紹介の流れ・費用</a>
-                <a href="company.html"
-                  class="font-noto-sans-r text-[#1A1A1A] text-[16px] leading-none tracking-[0.16px] underline hover:opacity-60 transition-opacity whitespace-nowrap">運営体制・会社概要</a>
-                <a href="#contact"
-                  class="font-noto-sans-r text-[#1A1A1A] text-[16px] leading-none tracking-[0.16px] underline hover:opacity-60 transition-opacity whitespace-nowrap">お問い合わせ</a>
-              </nav>
-              <p
-                class="hidden md:block font-noto-sans-r text-[#999999] text-[14px] leading-none tracking-[0.14px] mt-[24px]">
-                © 2026 Hana Global Support
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Copyright — mobile only, centered below -->
-        <p
-          class="md:hidden font-noto-sans-r text-[#999999] text-[14px] leading-none tracking-[0.14px] text-center mt-[32px]">
-          © 2026 Hana Global Support
-        </p>
-      </div>
-    </div>
-  </footer>
+  <div id="site-cta-closing"></div>
+  <div id="site-banner-cta"></div>
+  <div id="site-footer"></div>
 
   <!-- Video modal -->
   <div id="videoModal" class="fixed inset-0 z-[1000] hidden items-center justify-center bg-black/80 px-4" role="dialog"
@@ -474,6 +235,7 @@
   </script>
 
   <!-- Scripts -->
+  <script src="partials.js"></script>
   <script src="main.js"></script>
 </body>
 

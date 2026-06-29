@@ -1,0 +1,10 @@
+/* ==========================================
+   Company Page Specific Styles (company.css)
+   Page-specific overrides only — shared styles in shared.css
+   ========================================== */
+
+@media (max-width: 767px) {
+  .reason-number--lg {
+    font-size: 2.2rem;
+  }
+}

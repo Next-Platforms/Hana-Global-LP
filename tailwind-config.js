@@ -1,0 +1,32 @@
+/** Shared Tailwind CDN breakpoints — load after cdn.tailwindcss.com on all subpages */
+tailwind.config = {
+  theme: {
+    screens: {
+      xs: "375px",
+      sm: "480px",
+      sm2: "600px",
+      md: "750px",
+      md2: "900px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1440px",
+      "3xl": "1920px",
+      "hb-max": { max: "1860px" },
+      "hb-max2": { max: "1650px" },
+      "hb-max3": { max: "1450px" },
+      "hb-max4": { max: "1350px" },
+      "hb-min": "1351px",
+      "hb-mid": { min: "1351px", max: "1650px" },
+      "about-stack": { max: "1100px" },
+      "about-row": "1101px",
+      "about-sm": { min: "480px", max: "1100px" },
+      "about-sm2": { min: "600px", max: "1100px" },
+      "about-md": { min: "750px", max: "1100px" },
+      "about-md2": { min: "900px", max: "1100px" },
+      "about-b-stack": { max: "1000px" },
+      "about-b-h2": { min: "500px", max: "749px" },
+      "about-b-h3": { min: "750px", max: "1000px" },
+      "about-b-row": "1001px",
+    },
+  },
+};
