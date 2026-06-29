@@ -207,6 +207,18 @@
   font-weight: 900;
 }
 
+/* Yellow underline — 12px bar for Member section h2 */
+.member-uline {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background-image: linear-gradient(
+    transparent calc(100% - 16px),
+    #ffe05f calc(100% - 16px),
+    #ffe05f calc(100% - 4px),
+    transparent calc(100% - 4px)
+  );
+}
+
 /* Yellow underline bar — multi-line, matches About h-[5px] at bottom-[4px] */
 .about-b-uline {
   -webkit-box-decoration-break: clone;
