@@ -1,8 +1,37 @@
-<svg viewBox="0 0 36 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <rect x="3" y="6" width="30" height="35" rx="3" stroke="#2d3142" stroke-width="2.5" fill="#ffffff" />
-  <path d="M12 6V4C12 2.89543 12.8954 2 14 2H22C23.1046 2 24 2.89543 24 4V6" stroke="#2d3142" stroke-width="2.5" fill="#ffe082" />
-  <line x1="9" y1="14" x2="27" y2="14" stroke="#2d3142" stroke-width="2" stroke-linecap="round" />
-  <line x1="9" y1="21" x2="27" y2="21" stroke="#2d3142" stroke-width="2" stroke-linecap="round" />
-  <line x1="9" y1="28" x2="27" y2="28" stroke="#2d3142" stroke-width="2" stroke-linecap="round" />
-  <line x1="9" y1="34" x2="20" y2="34" stroke="#2d3142" stroke-width="2" stroke-linecap="round" />
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76.31 87.03">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+
+      .cls-2 {
+        fill: #ffed48;
+      }
+    </style>
+  </defs>
+  <g id="footer">
+    <g>
+      <g>
+        <rect class="cls-2" x="18.37" y="1.5" width="39.56" height="11.83"/>
+        <rect class="cls-2" x="28.32" y="70.36" width="19.66" height="15.18"/>
+      </g>
+      <g>
+        <rect class="cls-1" x="10.75" y="13.33" width="54.8" height="72.21"/>
+        <line class="cls-1" x1="1.5" y1="85.53" x2="74.81" y2="85.53"/>
+        <rect class="cls-1" x="18.37" y="1.5" width="39.56" height="11.83"/>
+        <g>
+          <line class="cls-1" x1="25.13" y1="28.65" x2="51.18" y2="28.65"/>
+          <line class="cls-1" x1="25.13" y1="42.2" x2="51.18" y2="42.2"/>
+          <line class="cls-1" x1="25.13" y1="55.76" x2="51.18" y2="55.76"/>
+        </g>
+        <rect class="cls-1" x="28.32" y="70.36" width="19.66" height="15.18"/>
+      </g>
+    </g>
+  </g>
 </svg>

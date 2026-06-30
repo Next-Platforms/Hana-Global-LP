@@ -3,8 +3,293 @@
    Page-specific overrides only — shared styles in shared.css
    ========================================== */
 
-@media (max-width: 767px) {
-  .reason-number--lg {
-    font-size: 2.2rem;
+/* —— Consortium section —— */
+
+.consortium-index {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-weight: 400;
+  color: #b79d7b;
+  flex-shrink: 0;
+  font-size: 40px;
+  line-height: 44px;
+  letter-spacing: 0.8px;
+}
+
+@media (min-width: 375px) {
+  .consortium-index {
+    font-size: 48px;
+    line-height: 52px;
+    letter-spacing: 0.96px;
+  }
+}
+
+@media (min-width: 480px) {
+  .consortium-index {
+    font-size: 56px;
+    line-height: 62px;
+    letter-spacing: 1.12px;
+  }
+}
+
+@media (min-width: 600px) {
+  .consortium-index {
+    font-size: 64px;
+    line-height: 70px;
+    letter-spacing: 1.28px;
+  }
+}
+
+@media (min-width: 750px) {
+  .consortium-index {
+    font-size: 72px;
+    line-height: 78px;
+    letter-spacing: 1.44px;
+  }
+}
+
+.consortium-section-title {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+@media (min-width: 375px) {
+  .consortium-section-title {
+    font-size: 26px;
+    line-height: 38px;
+  }
+}
+
+@media (min-width: 480px) {
+  .consortium-section-title {
+    font-size: 30px;
+    line-height: 44px;
+  }
+}
+
+@media (min-width: 600px) {
+  .consortium-section-title {
+    font-size: 32px;
+    line-height: 48px;
+  }
+}
+
+@media (min-width: 750px) {
+  .consortium-section-title {
+    font-size: 36px;
+    line-height: 52px;
+  }
+}
+
+@media (min-width: 900px) {
+  .consortium-section-title {
+    font-size: 38px;
+    line-height: 56px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .consortium-section-title {
+    font-size: 40px;
+    line-height: 59px;
+  }
+}
+
+.consortium-item-title {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+@media (min-width: 375px) {
+  .consortium-item-title {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+@media (min-width: 480px) {
+  .consortium-item-title {
+    font-size: 22px;
+    line-height: 36px;
+  }
+}
+
+@media (min-width: 600px) {
+  .consortium-item-title {
+    font-size: 24px;
+    line-height: 38px;
+  }
+}
+
+@media (min-width: 750px) {
+  .consortium-item-title {
+    font-size: 26px;
+    line-height: 42px;
+  }
+}
+
+@media (min-width: 900px) {
+  .consortium-item-title {
+    font-size: 28px;
+    line-height: 45px;
+  }
+}
+
+.consortium-item-body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  color: #1a1a1a;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+@media (min-width: 375px) {
+  .consortium-item-body {
+    font-size: 15px;
+    line-height: 28px;
+  }
+}
+
+@media (min-width: 480px) {
+  .consortium-item-body {
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: 750px) {
+  .consortium-item-body {
+    font-size: 17px;
+    line-height: 32px;
+  }
+}
+
+@media (min-width: 900px) {
+  .consortium-item-body {
+    font-size: 18px;
+    line-height: 34px;
+  }
+}
+
+/* Company 01 — desktop indent via padding; flush left on mobile/tablet */
+.consortium-detail-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.consortium-detail-line {
+  display: block;
+}
+
+@media (min-width: 1101px) {
+  .consortium-detail-line--indent {
+    padding-left: 3em;
+  }
+
+  .consortium-detail-line--indent2 {
+    padding-left: 5em;
+  }
+}
+
+.consortium-item-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 480px) {
+  .consortium-item-head {
+    gap: 1rem;
+    margin-bottom: 0.875rem;
+  }
+}
+
+@media (min-width: 1101px) {
+  .consortium-item-head {
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.consortium-item-body-gap > * + * {
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 1101px) {
+  .consortium-item-body-gap > * + * {
+    margin-top: 1.5rem;
+  }
+}
+
+.consortium-partner-title {
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 480px) {
+  .consortium-partner-title {
+    margin-bottom: 0.875rem;
+  }
+}
+
+@media (min-width: 1101px) {
+  .consortium-partner-title {
+    margin-bottom: 2rem;
+  }
+}
+
+.consortium-item-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: 0.25rem;
+}
+
+@media (min-width: 1101px) {
+  .consortium-item-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .consortium-item-grid {
+    gap: 3.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .consortium-item-grid {
+    gap: 4rem;
+  }
+}
+
+.consortium-item-img {
+  width: 100%;
+  max-width: 879px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+}
+
+@media (min-width: 1101px) {
+  .consortium-item-img {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+  }
+
+  .consortium-item-img--right {
+    justify-self: end;
+  }
+
+  .consortium-item-img--left {
+    justify-self: start;
   }
 }

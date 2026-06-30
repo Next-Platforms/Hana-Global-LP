@@ -51,6 +51,60 @@ body.partials-loading #site-header {
   z-index: -1;
 }
 
+/* Absolute yellow underline — inline-block so w-full resolves correctly */
+.yellow-mark {
+  position: relative;
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/* 12px yellow bar at text bottom — gradient scales with font-size */
+.yellow-uline-12 {
+  display: inline;
+  line-height: 1;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background-image: linear-gradient(
+    transparent calc(100% - 0.333em),
+    #ffe05f calc(100% - 0.333em),
+    #ffe05f calc(100% - 0.083em),
+    transparent calc(100% - 0.083em)
+  );
+}
+
+/* India map watermark — same asset & sizes as home About section */
+.bg-map-mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 537.1255px;
+  max-width: 100%;
+  height: auto;
+  pointer-events: none;
+  z-index: 0;
+  user-select: none;
+}
+
+@media (max-width: 1100px) {
+  .bg-map-mark {
+    left: auto;
+    right: 0;
+    width: 320px;
+  }
+
+  .bg-map-mark--left {
+    left: 0;
+    right: auto;
+    width: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bg-map-mark--left {
+    width: min(280px, 75vw);
+  }
+}
+
 /* India outline watermark — shared asset: images/shared/india-outline.png */
 .india-watermark {
   position: relative;
@@ -128,11 +182,48 @@ body.partials-loading #site-header {
 }
 
 /* Banner sits flush above footer (matches home page) */
-#site-banner-cta,
-#site-banner-cta .banner-cta-strip,
+#site-banner-cta {
+  width: 100%;
+  margin: 0;
+}
+
+#site-banner-cta .banner-cta-strip {
+  width: 100%;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #site-footer,
 #site-footer footer {
   margin: 0;
+}
+
+/* CTA closing — equal vertical space above & below heading */
+.cta-closing-inner {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 480px) {
+  .cta-closing-inner {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+@media (min-width: 750px) {
+  .cta-closing-inner {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cta-closing-inner {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
 }
 
 .subpage-section {
