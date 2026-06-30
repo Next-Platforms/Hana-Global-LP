@@ -87,7 +87,165 @@
   </head>
 
   <body class="bg-white text-[#1A1A1A] font-noto-sans-r min-h-screen" data-active-page="home">
-    <div id="site-header"></div>
+    <header
+  class="w-full bg-white border-b-2 border-[#e2b774] relative z-50 h-[96px] px-[10px] xs:h-[100px] sm:h-[106px] sm:px-6 sm2:h-[112px] sm2:px-8 md:h-[120px] md:px-10 md2:h-[125px] lg:h-[129px] lg:px-12 xl:px-14 2xl:px-16"
+>
+  <div
+    class="w-full max-w-[1920px] mx-auto h-full flex items-center justify-between"
+  >
+    <a
+      href="index.html"
+      class="flex shrink-0 h-[68px] xs:h-[74px] sm:h-[82px] sm2:h-[88px] md:h-[94px] md2:h-[98px] lg:h-[104.1372px]"
+    >
+      <img
+        src="./images/home-page/01-header-footer/logo.webp"
+        alt="Hana Global Edutech"
+        class="h-full w-auto object-contain"
+      />
+    </a>
+
+    <div
+      class="flex items-center shrink-0 gap-3 sm:gap-4 md2:gap-5 xl:gap-6 2xl:gap-10"
+    >
+      <nav
+        class="hidden lg:flex items-center h-full gap-2 xl:gap-3 2xl:gap-8 font-noto-sans-r"
+      >
+        <a
+          href="strengths.html"
+          data-nav="strengths"
+          class="text-[#1A1A1A] font-noto-sans-r whitespace-nowrap hover:opacity-60 transition-opacity text-[13px] leading-[48px] tracking-[0.13px] xl:text-[14px] xl:leading-[54px] xl:tracking-[0.14px] 2xl:text-[18px] 2xl:leading-[63px] 2xl:tracking-[0.18px]"
+          >独自の強み・教育体制</a
+        >
+        <a
+          href="candidates.html"
+          data-nav="candidates"
+          class="text-[#1A1A1A] font-noto-sans-r whitespace-nowrap hover:opacity-60 transition-opacity text-[13px] leading-[48px] tracking-[0.13px] xl:text-[14px] xl:leading-[54px] xl:tracking-[0.14px] 2xl:text-[18px] 2xl:leading-[63px] 2xl:tracking-[0.18px]"
+          >紹介可能な人材・職種</a
+        >
+        <a
+          href="flow-costs.html"
+          data-nav="flow-costs"
+          class="text-[#1A1A1A] font-noto-sans-r whitespace-nowrap hover:opacity-60 transition-opacity text-[13px] leading-[48px] tracking-[0.13px] xl:text-[14px] xl:leading-[54px] xl:tracking-[0.14px] 2xl:text-[18px] 2xl:leading-[63px] 2xl:tracking-[0.18px]"
+          >ご紹介の流れ・費用</a
+        >
+        <a
+          href="company.html"
+          data-nav="company"
+          class="text-[#1A1A1A] font-noto-sans-r whitespace-nowrap hover:opacity-60 transition-opacity text-[13px] leading-[48px] tracking-[0.13px] xl:text-[14px] xl:leading-[54px] xl:tracking-[0.14px] 2xl:text-[18px] 2xl:leading-[63px] 2xl:tracking-[0.18px]"
+          >運営体制・会社概要</a
+        >
+      </nav>
+
+      <a
+        href="#contact"
+        class="hidden lg:flex flex-col items-center justify-center self-center rounded-full bg-[#990033] hover:opacity-60 transition-opacity w-[210px] h-[54px] lg:w-[250px] lg:h-[64px] xl:w-[280px] xl:h-[72px] 2xl:w-[313px] 2xl:h-[80px]"
+      >
+        <div
+          class="bg-[#f9f2f2] text-center font-noto-sans-b text-[#990033] tracking-[0.05em] rounded-sm leading-none py-[2px] px-[4px] text-[9px] lg:py-[3px] lg:px-[5px] lg:text-[11px] xl:text-[13px] 2xl:text-[15px]"
+        >
+          24時間365日受付中／全国対応
+        </div>
+        <div
+          class="flex items-center justify-center text-white leading-none font-noto-sans-b gap-1.5 mt-0.5 text-[13px] lg:gap-2 lg:mt-1 lg:text-[15px] xl:text-[18px] 2xl:text-[22px]"
+        >
+          <img
+            src="./images/home-page/01-header-footer/mail-icon.svg"
+            alt=""
+            class="object-contain w-[15px] h-[11px] lg:w-[17px] lg:h-[12px] xl:w-[19px] xl:h-[14px] 2xl:w-[22px] 2xl:h-4"
+          />
+          <span>お問い合わせはこちら</span>
+        </div>
+      </a>
+
+      <button
+        id="mobile-menu-btn"
+        type="button"
+        class="flex lg:hidden items-center justify-center focus:outline-none w-10 h-10 xs:w-11 xs:h-11 sm:w-12 sm:h-12"
+        aria-label="メニューを開く"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <img
+          src="./images/home-page/01-header-footer/hamburger-icon.svg"
+          alt="MENU"
+          class="w-full h-full object-contain"
+        />
+      </button>
+    </div>
+  </div>
+
+  <div
+    id="mobile-menu-backdrop"
+    class="fixed inset-0 bg-black/50 z-[55] opacity-0 invisible transition-all duration-300 lg:hidden"
+    aria-hidden="true"
+  ></div>
+
+  <div
+    id="mobile-menu"
+    class="fixed inset-0 w-full h-full bg-white z-[60] translate-x-full transition-transform duration-300 ease-in-out flex flex-col overflow-y-auto lg:hidden"
+    aria-hidden="true"
+  >
+    <div
+      class="flex items-center justify-end border-b-2 border-[#e2b774] shrink-0 h-[96px] px-[10px] xs:h-[100px] sm:h-[106px] sm:px-6 sm2:h-[112px] sm2:px-8 md:h-[120px] md:px-10 md2:h-[125px] md2:px-10 lg:h-[129px] lg:px-12"
+    >
+      <button
+        id="mobile-menu-close"
+        type="button"
+        class="flex items-center justify-center hover:opacity-60 transition-opacity focus:outline-none w-10 h-10 xs:w-11 xs:h-11 sm:w-12 sm:h-12"
+        aria-label="メニューを閉じる"
+      >
+        <img
+          src="./images/home-page/01-header-footer/close-icon.svg"
+          alt=""
+          class="w-full h-full object-contain"
+        />
+      </button>
+    </div>
+
+    <nav class="flex flex-col px-[10px] sm:px-6 sm2:px-8 md:px-10">
+      <a
+        href="strengths.html"
+        data-nav="strengths"
+        class="font-noto-sans-r text-[#1A1A1A] border-b border-gray-100 hover:opacity-60 transition-opacity text-[15px] leading-[48px] tracking-[0.15px] xs:text-[16px] xs:leading-[52px] xs:tracking-[0.16px] sm:text-[17px] sm:leading-[56px] sm:tracking-[0.17px] sm2:text-[18px] sm2:leading-[60px] sm2:tracking-[0.18px] md:text-[18px] md:leading-[63px] md:tracking-[0.18px]"
+        >独自の強み・教育体制</a
+      >
+      <a
+        href="candidates.html"
+        data-nav="candidates"
+        class="font-noto-sans-r text-[#1A1A1A] border-b border-gray-100 hover:opacity-60 transition-opacity text-[15px] leading-[48px] tracking-[0.15px] xs:text-[16px] xs:leading-[52px] xs:tracking-[0.16px] sm:text-[17px] sm:leading-[56px] sm:tracking-[0.17px] sm2:text-[18px] sm2:leading-[60px] sm2:tracking-[0.18px] md:text-[18px] md:leading-[63px] md:tracking-[0.18px]"
+        >紹介可能な人材・職種</a
+      >
+      <a
+        href="flow-costs.html"
+        data-nav="flow-costs"
+        class="font-noto-sans-r text-[#1A1A1A] border-b border-gray-100 hover:opacity-60 transition-opacity text-[15px] leading-[48px] tracking-[0.15px] xs:text-[16px] xs:leading-[52px] xs:tracking-[0.16px] sm:text-[17px] sm:leading-[56px] sm:tracking-[0.17px] sm2:text-[18px] sm2:leading-[60px] sm2:tracking-[0.18px] md:text-[18px] md:leading-[63px] md:tracking-[0.18px]"
+        >ご紹介の流れ・費用</a
+      >
+      <a
+        href="company.html"
+        data-nav="company"
+        class="font-noto-sans-r text-[#1A1A1A] border-b border-gray-100 hover:opacity-60 transition-opacity text-[15px] leading-[48px] tracking-[0.15px] xs:text-[16px] xs:leading-[52px] xs:tracking-[0.16px] sm:text-[17px] sm:leading-[56px] sm:tracking-[0.17px] sm2:text-[18px] sm2:leading-[60px] sm2:tracking-[0.18px] md:text-[18px] md:leading-[63px] md:tracking-[0.18px]"
+        >運営体制・会社概要</a
+      >
+    </nav>
+
+    <a
+      href="#contact"
+      class="flex items-center justify-center shrink-0 rounded-full bg-[#990033] hover:opacity-60 transition-opacity mx-auto gap-1.5 w-[260px] max-w-[calc(100%-32px)] h-[64px] mt-5 mb-6 xs:gap-2 xs:w-[280px] xs:max-w-[calc(100%-40px)] xs:h-[68px] xs:mt-6 sm:w-[300px] sm:h-[72px] sm2:w-[313px] sm2:h-[76px] md:h-[80px] md:mb-8"
+    >
+      <img
+        src="./images/home-page/01-header-footer/mail-icon.svg"
+        alt=""
+        class="object-contain shrink-0 w-[16px] h-[12px] xs:w-[18px] xs:h-[13px] sm:w-5 sm:h-[15px]"
+      />
+      <span
+        class="font-noto-sans-b text-white text-[18px] leading-none xs:text-[19px] sm:text-[20px] sm2:text-[21px] md:text-[22px]"
+        >お問い合わせはこちら</span
+      >
+    </a>
+  </div>
+</header>
+
 
     <!-- Hero Section -->
     <!--
@@ -1247,10 +1405,54 @@
       </a>
     </section>
 
-    <div id="site-footer"></div>
+    <footer>
+  <div
+    class="bg-[#f7f7f7] max-w-[1920px] mx-auto py-[30px] px-[10px] sm:px-5 sm2:px-8 md:px-10 md2:px-12 lg:px-[48px]">
+    <div class="flex flex-col">
+      <div class="flex justify-center">
+        <div class="flex justify-between items-start md:items-center gap-[16px] md:gap-[32px] w-full md:w-auto">
+          <div class="shrink-0">
+            <a href="index.html">
+              <img src="./images/home-page/01-header-footer/logo.webp" alt="Hana Global Edutech"
+                class="w-[170px] h-auto block" />
+            </a>
+          </div>
+
+          <div class="flex flex-col">
+            <nav
+              class="flex flex-col items-start gap-y-[30px] md:flex-row md:flex-wrap md:items-center md:gap-x-[32px] md:gap-y-[20px]">
+              <a href="index.html" data-nav="home"
+                class="font-noto-sans-b text-[#990033] text-[16px] leading-none tracking-[0.16px] underline hover:opacity-60 transition-opacity whitespace-nowrap">トップページ</a>
+              <a href="strengths.html" data-nav="strengths"
+                class="font-noto-sans-r text-[#1A1A1A] text-[16px] leading-none tracking-[0.16px] underline hover:opacity-60 transition-opacity whitespace-nowrap">独自の強み・教育体制</a>
+              <a href="candidates.html" data-nav="candidates"
+                class="font-noto-sans-r text-[#1A1A1A] text-[16px] leading-none tracking-[0.16px] underline hover:opacity-60 transition-opacity whitespace-nowrap">紹介可能な人材・職種</a>
+              <a href="flow-costs.html" data-nav="flow-costs"
+                class="font-noto-sans-r text-[#1A1A1A] text-[16px] leading-none tracking-[0.16px] underline hover:opacity-60 transition-opacity whitespace-nowrap">ご紹介の流れ・費用</a>
+              <a href="company.html" data-nav="company"
+                class="font-noto-sans-r text-[#1A1A1A] text-[16px] leading-none tracking-[0.16px] underline hover:opacity-60 transition-opacity whitespace-nowrap">運営体制・会社概要</a>
+              <a href="#contact" data-nav="contact"
+                class="font-noto-sans-r text-[#1A1A1A] text-[16px] leading-none tracking-[0.16px] underline hover:opacity-60 transition-opacity whitespace-nowrap">お問い合わせ</a>
+            </nav>
+            <p
+              class="hidden md:block font-noto-sans-r text-[#999999] text-[14px] leading-none tracking-[0.14px] mt-[24px]">
+              © 2026 Hana Global Support
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <p
+        class="md:hidden font-noto-sans-r text-[#999999] text-[14px] leading-none tracking-[0.14px] text-center mt-[32px]">
+        © 2026 Hana Global Support
+      </p>
+    </div>
+  </div>
+</footer>
+
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <script src="partials.js"></script>
+    
     <script src="main.js"></script>
   </body>
 </html>
