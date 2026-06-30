@@ -139,7 +139,7 @@
   bottom: 0;
   width: min(537px, 70vw);
   height: min(537px, 70vw);
-  background: url("./images/shared/india-outline.png") no-repeat left bottom;
+  background: url("./images/shared/india-outline.webp") no-repeat left bottom;
   background-size: contain;
   opacity: 0.1;
   pointer-events: none;
