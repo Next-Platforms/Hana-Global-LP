@@ -1,7 +1,7 @@
 /* Local Font Faces */
 @font-face {
   font-family: "A-OTF Gothic MB101 Pro";
-  src: url("./fonts/A-OTF Gothic MB101 Pro B.otf") format("opentype");
+  src: url("./fonts/A-OTF Gothic MB101 Pro B.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: "A-OTF Ryumin Pro";
-  src: url("./fonts/A-OTF Ryumin Pro H-KL.otf") format("opentype");
+  src: url("./fonts/A-OTF Ryumin Pro H-KL.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -17,7 +17,7 @@
 
 @font-face {
   font-family: "Noto Sans JP";
-  src: url("./fonts/NotoSansJP-Regular.ttf") format("truetype");
+  src: url("./fonts/NotoSansJP-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -25,7 +25,7 @@
 
 @font-face {
   font-family: "Noto Sans JP";
-  src: url("./fonts/NotoSansJP-Medium.ttf") format("truetype");
+  src: url("./fonts/NotoSansJP-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -33,7 +33,7 @@
 
 @font-face {
   font-family: "Noto Sans JP";
-  src: url("./fonts/NotoSansJP-Bold.ttf") format("truetype");
+  src: url("./fonts/NotoSansJP-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -41,7 +41,7 @@
 
 @font-face {
   font-family: "Noto Sans Syriac";
-  src: url("./fonts/NotoSansSyriac-Thin.ttf") format("truetype");
+  src: url("./fonts/NotoSansSyriac-Thin.woff2") format("woff2");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -49,7 +49,7 @@
 
 @font-face {
   font-family: "Noto Sans Syriac";
-  src: url("./fonts/NotoSansSyriac-ExtraLight.ttf") format("truetype");
+  src: url("./fonts/NotoSansSyriac-ExtraLight.woff2") format("woff2");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -57,7 +57,7 @@
 
 @font-face {
   font-family: "Noto Sans Syriac";
-  src: url("./fonts/NotoSansSyriac-Light.ttf") format("truetype");
+  src: url("./fonts/NotoSansSyriac-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -65,7 +65,7 @@
 
 @font-face {
   font-family: "Noto Sans Syriac";
-  src: url("./fonts/NotoSansSyriac-Regular.ttf") format("truetype");
+  src: url("./fonts/NotoSansSyriac-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -73,7 +73,7 @@
 
 @font-face {
   font-family: "Noto Sans Syriac";
-  src: url("./fonts/NotoSansSyriac-Medium.ttf") format("truetype");
+  src: url("./fonts/NotoSansSyriac-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -81,7 +81,7 @@
 
 @font-face {
   font-family: "Noto Sans Syriac";
-  src: url("./fonts/NotoSansSyriac-SemiBold.ttf") format("truetype");
+  src: url("./fonts/NotoSansSyriac-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -89,7 +89,7 @@
 
 @font-face {
   font-family: "Noto Sans Syriac";
-  src: url("./fonts/NotoSansSyriac-Bold.ttf") format("truetype");
+  src: url("./fonts/NotoSansSyriac-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -97,7 +97,7 @@
 
 @font-face {
   font-family: "Noto Sans Syriac";
-  src: url("./fonts/NotoSansSyriac-ExtraBold.ttf") format("truetype");
+  src: url("./fonts/NotoSansSyriac-ExtraBold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -105,7 +105,7 @@
 
 @font-face {
   font-family: "Noto Sans Syriac";
-  src: url("./fonts/NotoSansSyriac-Black.ttf") format("truetype");
+  src: url("./fonts/NotoSansSyriac-Black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
   font-display: swap;

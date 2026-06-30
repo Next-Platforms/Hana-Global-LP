@@ -15,6 +15,7 @@ Thumbs.db
 node_modules/
 jspm_packages/
 .pnpm-store/
+.venv/
 
 # Builds / Output
 dist/
