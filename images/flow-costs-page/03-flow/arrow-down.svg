@@ -1,3 +1,13 @@
-<svg width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <path d="M3 3L15 14L27 3" stroke="#2d3142" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.51 17.2">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #231815;
+      }
+    </style>
+  </defs>
+  <g id="contents">
+    <path class="cls-1" d="M46.42.3l-21.17,10.58L4.09.3C2.21-.64,0,.73,0,2.83h0c0,1.07.6,2.05,1.56,2.53l23.69,11.85,23.69-11.85c.96-.48,1.56-1.46,1.56-2.53h0c0-2.1-2.21-3.46-4.09-2.53Z"/>
+  </g>
 </svg>
